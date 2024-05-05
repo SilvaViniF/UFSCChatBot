@@ -36,7 +36,7 @@ from llama_index.core import Settings
 
 "mudar pdffolder pra pasta que tem seu PDF:"
 
-pdffolder = ""
+pdffolder = "backend\pdffolder"
 
 
 documents = SimpleDirectoryReader(pdffolder).load_data()
@@ -55,6 +55,9 @@ system_prompt = "You are a Q&A assistant. Your goal is to answer questions as ac
 
 # This will wrap the default prompts that are internal to llama-index
 query_wrapper_prompt = PromptTemplate("<|USER|>{query_str}<|ASSISTANT|>")
+
+from huggingface_hub import HfApi
+from getpass import getpass
 
 from huggingface_hub import login
 
