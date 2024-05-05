@@ -36,7 +36,11 @@ from llama_index.core import Settings
 
 "mudar pdffolder pra pasta que tem seu PDF:"
 
-pdffolder = "backend\pdffolder"
+import os
+
+# Assuming the PDF files are in a directory named "pdffolder" within your repository
+pdffolder = os.path.join(os.getcwd(), "pdffolder")
+
 
 
 documents = SimpleDirectoryReader(pdffolder).load_data()
