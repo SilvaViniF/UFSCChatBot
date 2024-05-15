@@ -98,5 +98,7 @@ service_context=ServiceContext.from_defaults(
 )
 index=VectorStoreIndex.from_documents(documents,service_context=service_context)
 query_engine=index.as_query_engine()
-response=query_engine.query("Explain to me what is UFSC")
-print(response)
+while True:
+    user_input = input("Enter your query: ")
+    response = query_engine.query(user_input)
+    print(response)
