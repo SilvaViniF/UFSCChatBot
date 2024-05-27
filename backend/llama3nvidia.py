@@ -1,3 +1,4 @@
+#region IMPORTS
 from transformers import AutoTokenizer, AutoModelForCausalLM, AutoModel
 import torch
 import json
@@ -5,6 +6,34 @@ import urllib.request
 from bs4 import BeautifulSoup
 from langchain_community.document_loaders import WebBaseLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
+from flask import Flask, jsonify,request,Response
+#endregion
+
+#region FLASK setup
+
+#intanciar app:
+app = Flask(__name__)
+
+if __name__ == "__main__":
+    app.run(debug=True,port=8080)
+
+
+#this method will get a string from the server
+@app.route("/api/home", methods=['GET'])
+def return_home():
+    return jsonify({
+        'message': "Hello"
+    })
+#this method will insert on the server
+@app.route("api/userinput",methods=["POST"])
+def user_input():
+    d = request.json
+    print(d)
+    return Response(status=204)
+
+#endregion
+
+#region LLM SETUP
 
 model_id = "nvidia/Llama3-ChatQA-1.5-8B"
 tokenizer = AutoTokenizer.from_pretrained(model_id)
@@ -26,11 +55,14 @@ def get_vectorstore_from_url(url):
         soup = BeautifulSoup(html_content, 'html.parser')
         text = soup.get_text(separator=' ')
         return text
+#endregion
 
-# Loading documents from URL and local JSON file
+#region Loading documents from URL
 url = "https://blumenau.ufsc.br/"
 chunk_list = get_vectorstore_from_url(url)
+#endregion
 
+#region format input/context
 def get_formatted_input(messages, context):
     system = "System: This is a chat between a user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions based on the context. The assistant should also indicate when the answer cannot be found in the context."
     instruction = "Please give a full and complete answer for the question."
@@ -45,9 +77,9 @@ def get_formatted_input(messages, context):
     formatted_input = system + "\n\n" + context + "\n\n" + conversation
     
     return formatted_input
+#endregion
 
-
-# Running retrieval
+#region Running retrieval
 def retrieval(messages):
     formatted_query_for_retriever = '\n'.join([turn['role'] + ": " + turn['content'] for turn in messages]).strip()
 
@@ -72,9 +104,9 @@ def retrieval(messages):
 
     response = outputs[0][tokenized_prompt.input_ids.shape[-1]:]
     print(tokenizer.decode(response, skip_special_tokens=True))
+#endregion
 
-
-##conversation loop
+#region conversation loop
 while True:
     user_input = input("You: ")
     messages = [
@@ -82,4 +114,4 @@ while True:
     ]
     retrieval(messages)
 
-
+#endregion
