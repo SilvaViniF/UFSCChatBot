@@ -2,11 +2,12 @@ from transformers import AutoTokenizer, AutoModelForCausalLM, AutoModel
 import torch
 import urllib.request
 from bs4 import BeautifulSoup
-from flask import Flask, jsonify, request, Response
+from flask import Flask, jsonify, request
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
-# Model setup
 model_id = "nvidia/Llama3-ChatQA-1.5-8B"
 tokenizer = AutoTokenizer.from_pretrained(model_id)
 model = AutoModelForCausalLM.from_pretrained(model_id, torch_dtype=torch.float16, device_map="auto")
@@ -16,7 +17,7 @@ query_encoder = AutoModel.from_pretrained('nvidia/dragon-multiturn-query-encoder
 context_encoder = AutoModel.from_pretrained('nvidia/dragon-multiturn-context-encoder')
 terminators = [
     tokenizer.eos_token_id,
-    tokenizer.convert_tokens_to_ids("")
+    tokenizer.convert_tokens_to_ids("<|eot_id|>")
 ]
 
 # Function to get vectorstore from URL
@@ -38,6 +39,7 @@ def get_formatted_input(messages, context):
 
     for item in messages:
         if item['role'] == "user":
+            ## only apply this instruction for the first user turn
             item['content'] = instruction + " " + item['content']
             break
 
@@ -49,33 +51,38 @@ def get_formatted_input(messages, context):
 # Running retrieval
 def retrieval(messages):
     formatted_query_for_retriever = '\n'.join([turn['role'] + ": " + turn['content'] for turn in messages]).strip()
-
     query_input = retriever_tokenizer(formatted_query_for_retriever, return_tensors='pt')
     ctx_input = retriever_tokenizer(chunk_list, padding=True, truncation=True, max_length=512, return_tensors='pt')
     query_emb = query_encoder(**query_input).last_hidden_state[:, 0, :]
     ctx_emb = context_encoder(**ctx_input).last_hidden_state[:, 0, :]
-
-    similarities = query_emb.matmul(ctx_emb.transpose(0, 1))
-    ranked_results = torch.argsort(similarities, dim=-1, descending=True)
-
+    ## Compute similarity scores using dot product and rank the similarity
+    similarities = query_emb.matmul(ctx_emb.transpose(0, 1)) # (1, num_ctx)
+    ranked_results = torch.argsort(similarities, dim=-1, descending=True) # (1, num_ctx)
+    ## get top-n chunks (n=5)
     retrieved_chunks = [chunk_list[idx] for idx in ranked_results.tolist()[0][:5]]
     context = "\n\n".join(retrieved_chunks)
 
+    ### running text generation
     formatted_input = get_formatted_input(messages, context)
     tokenized_prompt = tokenizer(tokenizer.bos_token + formatted_input, return_tensors="pt").to(model.device)
-
     outputs = model.generate(input_ids=tokenized_prompt.input_ids, attention_mask=tokenized_prompt.attention_mask, max_new_tokens=128, eos_token_id=terminators)
+    print("response")
     response = outputs[0][tokenized_prompt.input_ids.shape[-1]:]
-    return tokenizer.decode(response, skip_special_tokens=True)
+    teste = tokenizer.decode(response, skip_special_tokens=True)
+    print(teste)
+    return teste
+
 
 # API endpoint to handle user input
 @app.route("/api/userinput", methods=["POST"])
 def user_input():
     user_message = request.json.get('message')
     messages = [{"role": "user", "content": user_message}]
+    print(messages)
+    #torch.cuda.empty_cache()
     ai_response = retrieval(messages)
+    print(ai_response)
     return jsonify({"response": ai_response})
-
 
 @app.route("/api/home", methods=['GET'])
 def return_home():
