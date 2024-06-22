@@ -1,110 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Chat</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        .chat-container {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: #f9f9f9;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        .message-input {
-            width: calc(100% - 80px);
-            padding: 10px;
-            margin-right: 10px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-            font-size: 16px;
-            box-sizing: border-box;
-        }
-        .send-button {
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            border: none;
-            color: white;
-            border-radius: 3px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        .loading-text {
-            font-style: italic;
-            color: #888;
-        }
-        .spinner {
-            display: none;
-            border: 4px solid rgba(0, 0, 0, 0.1);
-            border-left-color: #333;
-            border-radius: 50%;
-            width: 20px;
-            height: 20px;
-            animation: spin 1s linear infinite;
-            margin-left: 10px;
-            vertical-align: middle;
-        }
-        @keyframes spin {
-            to {
-                transform: rotate(360deg);
-            }
-        }
-    </style>
-    <script>
-        async function sendMessage() {
-            const userMessage = document.getElementById("userMessage").value.trim();
-            if (!userMessage) {
-                alert("Please enter a message.");
-                return;
-            }
-            
-            // Display the message being sent and show loading indicator
-            document.getElementById("sentMessage").innerText = `Message Sent: ${userMessage}`;
-            document.getElementById("loadingIndicator").style.display = "inline-block";
-            document.getElementById("aiResponse").innerText = "";
-
-            try {
-                const response = await fetch("http://localhost:8080/api/userinput", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify({ message: userMessage })
-                });
-
-                if (!response.ok) {
-                    throw new Error(`HTTP error! Status: ${response.status}`);
-                }
-
-                const data = await response.json();
-                document.getElementById("aiResponse").innerText = data.response;
-            } catch (error) {
-                console.error('Error:', error);
-                alert('Error fetching data. Please try again.');
-            } finally {
-                // Hide loading indicator
-                document.getElementById("loadingIndicator").style.display = "none";
-            }
-        }
-    </script>
-</head>
-<body>
-    <div class="chat-container">
-        <h1>AI Chat</h1>
-        <div class="message">
-            <input type="text" id="userMessage" class="message-input" placeholder="Enter your message">
-            <button onclick="sendMessage()" class="send-button">Send</button>
-            <span id="loadingIndicator" class="spinner"></span>
-        </div>
-        <p class="message"><strong>Message Sent:</strong> <span id="sentMessage"></span></p>
-        <p class="message"><strong>AI Response:</strong> <span id="aiResponse"></span></p>
-    </div>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <title>ChatUFSC</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div><link rel="preconnect" href="https://fonts.googleapis.com">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </body>
 </html>

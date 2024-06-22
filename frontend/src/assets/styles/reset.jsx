@@ -29,7 +29,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     line-height: 1;
     font-family: sans-serif;
-    background-color: #dddddd;
+    
   }
   ol,
   ul {

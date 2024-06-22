@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)https://servidores.blumenau.ufsc.br/servidores-docentes/ -->
+<html style="" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths fnsmpomr idc0_350" data-lt-installed="true"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="SeTIC-UFSC">
+    <meta name="generator" content="WordPress 4.7.28">
+    <meta name="description" content="">
+    <meta name="copyright" content="Universidade Federal de Santa Catarina">
+    <meta name="Keywords" content="universidade, federal, santa, catarina, a universidade, faculdade, estudantes, faculdade, ensino superior, licenciatura, mestrado, doutorado, pós-graduações, bolsas, candidatura ao ensino superior">
+
+    <title>Servidores UFSC – Blumenau</title>        
+
+    <link rel="stylesheet" type="text/css" href="./Servidores UFSC – Blumenau_files/reset.css">
+    <link rel="stylesheet" type="text/css" href="./Servidores UFSC – Blumenau_files/style.css">
+    <link rel="alternate stylesheet" type="text/css" href="./Servidores UFSC – Blumenau_files/high.css" title="high" disabled="">
+    <link rel="shortcut icon" type="image/x-icon" href="https://servidores.blumenau.ufsc.br/wp-content/themes/brasilGovInterno/img/favicon.ico?ver=1713127935">
+    <link href="./Servidores UFSC – Blumenau_files/css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" id="www-widgetapi-script" src="./Servidores UFSC – Blumenau_files/www-widgetapi.js.download" async=""></script><script src="./Servidores UFSC – Blumenau_files/iframe_api"></script><script src="./Servidores UFSC – Blumenau_files/modernizr-2.7.min.js.download"></script>
+    <script src="./Servidores UFSC – Blumenau_files/font-resizer.js.download"></script>           
+
+
+    <link rel="dns-prefetch" href="https://servidores.blumenau.ufsc.br/">
+<link rel="dns-prefetch" href="https://s.w.org/">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/svg\/","svgExt":".svg","source":{"wpemoji":"https:\/\/servidores.blumenau.ufsc.br\/wp-includes\/js\/wp-emoji.js?ver=4.7.28","twemoji":"https:\/\/servidores.blumenau.ufsc.br\/wp-includes\/js\/twemoji.js?ver=4.7.28"}};
+			( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	/*
+	 * Create a canvas element for testing native browser support
+	 * of emoji.
+	 */
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Detect if the browser supports rendering emoji or flag emoji. Flag emoji are a single glyph
+	 * made of two characters, so some browsers (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param type {String} Whether to test for support of "flag" or "emoji4" emoji.
+	 * @return {Boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var stringFromCharCode = String.fromCharCode,
+			flag, flag2, technologist, technologist2;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * This works because the image will be one of three things:
+				 * - Two empty squares, if the browser doesn't render emoji
+				 * - Two squares with 'U' and 'N' in them, if the browser doesn't render flag emoji
+				 * - The United Nations flag
+				 *
+				 * The first two will encode to small images (1-2KB data URLs), the third will encode
+				 * to a larger image (4-5KB data URL).
+				 */
+				context.fillText( stringFromCharCode( 55356, 56826, 55356, 56819 ), 0, 0 );
+				if ( canvas.toDataURL().length < 3000 ) {
+					return false;
+				}
+
+				context.clearRect( 0, 0, canvas.width, canvas.height );
+
+				/*
+				 * Test for rainbow flag compatibility. As the rainbow flag was added out of sequence with
+				 * the usual Unicode release cycle, some browsers support it, and some don't, even if their
+				 * Unicode support is up to date.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + rainbow emoji).
+				 */
+				context.fillText( stringFromCharCode( 55356, 57331, 65039, 8205, 55356, 57096 ), 0, 0 );
+				flag = canvas.toDataURL();
+
+				context.clearRect( 0, 0, canvas.width, canvas.height );
+
+				context.fillText( stringFromCharCode( 55356, 57331, 55356, 57096 ), 0, 0 );
+				flag2 = canvas.toDataURL();
+
+				return flag !== flag2;
+			case 'emoji4':
+				/*
+				 * Emoji 4 has the best technologists. So does WordPress!
+				 *
+				 * To test for support, try to render a new emoji (woman technologist: medium skin tone),
+				 * then compare it to how it would look if the browser doesn't render it correctly
+				 * (woman technologist: medium skin tone + personal computer).
+				 */
+				context.fillText( stringFromCharCode( 55357, 56425, 55356, 57341, 8205, 55357, 56507), 0, 0 );
+				technologist = canvas.toDataURL();
+
+				context.clearRect( 0, 0, canvas.width, canvas.height );
+
+				context.fillText( stringFromCharCode( 55357, 56425, 55356, 57341, 55357, 56507), 0, 0 );
+				technologist2 = canvas.toDataURL();
+
+				return technologist !== technologist2;
+		}
+
+		return false;
+	}
+
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji4' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script><script src="./Servidores UFSC – Blumenau_files/twemoji.js.download" type="text/javascript" defer=""></script><script src="./Servidores UFSC – Blumenau_files/wp-emoji.js.download" type="text/javascript" defer=""></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="dashicons-css" href="./Servidores UFSC – Blumenau_files/dashicons.css" type="text/css" media="all">
+<link rel="stylesheet" id="thickbox-css" href="./Servidores UFSC – Blumenau_files/thickbox.css" type="text/css" media="all">
+<link rel="stylesheet" id="patrocinio-css" href="./Servidores UFSC – Blumenau_files/patrocinio.css" type="text/css" media="all">
+<link rel="stylesheet" id="ufsc-carrossel-css" href="./Servidores UFSC – Blumenau_files/ufsc-carrossel.css" type="text/css" media="all">
+<link rel="stylesheet" id="collapseomatic-css-css" href="./Servidores UFSC – Blumenau_files/style(1).css" type="text/css" media="all">
+<link rel="stylesheet" id="contact-form-7-css" href="./Servidores UFSC – Blumenau_files/styles.css" type="text/css" media="all">
+<link rel="stylesheet" id="sharity-style-css" href="./Servidores UFSC – Blumenau_files/sharity-style.css" type="text/css" media="all">
+<link rel="stylesheet" id="bootstrap_funBox_style-css" href="./Servidores UFSC – Blumenau_files/bootstrap.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="custom_funBox_style-css" href="./Servidores UFSC – Blumenau_files/custom-fun-box.css" type="text/css" media="all">
+<link rel="stylesheet" id="animated_css-css" href="./Servidores UFSC – Blumenau_files/animate-custom.css" type="text/css" media="all">
+<link rel="stylesheet" id="auto-thickbox-css" href="./Servidores UFSC – Blumenau_files/styles-pre39.css" type="text/css" media="all">
+<link rel="stylesheet" id="jquery-ui-smoothness-css" href="./Servidores UFSC – Blumenau_files/jquery-ui.min.css" type="text/css" media="screen">
+<link rel="stylesheet" id="slideshow-css3-css" href="./Servidores UFSC – Blumenau_files/css3.css" type="text/css" media="screen">
+<script type="text/javascript" src="./Servidores UFSC – Blumenau_files/jquery.js.download"></script>
+<script type="text/javascript" src="./Servidores UFSC – Blumenau_files/jquery-migrate.js.download"></script>
+<script type="text/javascript" src="./Servidores UFSC – Blumenau_files/collapse.min.js.download"></script>
+<script type="text/javascript" src="./Servidores UFSC – Blumenau_files/functions.js.download"></script>
+<script type="text/javascript" src="./Servidores UFSC – Blumenau_files/ufsc.js.download"></script>
+<script type="text/javascript" src="./Servidores UFSC – Blumenau_files/jquery.pikachoose.js.download"></script>
+<script type="text/javascript" src="./Servidores UFSC – Blumenau_files/jquery.jcarousel.min.js.download"></script>
+<script type="text/javascript" src="./Servidores UFSC – Blumenau_files/sharity.js.download"></script>
+<script type="text/javascript" src="./Servidores UFSC – Blumenau_files/jquery.fancybox.pack.js.download"></script>
+<script type="text/javascript" src="./Servidores UFSC – Blumenau_files/fun_box.js.download"></script>
+<script type="text/javascript" src="./Servidores UFSC – Blumenau_files/bootstrap.min.js.download"></script>
+<link rel="https://api.w.org/" href="https://servidores.blumenau.ufsc.br/wp-json/">
+<link rel="shortlink" href="https://servidores.blumenau.ufsc.br/?p=28">
+<link rel="alternate" type="application/json+oembed" href="https://servidores.blumenau.ufsc.br/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fservidores.blumenau.ufsc.br%2Fservidores-docentes%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://servidores.blumenau.ufsc.br/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fservidores.blumenau.ufsc.br%2Fservidores-docentes%2F&amp;format=xml">
+ 
+    <link href="./Servidores UFSC – Blumenau_files/video-js.min.css" rel="stylesheet">
+    <script src="./Servidores UFSC – Blumenau_files/video.min.js.download" type="text/javascript"></script>
+   <script type="text/javascript">
+    _V_.options.flash.swf = "/wp-content/mu-plugins/videojs/video-js.swf";
+  </script>
+
+    
+<script type="text/javascript">
+/* <![CDATA[ */
+var thickboxL10n = {"next":"Próximo &gt;","prev":"&lt; Anterior","image":"Imagem","of":"de","close":"Fechar","loadingAnimation":"https:\/\/servidores.blumenau.ufsc.br\/wp-content\/plugins\/auto-thickbox\/images\/loadingAnimation.gif"};
+try{convertEntities(thickboxL10n);}catch(e){};;
+/* ]]> */
+</script>
+<style type="text/css" media="all">
+/* <![CDATA[ */
+@import url("https://servidores.blumenau.ufsc.br/wp-content/plugins/wp-table-reloaded/css/plugin.css?ver=1.9.2");
+@import url("https://servidores.blumenau.ufsc.br/wp-content/plugins/wp-table-reloaded/css/datatables.css?ver=1.9.2");
+/* ]]> */
+</style><link rel="icon" href="https://servidores.blumenau.ufsc.br/files/2017/08/cropped-cropped-Brasao_Servidores-1-32x32.png" sizes="32x32">
+<link rel="icon" href="https://servidores.blumenau.ufsc.br/files/2017/08/cropped-cropped-Brasao_Servidores-1-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon-precomposed" href="https://servidores.blumenau.ufsc.br/files/2017/08/cropped-cropped-Brasao_Servidores-1-180x180.png">
+<meta name="msapplication-TileImage" content="https://servidores.blumenau.ufsc.br/files/2017/08/cropped-cropped-Brasao_Servidores-1-270x270.png">
+
+<!-- START - Facebook Open Graph, Google+ and Twitter Card Tags 1.7 -->
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Servidores UFSC - Blumenau">
+<meta property="og:title" content="Contatos - Docentes">
+<meta itemprop="name" content="Contatos - Docentes">
+<meta property="og:url" content="https://servidores.blumenau.ufsc.br/servidores-docentes/">
+<meta property="og:type" content="article">
+<meta property="og:description" content="Atenção! Os telefones com DDD 47 estão temporariamente indisponíveis. Todos os números com DDD 48 estão funcionando normalmente.
+Coordenadoria Especial de Engenharia de Materiais (EMT)
+
+
+ 
+Departamento de Ciências Exatas e Educação (CEE)
+
+
+ 
+Departamento de Engenharia de Controle,">
+<meta itemprop="description" content="Atenção! Os telefones com DDD 47 estão temporariamente indisponíveis. Todos os números com DDD 48 estão funcionando normalmente.
+Coordenadoria Especial de Engenharia de Materiais (EMT)
+
+
+ 
+Departamento de Ciências Exatas e Educação (CEE)
+
+
+ 
+Departamento de Engenharia de Controle,">
+<!-- END - Facebook Open Graph, Google+ and Twitter Card Tags -->
+
+<style type="text/css" media="all">#barra-brasil div,#barra-brasil a,#barra-brasil ul,#barra-brasil li{margin:0;padding:0;font-size:100%;font-family:inherit;vertical-align:baseline}#barra-brasil ul{list-style:none}@font-face{font-family:"Open Sans";font-style:normal;font-weight:700;src:local("Open Sans Bold"),local("OpenSans-Bold"),url("//barra.brasil.gov.br/static/opensans-bold.woff") format("woff")}#barra-brasil{height:32px;background:#f1f1f1;font-weight:bold;font-size:12px;line-height:32px;font-family:"Open Sans",Arial,Helvetica,sans-serif;border-bottom:1px solid #dfdfdf;box-sizing:content-box}#barra-brasil a{text-decoration:none}body.contraste #barra-brasil{background:#000 !important}div#wrapper-barra-brasil{position:relative;overflow:hidden;margin:0 auto;width:100%;max-width:960px;height:100%}#barra-brasil .brasil-flag{float:left;padding:7px 0 6px;width:115px;height:19px;border-right:2px solid #dfdfdf}#barra-brasil .brasil-flag .link-barra{display:block;padding-left:42px;width:43px;background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAATCAMAAAC5m+00AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAACrUExURQCXSF27iQCWRQOWSQCWSRCdVACSSgCWRwCVSRKcVv/oAP/yAAIvh/bjBQKVTP/rAK3PF/3sARZBkg05ima2LCqiPg+ZRR9JoermBbGwLwEqkgCST1GwMRqdQZfIHdzgCSdSlTlYbEWrNyNKeouUPHOgtEJsn2WOrSClX2m/lF+6i3q8JsDVEBpCgWN2WefTD8i/IYSstzKmO3eIUaa2h3SOjfvlHjVfq6OmNShvDYIAAAFISURBVCjPbVHXksMgDNQBljC4l9iOndjp5VKv//+XnXByb7fDADO7rNAK9v4DngPv/h/24BHBuEhqB3pCeUxJIAWKtMZlIVCTciogH3yhWMpinM2t7ZctS5UgAR74kVICpMauNrfmaucTpMj5e+4VUNTOEvuzCoL8EvZLJCH1SIHAqKjtehowposwTmbIcqZIt+UpNV/3zWa3HYLp2sZ1gegoPXkNU5M238Ow3d132cIYEyel9MHDLo2NcX4519puPkPmbOIowrdTbGyTZXk2BEH1kZo4LPSjFgq2DFcVc3lWNZbt2rGWIIiwTOztzJZV9W77glCp8RsSNHdc1NfL6rxoxp5JCcmUC1cJjdx0GKZ1hxq0eqYBkuPlzLHrjXuiOAwaDUGQFJyWBpyU7EUaQI/xckGeA98jksqNQLmp8BnB4Xh8+ReHX640GNLt25uiAAAAAElFTkSuQmCC") 8px center no-repeat;text-transform:uppercase;line-height:19px}#barra-brasil .acesso-info{position:absolute;left:130px}#barra-brasil .list{position:absolute;top:0;right:0}#barra-brasil .list .first{border-left:2px solid #dfdfdf}#barra-brasil .list-item{display:inline-block;height:32px;border-right:2px solid #dfdfdf}#barra-brasil .list-item a{padding:0 15px 8px 13px}#barra-brasil .link-barra{color:#606060}body.contraste #barra-brasil .link-barra{color:#FF0 !important;text-decoration:underline}#menu-icon{position:absolute;top:3px;border-top:15px double #606060;border-bottom:5px solid #606060;display:none;width:20px;right:5px}@media only screen and (max-width: 959px){#barra-brasil #menu-icon{display:inline-block;padding:5px 3px 0px 3px}#barra-brasil .list .first{border-left:1px solid #dfdfdf}#barra-brasil nav:hover #menu-icon,#barra-brasil nav:active #menu-icon,#barra-brasil nav:focus #menu-icon{background-color:#DDD}body.contraste #barra-brasil nav:hover #menu-icon,body.contraste #barra-brasil nav:active #menu-icon,body.contraste #barra-brasil nav:focus #menu-icon{background-color:#606060 !important}#barra-brasil ul.list,#barra-brasil ul.list:active,#barra-brasil ul.list:focus{overflow:hidden;height:0px;transition:0.3s;padding-top:32px;width:auto;position:absolute;z-index:9}#barra-brasil .list-item{display:block;text-align:center;height:30px;background:#EEE;border:1px solid #dfdfdf}#barra-brasil .list-item a{padding:8px 30px 8px 28px}body.contraste #barra-brasil .list-item{background:#000 !important}body.contraste #menu-icon{border-top:15px double #fff !important;border-bottom:5px solid #fff !important}#barra-brasil .list a:active li,#barra-brasil .list a:focus li,#barra-brasil .list a:hover li{background:#DDD}body.contraste #barra-brasil .list a:active li,body.contraste #barra-brasil .list a:focus li,body.contraste #barra-brasil .list a:hover li{background:#606060 !important}#barra-brasil nav:active ul.list,#barra-brasil nav:focus ul.list,#barra-brasil nav:hover ul.list{height:150px;transition:0.5s}div#wrapper-barra-brasil{overflow:visible}}@media screen and (min-width: 960px){#wrapper-barra-brasil{width:960px}}@media print{#barra-brasil .list{display:none}#barra-brasil .acesso-info .link-barra:after{content:" - Barra GovBr"}}</style><style type="text/css" media="all">div#wrapper-footer-brasil{position:relative;overflow:hidden;margin:0 auto;width:auto;padding:0 20px;max-width:960px}#wrapper-footer-brasil .logo-acesso-footer{float:left;width:107px;background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGsAAAAxCAMAAADqdKevAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAFZUExURQAAAP////7+/v////////39/f////////////////v7+/qnHv7+/v////qmGv////X19f////qnHPqmGuaqR/qmGvepKvqmGvqmGsvMzuTl5vn38+jdy/fx5tTU1u+gHt7c1827ns3Oz/jivvCdGP////yuGfunGv/LFvyyGf24F//WE/upGfCfF/21GP6+Fv/QFP/EFv67F//hif7Qb//HFv/BFgCZTP3FWv/Xd//ffgCEQgB6Pv/glP7ckwKKRQCgTv7iptiMEgCSSP/OY+OVFfy7Sf7gnf/aif7Ufv7sx0CkO/qzOD2SNvuuKP/GP3G3lP/bbnq6mv7lsf7cmsV7DrJrCv3VieLQof7nuM+EEdfMGv/YSq7Hk5+2J4a1K2eyjfO4VPbEb41MA1SPMO63GZXAmPPNjSGTW+rj12iyM4iiKVOrgNi2fr6nIN/BG8bJfpi6dsGymid2QgoAAAAldFJOUwDvkd9AEGC/gLBSl6Fw7M8zIH4g/RBQPb9ogNXq9yD319en97/AhMqTAAAFFUlEQVRYw+3X+1faSBQH8LxnEgkBq23dvtsdAjSxoKBBFq1IVOTRWotYrFr73Lbbff3/P+y9M0TRlp72NP60vQc5IUo+fm9mJokk/awLqcsTV5MuVvLq5JWLhC5NoOMNC7zJSxckTU+A0w36y6sbT5eXm8F6F7jJ6QvpXtL1go2tZzucWt7s95tB23OTF9BJCNXe2IqoTagmVADZJuOnvObW1tbO6upGLaIqzVKptO65E3FT3ac8FFIHb5+8PVhqViqlEsf8iZipHdG/jVrt4AnU44OKsBqNddePsY2XXW9ZULVabQ+lx49f/F3ZRqkRBIDFNkCmk25peKpqtfkDQb34p/GIVxAEXT85HVsH28NTVZufn3+L1B+/r3SKCwsP5vL52Vw348XVxUvQwWH/gJo/QKlarX4sF4tDLJPxb40GI2T80dLE1L8Wa/3Z6gm1tPcCpWr1r/IQQ+tMMIsxa/zhNGKP/2XS68P8HUpLS88PV7AOs9lRzE+efiEhs4SkJyAAJQk9bRIzZZKERAmBf4F/HEddcbtILUdUobB/dHS0XygUQBNdRMu/fPIN1XRkiTBiJpgiE5MppsmoaTCisjT0UGHmOGvSDZ7yVSmi7otCrFyOgo1M6BRTEiwF0SRZJhCROYbJHMtkusVszCuPPZ1X3ZKgliJq/6h1tI9YFIw3cSr6gsKgFG6plFLdVplGVaYySWNUosxwyPjT1eQLIFLbSB0uYh1yjAcTVvtm1EJH02RV5a1LKDZVHGZSh1FmOiwFlqKOtWDEbw6ppSxY+wA9fLi4uD8aDCw3FQ1qGGcK0UxCoF+EwpAwFBwWYmzosJ+Otzb7SFUq28+zEOsDUoB9EMGiJvr+zI9PZdfr9/ECUtnexlj3W5x6uNg6b/0Si9UU1PNs9husNNXEhk6V9Nij6tQw9C9YKPFYZQzW4j1c5NbIQPTdoYWDTaxUzBlvGarMUl+wSiJWoyysNT4OwTqdYHwcWieWYRg0bTDV1m0IaeBHi9o6taUUxdQGtdOUWrhhnJ1fXtDkF+BHRbQKrTXE1taEVSxGc/lYO7EITDAV3xz4sWADt5nMmK3AmwafZFuWmaHAPvPc0suvv9vZIg8GFq/Wmbns++/0ESvlMIkRjSm6TAgzJObo+IKJnYCFBI6v2wqjsgONPntR7vJLfePBAgTLFjornFppcerUui6NWDBluWVLDsHDMcJf1JFNCAkn1JTBgl2UnVs4AqQeoQVYZ0VUJ3tmOWwrn1tpZlrMHLUYsSGOahlEhb9TZUuVz1+WG2jNCaxT5VS1I6gHeRHrpfW5Be9MTY1asIPZBpw0Azc0mcnG+esy3FMEYAFWLHeqojqCErHCkxZ+Symq8ZX7DbTyAjuxihHFYxnfYSVUc/wNRxet2fwctHGh85uo1wunVNi99j1LUUrTx1uYq52bzWO0j0PrECSg8GSF/o4V0z3bpLsOlctxbO6NCNZBiafywvClGde9aNIDqpvJZHKzoOXfvMYOvoGtWdHAsH1Nj4m64raBcj3EhJb/Mx9JGb8etm+k43twaK93/fpuKDTgeOVQ8sJ6+PJGKrYnh6TbHey+erXbExpyOQ6BNKj772JrIFSI0GDq079Tvd26n4nK8+uDQXj8Xonz4evXXm9q7/rdGWnmzlR9d7dX5zXo9erh8T1Ti/WZUrt3I2GJPs3c+TQV1uu93qBev3X87n0iXulc3Zy5e3sP6/1txdKln/X/rP8A6HRZ8kCrrTMAAAAASUVORK5CYII=") center no-repeat;height:49px}#wrapper-footer-brasil .logo-brasil-footer{float:right;width:153px;background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJkAAAAwCAMAAAA1kSiuAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAFiUExURQAAAP/////////////////////////dAICUGYa2J////////////////////////////////////////////////////////////////////////////6PBH97PCY2fGMDCEFSIKV6EIv/dAP/dACd2OCuHPil+OyqBPCh6OSuKPyqEPSJkMCyTQyyNQS2gSCZwNS2bRiFfLiRtNCRqMy2dRydzNx9bLCNnMi2YRR1UKS2WRCyQQip8OcnIDyBYKiZyNvfZAiyRQvWGHcbADSBioqy7F/////uoFkaFMEiVNpimFztyLJ21HPaPG3GuLiBQjvyxE3GdJ+nUBvmYGTeRPY24JEekPmGJJd7NCFqXMoKbH9TQDtKTJlipN/mgGKKvF7fFF4GvJ0VymbKGRKmaJ/vHCKODJO2nGdrl8N6WKry8EYp0WGSOuoisza7D2nd7JEpYcrWacEN9stekWsTR4lEu4eYAAABIdFJOUwDzBb3oLXhAcHA7EJJUhJ6wRxpg0NrhI2jHbnOpX0hfUd2Nqf///////////////////////////////////////////////nia+rQAAAnqSURBVFjD7ZnXf9tIDoApkdTuSVTvtjZll8kmci+JHSeiQ5sRrWIpkSNbkuMap9dt//9hBphhkXd/93b3cPNiZkAAHzDAUJlREumIFlP4iBqaloryx3gpocQy/DGhaVoRX1C1UjrHn3JaXEkZOFtWI4WkEhgq6Oj8KQ1PKMxrmppFcRwm0bgCto0oadVUeihrbCpd1bNxnIgV9XiJKEt5pZhHCFfXyzhZiOnVFOq6Ws5I02ytXHHLAbLijK6jv4yh6wn+VCnoMxHEzWq6jhEqbjZO5EouQtEousuUI9lyOo261RmgI+6YGo9EiUxVZ4nBSBZmiaymElnOzaGqn6yaIexMSSWLlSq8htpZMEk4bj4ZocSk0iJWJCtWEjMuBqDC8qRriuAxxFMyS7EUipoaJbJEIYJ2Em5ciZaCy1k0KjSRSWezkixaylPOslmRs2qE/ES1YjGS8JHlI0aGJuKRWo3yDSZdXZAZBikX8nGSl92oTmRKSjMKhWiQTIJmVMPAnFS0dKGKr2UjhkFJdvVKCb3nC9lsNUZkaaMCPKmZnKi8WEzWi04FpyRisRitZl5XkkmajCoiGUo2lQ+CKXlpJgnaOhmcTUaln1ieqiahzCB5Ev7oeeky1FP/H//ZuPmv4Pjpxg9y3AiJbvlkvvGTfOEfZH7pDd/Mret1FeV2vb64+OTJzsLC40ePVlYePFhaOjrtX5hs2EMQgUSImKx/+MoMjVcrqAfDCkrsi9PH0uzS0inp2kdLNA5RmT83A6q/KHfvMjQOAEakj/4YpBZSCzThvh9iO/V8HwUEVnsnrHvKdC2Mkr/flMr9oFVljqHVp9FYCFbdS6gvdBaqP2WohzJ/0pohXVQ+tIFsRSyB2VwQTqfI/GgLfv+vTMuX0GDofrTLBR+az3yz7qXcH/KpaT3itmCCkQmnYbJ79wDtbnDZqCpMS1JPpc3LjT1k3JOTkwmXHXjzfxOXZVrcFpsAMvQKz2GyXwFtTqDt+It9ybbmBHW4EZaObGFhH/SGb17CeMM8y2wezl0fF7xgLWAeHz0CskXhdYrMhxYqtleWEF2zKpKgvbh43GNgL8/eH8P6COTGveviWjkFucX/zcwdQWBiscJk9wXacB/G4enQW9ELi0ReRr20CTtOfXLS6738eHX18ezs7GTyADcc88ALud+82O+DYZ423vPC2gKQyfabIrvfABtgoo0TY8/9K6shsR3Lsi4uj7yCEfvD4F2v1zv57fmzZ89efzzb23tDDhwvZMyi3TwCZb5pWSyPDG4HyGSNh8nuINq9OSIz+7LYbOu+QBPCfa9g0N+L3V0Ae/6ckQHa3t7e+zF25n2pfCm64qK/j/tcnRcIALXNfVHkO1NkgMbDa4uWEsV2aVokmpPYtlcwDODty11G9huRPXsNZHsvXjDoT2iXAjt0bP8OzAuE8TAygRYmeyjQWhZbsMO26IOVA9NiooYP2zQl94pt2nu7bPT+/PbXh7++ff0D0E442Yu3UBXcsCyHu/WJR4c9z+CATDZgmGz54UP07+9D8N6Gz4jlYYv9XvbZCltIJPv9y+vXr798/fDh67MrRsbYbLOFyg2vE+rDQ1xX3vMcrm2eY5WzRgmTLT/1RSf6cMhrw3kqrCPZQbMt949T80yQfX6Oq/nHtw+/Y85Y1s5ZzHdkPZBlbtdiUxwOyKR8ECJbC6LN+QyYzjJZb9ybwGj79w9osrc9JDt5Lursy59Extats/x0Om2LbbDMO4vDMTKxOYTJ1tfWhIXAptsHC47EJpm3I7eZb/sdJ9vlHcD3jTNG9r6DBdUJaAs20GSdhXBAhlkB8RQZQ6Ni88e22LZMR8juhAJffML3U7vbfcd680rkjDXA3pvhY9ommq0pbVCfQGcxb1gl51IeJttENG9FZUkMDxy/LFAv+CvvfPnpche+AAyNZewKUnbSgjKUny5ndM2SWhbD5bMtZoNch8nmNzfRPRb5uDmRK9p3Atie8SH9/GyxjK59h6ztXn3+fNU7O3s/usuat+3tXuPzQSMU2aXDTHK4ltmRKzZFxtDWQSw2hrFXbA7Kwis6oMWixX66/o6+6GdvGrTp4MdzLEw2Bw1fZAOH6XE4IJOFPk1G7gWZ2ZL11JyXaP60CROjTaJe654wspPur+JLc8qqcDTf7Yjk2Z8aMm0TXiUcDsiEkTujENnqKrkXZE1v0+2sSu5Rp+GlDRfzYHNTWt383ut9X/N+6e3APj1i2t2OSNxAqkOVgE0Ox8gwdgh9sO+Npq1srHL36+vdDhuDlm/TPV8VaF3bbHqNMOTL2ZGFAJK1+bX7/h+hl2YHLHP17qjzyWl2Hsqs7ztMk8O1yEpofwDfA2VjQ7qf2nQdYXy9yxbPW9EB3zJWp9Q8tGFze2NDqIeK1QGyeYQDMkqM3FbJSlvZ9qMxda+PJo60zcgOut7+AevZXF39J7TlrS1kmw8Xa8t20Cq32xFvhNIGZNvk3hcZfeGbjrTd5RXoNULjwByhiKmNjmm05Od5cW4L0LbDaWP6jokRo93OhqwnX9rg66Dw0FZ9Qik9NB1pu4vN6C3JZOxlxGt3eyLR6qtbW9emDd7mEXM4IAtkhnvnaWspIXUPjVmQQiQ76Hr7x0iqbR74fhOK7oGP0PbWdWk7NrndbYQDMnrFywyGzsmmIgPnIwctkLBLO4qs5DvS63xgH2rJ5qqPj7c942S9yzccbperMzJv1fxpaym3vcgEWnc0cHBxZNjH5LizRkld3iKvq91x4CijIb9C8J9lh8PJwFvnts8ukxyb46B/mbbbinLzx+C46T+lEnNy5pZ47eef6SF0cHUjdCblM3/zWru3frxu3AwepeX+V8/44qFz4P/yiMXkAfJsUhwew6Dz31k6rE/S32iqHDIQlSfM8dgsHSrnZkCDzsaTqZkEzaboIe4dJoOYHnOxWD4hzqTZSbJbU7UEHa/TJU42HVHxRD1TSNPVj0pH3XnXCJEl3DSdyqeK6VKGzu9Bo8IfDc0oVOh43qWj9lQpXaSLhVrRKOEVRNw1VA0no0U3wQ7kE3Tyn0qXxDl6gc7EMynFyATICqlINExWoYSm0koCL0Q8MmY8Kq4iUhR6KgMvZvHkP8euj5BMESTJYgbcuYUS3h+AYkYNk0VKaEGQxd28lg+TidsfIFPwEondDFXzdNkiLwm0vJsVZHSrlY3wCyY0XYrQNZmaMSB7biWOMSW1TEZcbEkyY5aWmshqhYxaCJPFdUp6Rk/h61GtknXjuDDpcgVTWlUzBXSdUvVYJIcXgaky6cRdvYirrUcyGYhQk9c5QJOmNRP3VelZpYY1VONKiVIZfOlBMg0GNpNWUkXZF7QUtZMaKXAyvRhVciXOMwsvUkfp1UiV7lhKShzF7HpypvZvSR7U59ZU+3sAAAAASUVORK5CYII=") center no-repeat;height:48px}body.contraste #footer-brasil{background:#000 !important}@media screen and (min-width: 960px){#wrapper-footer-brasil{width:960px}}@media print{#wrapper-footer-brasil{border-top:2px solid #dfdfdf}#wrapper-footer-brasil:before{content:"Barra GovBr";color:#606060;font-size:12px;font-family:"Open Sans",Arial,Helvetica,sans-serif}}</style><style type="text/css" media="all">#barra-brasil div,#barra-brasil a,#barra-brasil ul,#barra-brasil li{margin:0;padding:0;font-size:100%;font-family:inherit;vertical-align:baseline;border:none}#barra-brasil ul{list-style:none}@font-face{font-family:"Open Sans";font-style:normal;font-weight:700;font-display:swap;src:local("Open Sans Bold"),local("OpenSans-Bold"),url("//barra.brasil.gov.br/static/opensans-bold.woff") format("woff")}#barra-brasil{height:32px;background:#f1f1f1;font-weight:bold;font-size:12px;line-height:32px;font-family:"Open Sans",Arial,Helvetica,sans-serif;border-bottom:1px solid #dfdfdf;box-sizing:content-box}#barra-brasil a{text-decoration:none}body.contraste #barra-brasil,body.contraste .link-vlibras{background:#000 !important}body.contraste #barra-brasil .link-barra,body.contraste #barra-brasil .link-vlibras{color:#FF0 !important;text-decoration:underline}div#wrapper-barra-brasil{position:relative;margin:0 auto;width:100%;max-width:960px;height:100%}#barra-brasil .brasil-flag{float:left;padding:7px 0 6px;width:115px;border-right:2px solid #dfdfdf}#barra-brasil .brasil-flag .link-barra{display:block;padding-left:42px;width:43px;background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2226%22%20height%3D%2219%22%20viewBox%3D%220%200%201000%20700%22%3E%3Cpath%20fill%3D%22%2300923F%22%20d%3D%22M0%200h1000v700H0z%22%2F%3E%3Cpath%20fill%3D%22%23F8C300%22%20d%3D%22M500%2085L85%20350l415%20265%20415-265L500%2085z%22%2F%3E%3Ccircle%20fill%3D%22%2328166F%22%20cx%3D%22499%22%20cy%3D%22350%22%20r%3D%22174%22%2F%3E%3Cpath%20fill%3D%22%23FFF%22%20d%3D%22M395%20296c103%200%20199%2038%20272%20101%202-8%204-17%205-26-75-61-172-98-277-98-18%200-36%201-53%203-3%208-6%2016-9%2025%2020-3%2041-4%2063-4z%22%2F%3E%3C%2Fsvg%3E") 8px center no-repeat;text-transform:uppercase;line-height:19px}#barra-brasil #brasil-vlibras{position:absolute;top:0;right:0}#barra-brasil #brasil-vlibras .logo-vlibras{background:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyOSIgaGVpZ2h0PSIyOSI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTI2Ni4yNTAzOCwtMjMxLjY4NTk0KSI+PHBhdGggZD0ibTI5Mi40IDIzNy44Yy0wLjEgMC0wLjItMC4xLTAuMi0wLjIgMC0xLTEuOC0yLjYtNC4xLTIuNmwtMi41IDAtNC44IDMuNi00LjgtMy42LTIuNSAwYy0yLjQgMC00LjEgMS42LTQuMSAyLjYgMCAwLjEtMC4xIDAuMi0wLjIgMC4yLTAuMSAwLTAuMi0wLjEtMC4yLTAuMiAwLTEuNCAyLjEtMy4xIDQuNi0zLjFsMi40IDAgMC42LTAuNmMwLjEtMC4xIDAuMi0wLjEgMC4zIDBsMy45IDQuNiAzLjktNC42YzAuMS0wLjEgMC4yLTAuMSAwLjMgMGwwLjYgMC42IDIuNCAwYzIuNSAwIDQuNiAxLjcgNC42IDMuMSAwIDAuMS0wLjEgMC4yLTAuMiAwLjJ6bS0zIDEwLjRjLTAuMSAwLjctMC4yIDEtMC4zIDEgMCAwLjEtMC4xIDAuMS0wLjIgMC4xLTAuMSAwLTAuMS0wLjEtMC4xLTAuMiAwIDAgMC4xLTAuMyAwLjItMC45IDAuMS0wLjYtMC4yLTEuMS0wLjItMS4xIDAtMC4xIDAtMC4yIDAuMS0wLjIgMC4xIDAgMC4xIDAgMC4yIDAgMCAwIDAgMCAwIDAuMSAwIDAgMC4zIDAuNiAwLjIgMS4zem0tMSAwLjhjMCAwLjEtMC4xIDAuMS0wLjIgMC4xLTAuMSAwLTAuMS0wLjEtMC4xLTAuMiAwIDAgMC4xLTAuMyAwLjEtMC45IDAtMC42LTAuMy0xLjEtMC4zLTEuMSAwLTAuMSAwLTAuMiAwLjEtMC4yIDAuMSAwIDAuMSAwIDAuMiAwIDAgMCAwIDAgMCAwIDAgMCAwLjMgMC42IDAuMyAxLjMgMCAwLjctMC4xIDEtMC4yIDF6bS0wLjctMC40Yy0wLjMgMS4yLTAuOCAyLjItMC45IDIuNi0wLjIgMC40LTAuMyAwLjktMC4yIDIuMiAwIDEuMyAwIDIuMi0wLjEgMi41IDAgMC4yLTAuMiAwLjMtMC40IDAuMy0wLjIgMC0wLjMtMC4xLTAuNC0wLjQtMC4xLTAuNS0wLjMtMi42LTAuMy0yLjkgMC0wLjItMC4yLTAuNC0wLjMtMC40LTAuMSAwLTAuMiAwLjEtMC4zIDAuNS0wLjIgMC45LTAuNSAzLjEtMC42IDMuNi0wLjEgMC41LTAuMyAwLjYtMC40IDAuNi0wLjEgMC0wLjEgMC0wLjEgMCAwIDAgMCAwIDAgMC0wLjEgMC0wLjQgMC0wLjQtMC40IDAtMC41IDAuNC0zLjUgMC40LTMuOCAwLTAuMiAwLTAuMy0wLjEtMC4zLTAuMSAwLTAuMSAwLjEtMC4yIDAuMi0wLjMgMC40LTEuNyAyLjktMi4xIDMuNy0wLjEgMC4yLTAuMiAwLjItMC40IDAuMi0wLjEgMC0wLjIgMC0wLjMtMC4xLTAuMS0wLjEtMC4zLTAuNC0wLjItMC42IDAuMS0wLjIgMS41LTMuNCAxLjctMy44IDAuMS0wLjMgMC4xLTAuNS0wLjEtMC41LTAuMSAwLTAuMiAwLjEtMC40IDAuMi0wLjUgMC41LTIuNCAyLjUtMi43IDIuNy0wLjEgMC4xLTAuMiAwLjItMC4zIDAuMi0wLjEgMC0wLjItMC4xLTAuMy0wLjItMC4yLTAuMi0wLjItMC40LTAuMS0wLjYgMC4yLTAuMiAyLjYtMy4zIDMtNC4xIDAuNC0wLjcgMS0xLjktMC4yLTEuOS0wLjEgMC0wLjEgMC0wLjIgMC0wLjUgMC0wLjggMC4xLTEuMSAwLjEtMC41IDAtMC43LTAuMS0wLjgtMC4xLTAuMi0wLjEtMC42LTAuMy0wLjUtMC42IDAuMS0wLjIgMC43LTAuMSAxLTAuMiAwLjItMC4xIDAuMi0wLjEgMC4yLTAuMSAwIDAgMS4xLTAuMyAxLjgtMC43IDAuNy0wLjQgMi4zLTEuMSAyLjctMS4xIDAuMiAwIDAuNC0wLjEgMC42LTAuMSAwLjMgMCAwLjYgMCAwLjcgMC4xIDAuMyAwLjEgMC42IDAuOSAyIDEuNSAwIDAgMC42IDAuNiAwLjMgMS44em0tMTEuNyAyLjJjLTAuNC0xLjItMC42LTIuMy0wLjYtMi43LTAuMS0wLjQtMC4zLTAuOS0xLTEuOS0wLjctMS0xLjItMS44LTEuMy0yLjEtMC4xLTAuMiAwLjEtMC41IDAuNC0wLjUgMC4xIDAgMC4yIDAgMC4zIDAuMiAwLjQgMC40IDEuNyAyIDEuOSAyLjIgMC4xIDAuMSAwLjMgMC4yIDAuNCAwLjIgMC4yIDAgMC4yLTAuMSAwLjEtMC42LTAuMy0wLjktMS4zLTIuOS0xLjUtMy4zLTAuMy0wLjcgMC4xLTAuNyAwLjEtMC43IDAgMCAwLjEtMC4xIDAuMi0wLjEgMC4xIDAgMC4yIDAgMC4zIDAuMiAwLjIgMC40IDEuNiAzLjIgMS44IDMuNCAwLjEgMC4xIDAuMiAwLjIgMC4zIDAuMiAwLjEgMCAwLjEtMC4xIDAuMS0wLjMgMC0wLjUtMC4yLTMuMy0wLjMtNC4yIDAtMC4zIDAuMy0wLjUgMC41LTAuNSAwIDAgMCAwIDAgMCAwLjIgMCAwLjQgMC4yIDAuNSAwLjQgMC4xIDAuMiAwLjYgMy43IDAuNyA0LjIgMCAwLjIgMC4yIDAuNCAwLjMgMC40IDAuMSAwIDAuMi0wLjEgMC4zLTAuNCAwLjEtMC43IDAuNy0zLjQgMC43LTMuNyAwLTAuMyAwLjItMC40IDAuNC0wLjQgMCAwIDAuMSAwIDAuMSAwIDAuMiAwIDAuNCAwLjIgMC40IDAuNSAwIDAuMy0wLjMgMy43LTAuMiA0LjgtMC41IDAuMi0xIDAuNC0xLjMgMC40bDAgMCAwIDAtMC4yIDAuMWMwIDAtMC4xIDAtMC4yIDAtMC40IDAtMSAwLTEuMyAwLjYtMC4xIDAuMy0wLjIgMC42LTAuMSAwLjggMC4yIDAuNSAwLjggMC44IDAuOSAwLjkgMCAwIDAgMCAwIDAgMC4yIDAuMSAwLjUgMC4yIDEuMSAwLjIgMC4zIDAgMC42IDAgMS4xLTAuMS0wLjEgMC4yLTAuMiAwLjQtMC4zIDAuNmwtMC4xIDAuMWMtMC4yIDAuMy0wLjggMS4yLTEuOCAyLjUtMC4yIDAtMC4zIDAtMC41IDAtMC4zIDAtMC42IDAtMC45IDAuMSAwIDAtMC44LTAuMS0xLjMtMS4zem0wLjggMi4yYzAgMC4xLTAuMSAwLjEtMC4yIDAuMSAwIDAgMCAwLTAuMSAwIDAgMC0wLjYtMC4yLTEtMC44LTAuNC0wLjYtMC41LTAuOS0wLjUtMC45IDAtMC4xIDAtMC4yIDAuMS0wLjIgMC4xIDAgMC4yIDAgMC4yIDAuMSAwIDAgMC4xIDAuMyAwLjQgMC44IDAuNCAwLjUgMC45IDAuNyAwLjkgMC43IDAuMSAwIDAuMSAwLjEgMC4xIDAuMnptLTAuOSAwLjRjMCAwLjEtMC4xIDAuMS0wLjEgMC4xIDAgMC0wLjEgMC0wLjEgMCAwIDAtMC42LTAuMy0wLjktMC45LTAuNC0wLjYtMC40LTAuOS0wLjQtMSAwLTAuMSAwLjEtMC4yIDAuMS0wLjIgMC4xIDAgMC4yIDAuMSAwLjIgMC4xIDAgMCAwIDAuMyAwLjQgMC44IDAuMyAwLjUgMC44IDAuOCAwLjggMC44IDAuMSAwIDAuMSAwLjEgMC4xIDAuMnptMTQuOS0yMS44LTIwLjIgMGMtMi40IDAtNC40IDItNC40IDQuNGwwIDIwLjJjMCAyLjQgMiA0LjQgNC40IDQuNGwyMC4yIDBjMi40IDAgNC40LTIgNC40LTQuNGwwLTIwLjJjMC0yLjQtMi00LjQtNC40LTQuNCIgZmlsbD0iIzFjNGY5YyIvPjwvZz48L3N2Zz4K") 8px center no-repeat;position:absolute;top:0;right:0;width:43px;height:32px;display:block}#barra-brasil #brasil-vlibras .link-vlibras{height:0;top:32px;transition:0.1s;width:166px !important;display:block;border:2px solid #dfdfdf;color:#606060;visibility:hidden;position:relative}#barra-brasil #brasil-vlibras .link-vlibras a:hover,#barra-brasil #brasil-vlibras .link-vlibras a:focus,#barra-brasil #brasil-vlibras .link-vlibras a:active{visibility:visible;background:#f1f1f1;z-index:8}#barra-brasil #brasil-vlibras .logo-vlibras:hover+.link-vlibras,#barra-brasil #brasil-vlibras .logo-vlibras:active+.link-vlibras,#barra-brasil #brasil-vlibras .logo-vlibras:focus+.link-vlibras,#barra-brasil #brasil-vlibras .link-vlibras:hover,#barra-brasil #brasil-vlibras .link-vlibras:active,#barra-brasil #brasil-vlibras .link-vlibras:focus{width:132px !important;height:50px !important;display:inline-table;border:2px solid #dfdfdf;padding:10px 24px 10px 24px;visibility:visible;background:#f1f1f1;z-index:8;line-height:1.75em}#barra-brasil .eselo{position:absolute;top:0;right:44px;display:block;font-size:1.25em;color:blue}#barra-brasil .acesso-info{position:absolute;left:130px}#barra-brasil .list{position:absolute;top:0;right:40px;width:auto}#barra-brasil .list-eselo{right:90px !important}#barra-brasil .list .first{border-left:2px solid #dfdfdf}#barra-brasil .list-item{display:inline-block;height:32px;line-height:32px;border-right:2px solid #dfdfdf}#barra-brasil .list-item a{padding:8px 15px 8px 13px}#barra-brasil .link-barra{color:#606060}#barra-brasil #menu-icon{position:absolute;top:3px;border-top:15px double #606060;border-bottom:5px solid #606060;display:none;width:20px;right:5px}@media only screen and (max-width: 959px){#barra-brasil #menu-icon{display:inline-block;padding:5px 3px 0px 3px}#barra-brasil .list .first{border-left:1px solid #dfdfdf}#barra-brasil nav:hover #menu-icon,#barra-brasil nav:active #menu-icon,#barra-brasil nav:focus #menu-icon{background-color:#DDD}body.contraste #barra-brasil nav:hover #menu-icon,body.contraste #barra-brasil nav:active #menu-icon,body.contraste #barra-brasil nav:focus #menu-icon{background-color:#606060 !important}#barra-brasil ul.list,#barra-brasil ul.list:active,#barra-brasil ul.list:focus{overflow:hidden;height:0px;transition:0.3s;padding-top:32px;width:auto;position:absolute;z-index:9}#barra-brasil .list-item{display:block;text-align:center;height:30px;background:#EEE;border:1px solid #dfdfdf}#barra-brasil .list-item a{padding:8px 30px 8px 28px}body.contraste #barra-brasil .list-item{background:#000 !important}body.contraste #menu-icon{border-top:15px double #fff !important;border-bottom:5px solid #fff !important}#barra-brasil .list a:active li,#barra-brasil .list a:focus li,#barra-brasil .list a:hover li{background:#DDD}body.contraste #barra-brasil .list a:active li,body.contraste #barra-brasil .list a:focus li,body.contraste #barra-brasil .list a:hover li{background:#606060 !important}#barra-brasil nav:active ul.list,#barra-brasil nav:focus ul.list,#barra-brasil nav:hover ul.list{height:165px;transition:0.5s}div#wrapper-barra-brasil{overflow:visible}}@media screen and (min-width: 960px){#wrapper-barra-brasil{width:960px}}@media print{#barra-brasil .list{display:none}#barra-brasil .acesso-info .link-barra:after{content:" Barra GovBr"}}</style><style type="text/css" media="all">div#wrapper-footer-brasil{position:relative;overflow:hidden;margin:0 auto;width:auto;padding:0 20px;max-width:960px}#wrapper-footer-brasil .logo-acesso-footer{float:left;width:117px;background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20117%2049%22%20height%3D%2249%22%20width%3D%22117%22%20shape-rendering%3D%22geometricPrecision%22%20text-rendering%3D%22geometricPrecision%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%3C!%5BCDATA%5B.a%20%7Bfont%3A%20normal%20bold%2011px%20Open%20Sans%2C%20sans-serif%3B%7D%5D%5D%3E%3C%2Fstyle%3E%3C%2Fdefs%3E%3Ccircle%20cx%3D%2222%22%20cy%3D%2223%22%20r%3D%2222%22%20fill%3D%22%23f6a800%22%2F%3E%3Cpath%20style%3D%22stroke%3A%23f6a800%3Bstroke-width%3A4%3Bstroke-linejoin%3Around%3B%22%20d%3D%22m%204%2C43%203%2C-6%204%2C3%20z%22%2F%3E%3Ccircle%20r%3D%224.5%22%20cy%3D%2211%22%20cx%3D%2222%22%20fill%3D%22%2300692c%22%2F%3E%3Cg%20fill%3D%22%23fff%22%3E%3Ctext%20x%3D%2248%22%20y%3D%2222%22%3E%3Ctspan%20class%3D%22a%22%20y%3D%2218%22%3EAcesso%20%C3%A0%3C%2Ftspan%3E%3Ctspan%20class%3D%22a%22%20x%3D%2248%22%20y%3D%2231%22%3EInforma%C3%A7%C3%A3o%3C%2Ftspan%3E%3C%2Ftext%3E%3C%2Fg%3E%3Cpath%20style%3D%22stroke%3A%2300692c%3Bstroke-width%3A9%3Bstroke-linecap%3Around%3B%22%20d%3D%22m%2022%2C23%20v%2013%22%2F%3E%3C%2Fsvg%3E") center no-repeat;height:49px}#wrapper-footer-brasil .logo-governo-federal{float:right;width:149px;height:62px;background-repeat:no-repeat;background-position:bottom right;background-image:url("data:image/svg+xml,%3Csvg%20version%3D%221.1%22%20id%3D%22svg150%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220%22%20y%3D%220%22%20viewBox%3D%220%200%202000%20893.3%22%20style%3D%22enable-background%3Anew%200%200%202000%20893.3%22%20xml%3Aspace%3D%22preserve%22%3E%3Cstyle%3E.st0%2C.st1%2C.st2%2C.st3%7Bfill-rule%3Aevenodd%3Bclip-rule%3Aevenodd%3Bfill%3A%23fddb00%7D.st1%2C.st2%2C.st3%7Bfill%3A%2301d101%7D.st2%2C.st3%7Bfill%3A%234e4e4e%7D.st3%7Bfill%3A%23193dff%7D.st4%7Bfill%3Ared%7D.st4%2C.st5%7Bfill-rule%3Aevenodd%3Bclip-rule%3Aevenodd%7D%3C%2Fstyle%3E%3Cg%20id%3D%22g148%22%20transform%3D%22matrix(.77438%200%200%20.77438%20-1791.426%20-230.692)%22%3E%3Cg%20id%3D%22g146%22%20transform%3D%22translate(1982.62)%22%3E%3Cpath%20id%3D%22path2%22%20class%3D%22st0%22%20d%3D%22m1475.7%20551.9%20377.3%20629.5h-754.5l377.2-629.5z%22%2F%3E%3Cg%20id%3D%22g6%22%20transform%3D%22matrix(1.08397%200%200%201%20-324.434%200)%22%3E%3Cpath%20id%3D%22path4%22%20class%3D%22st1%22%20d%3D%22m1046%20551.9%20377.3%20629.5H1046V551.9z%22%2F%3E%3C%2Fg%3E%3Cg%20id%3D%22g10%22%20transform%3D%22translate(-1982.62)%22%3E%3Cpath%20id%3D%22path8%22%20class%3D%22st2%22%20d%3D%22m3138.6%201085.3-57.5%2096H3201l-62.4-96z%22%2F%3E%3C%2Fg%3E%3Cg%20id%3D%22g14%22%20transform%3D%22translate(31.164%2057.068)%20scale(1.20387)%22%3E%3Cpath%20id%3D%22path12%22%20class%3D%22st3%22%20d%3D%22M1199.9%20742.2c105.8%200%20191.7%2085.9%20191.7%20191.7h-383.4c0-105.8%2085.9-191.7%20191.7-191.7z%22%2F%3E%3C%2Fg%3E%3Cg%20id%3D%22g18%22%20transform%3D%22translate(-1982.62)%22%3E%3Cpath%20id%3D%22path16%22%20class%3D%22st3%22%20d%3D%22M3039.4%20551.9c104.1%200%20188.6%2084.5%20188.6%20188.6s-84.5%20188.6-188.6%20188.6l-189.7-36.9-57.7-340.3h247.4z%22%2F%3E%3C%2Fg%3E%3Cg%20id%3D%22g22%22%20transform%3D%22matrix(1.02029%200%200%20.99172%20-29.368%205.752)%22%3E%3Cpath%20id%3D%22rect20%22%20class%3D%22st3%22%20d%3D%22M2670.3%20971.4h214v214h-214z%22%2F%3E%3C%2Fg%3E%3Cg%20id%3D%22g26%22%20transform%3D%22matrix(1.02029%200%200%20.99172%20-111.71%205.752)%22%3E%3Cpath%20id%3D%22rect24%22%20class%3D%22st2%22%20d%3D%22M2537.1%20971.4h214v214h-214z%22%2F%3E%3C%2Fg%3E%3Cg%20id%3D%22g30%22%20transform%3D%22matrix(1.02029%200%200%201.94506%20-111.71%20-736.926)%22%3E%3Cpath%20id%3D%22rect28%22%20class%3D%22st0%22%20d%3D%22M2537.1%20663.1h214v214h-214z%22%2F%3E%3C%2Fg%3E%3Cg%20id%3D%22g34%22%20transform%3D%22matrix(1.02029%200%200%202.93679%20-208.116%20-1346.21)%22%3E%3Cpath%20id%3D%22rect32%22%20class%3D%22st1%22%20d%3D%22M2381%20646.7h214v214h-214z%22%2F%3E%3C%2Fg%3E%3Cg%20id%3D%22g38%22%20transform%3D%22translate(-1982.62)%22%3E%3Cpath%20id%3D%22path36%22%20class%3D%22st0%22%20d%3D%22M3879.3%201142.3c-49.5-36.5-81.6-95.2-81.6-161.4s32.1-124.9%2081.6-161.4v-39h118.8c110.6%200%20200.4%2089.8%20200.4%20200.4s-89.8%20200.4-200.4%20200.4h-118.8v-39z%22%2F%3E%3C%2Fg%3E%3Cg%20id%3D%22g42%22%20transform%3D%22translate(-1982.62)%22%3E%3Cpath%20id%3D%22path40%22%20class%3D%22st1%22%20d%3D%22m3946.7%20741.4-7.7%2039.1v44.8h-77.6c-75.4%200-136.7-61.3-136.7-136.7%200-75.4%2061.3-136.7%20136.7-136.7h77.6l7.7%2039.1v150.4z%22%2F%3E%3C%2Fg%3E%3Cg%20id%3D%22g46%22%20transform%3D%22matrix(1%200%200%201.00463%200%20-2.516)%22%3E%3Cpath%20id%3D%22rect44%22%20class%3D%22st3%22%20d%3D%22M1956.4%20551.8H2184v227.6h-227.6z%22%2F%3E%3C%2Fg%3E%3Cg%20id%3D%22g50%22%20transform%3D%22matrix(.94166%200%200%201.56462%20-17.443%20-155.918)%22%3E%3Cpath%20id%3D%22rect48%22%20class%3D%22st4%22%20d%3D%22M1868.5%20627.1h227.6v227.6h-227.6z%22%2F%3E%3C%2Fg%3E%3Cg%20id%3D%22g54%22%20transform%3D%22translate(-1982.62)%22%3E%3Cpath%20id%3D%22path52%22%20class%3D%22st4%22%20d%3D%22M2603.4%20804.1c104.1%200%20188.6%2084.5%20188.6%20188.6s-84.5%20188.6-188.6%20188.6h-290V804.1h290z%22%2F%3E%3C%2Fg%3E%3Cg%20id%3D%22g58%22%20transform%3D%22translate(-1982.62)%22%3E%3Cpath%20id%3D%22path56%22%20class%3D%22st3%22%20d%3D%22M2583.4%20551.9c69.6%200%20126.1%2056.5%20126.1%20126.1s-56.5%20126.1-126.1%20126.1H2432l90.6-252.2h60.8z%22%2F%3E%3C%2Fg%3E%3Cg%20id%3D%22g88%22%20transform%3D%22translate(-2658.59%20-1693.18)%20scale(5.57805)%22%3E%3Cpath%20id%3D%22path60%22%20d%3D%22M584.4%20366.8v4.6h5.8c-.5%201.4-2%202.5-4.3%202.5-3.3%200-5.5-2.4-5.5-5.6%200-3.3%202.3-5.8%205.4-5.8%202%200%203.8%201%204.7%202.7l5-3c-2-3.3-5.7-5.4-9.6-5.4-6.3%200-11.3%205-11.3%2011.4%200%206.3%205%2011.3%2011.4%2011.3%206%200%2010.5-4.4%2010.5-11.1v-1.7l-12.1.1z%22%2F%3E%3Cpath%20id%3D%22path62%22%20d%3D%22M616.4%20379.6c6.3%200%2011.3-5%2011.3-11.3s-5-11.3-11.3-11.3c-6.3%200-11.4%205-11.4%2011.3s5%2011.3%2011.4%2011.3zm0-6c-2.9%200-5.1-2.3-5.1-5.3%200-3.1%202.2-5.3%205.1-5.3%202.8%200%205%202.3%205%205.3s-2.2%205.3-5%205.3z%22%2F%3E%3Cpath%20id%3D%22path64%22%20d%3D%22m649.4%20357.5-5.1%2013.3-5-13.3H633l8.4%2021.6h5.8l8.5-21.6h-6.3z%22%2F%3E%3Cpath%20id%3D%22path66%22%20d%3D%22M678.6%20362.7v-5.3h-15.5V379h15.5v-5.3H669v-3.2h6.4V366H669v-3.2l9.6-.1z%22%2F%3E%3Cpath%20id%3D%22path68%22%20d%3D%22M699.9%20379.1h6.5l-4.8-8.3c2.3-1.2%203.8-3.5%203.8-6.3%200-4-3.2-7-7.5-7h-10.5v21.6h5.8v-7.5h2.4l4.3%207.5zm-6.7-16.5h4.1c1.4%200%202.2%201%202.2%202s-.9%202-2.2%202h-4.1v-4z%22%2F%3E%3Cpath%20id%3D%22path70%22%20d%3D%22M727.9%20357.5v11.4l-8.7-11.4h-4.9v21.6h5.8v-11.4l8.7%2011.4h4.9v-21.6h-5.8z%22%2F%3E%3Cpath%20id%3D%22path72%22%20d%3D%22M753.3%20379.6c6.3%200%2011.3-5%2011.3-11.3s-5-11.3-11.3-11.3c-6.3%200-11.4%205-11.4%2011.3s5%2011.3%2011.4%2011.3zm0-6c-2.9%200-5.1-2.3-5.1-5.3%200-3.1%202.2-5.3%205.1-5.3%202.8%200%205%202.3%205%205.3s-2.2%205.3-5%205.3z%22%2F%3E%3Cpath%20id%3D%22path74%22%20d%3D%22M802.5%20362.6v-5.2H787V379h5.9v-7.9h6.4v-4.9h-6.4v-3.7h9.6z%22%2F%3E%3Cpath%20id%3D%22path76%22%20d%3D%22M826.5%20362.7v-5.3H811V379h15.5v-5.3h-9.6v-3.2h6.4V366h-6.4v-3.2l9.6-.1z%22%2F%3E%3Cpath%20id%3D%22path78%22%20d%3D%22M844.2%20357.5h-8.8v21.6h8.8c6.6%200%2011.5-4.6%2011.5-10.8%200-6.2-4.9-10.8-11.5-10.8zm-.3%2016h-2.6v-10.4h2.6c3.4%200%205.8%202%205.8%205.2%200%203.1-2.4%205.2-5.8%205.2z%22%2F%3E%3Cpath%20id%3D%22path80%22%20d%3D%22M879.5%20362.7v-5.3H864V379h15.5v-5.3h-9.6v-3.2h6.4V366h-6.4v-3.2l9.6-.1z%22%2F%3E%3Cpath%20id%3D%22path82%22%20d%3D%22M900.8%20379.1h6.5l-4.8-8.3c2.3-1.2%203.8-3.5%203.8-6.3%200-4-3.2-7-7.5-7h-10.5v21.6h5.8v-7.5h2.4l4.3%207.5zm-6.7-16.5h4.1c1.4%200%202.2%201%202.2%202s-.9%202-2.2%202h-4.1v-4z%22%2F%3E%3Cpath%20id%3D%22path84%22%20d%3D%22M931.2%20379.1h6l-9.1-21.6h-5.5l-9%2021.6h6.1l1.5-3.7h8.6l1.4%203.7zm-8-8.9%202.2-5.3%202.2%205.3h-4.4z%22%2F%3E%3Cpath%20id%3D%22path86%22%20d%3D%22M950.8%20373.5v-16.1h-6.1V379h15.2v-5.6h-9.1z%22%2F%3E%3C%2Fg%3E%3Cg%20id%3D%22g92%22%20transform%3D%22translate(-1982.62)%22%3E%3Cpath%20id%3D%22path90%22%20class%3D%22st2%22%20d%3D%22m3724.7%20996.3%20110.9%20185.1h-110.9V996.3z%22%2F%3E%3C%2Fg%3E%3Cg%20id%3D%22g128%22%20transform%3D%22translate(-1704.56%20-761.458)%20scale(4.10943)%22%3E%3Cpath%20id%3D%22path94%22%20class%3D%22st5%22%20d%3D%22M558.4%20528.9c1.2%200%202.2-.2%203-.7.8-.5%201.4-1.1%201.9-1.8s.8-1.6%201-2.6c.2-1%20.3-2%20.3-3v-11.5h3.6v11.5c0%201.5-.2%203-.5%204.4-.4%201.4-.9%202.6-1.7%203.6s-1.8%201.8-3%202.4c-1.2.6-2.7.9-4.5.9-1.8%200-3.3-.3-4.6-.9-1.2-.6-2.2-1.5-3-2.5-.8-1-1.3-2.3-1.7-3.6-.3-1.4-.5-2.8-.5-4.2v-11.5h3.6v11.5c0%201%20.1%202%20.3%203s.5%201.8%201%202.6%201.1%201.4%201.9%201.8c.8.4%201.7.6%202.9.6z%22%2F%3E%3Cpath%20id%3D%22path96%22%20class%3D%22st5%22%20d%3D%22M583.3%20516.1V532h-3.6v-22.6h2.8l12.9%2016.3v-16.3h3.6V532h-3l-12.7-15.9z%22%2F%3E%3Cpath%20id%3D%22rect98%22%20class%3D%22st5%22%20d%3D%22M610.9%20509.4h3.6V532h-3.6z%22%2F%3E%3Cpath%20id%3D%22path100%22%20class%3D%22st5%22%20d%3D%22M633%20509.4h3.1L645%20532h-3.8l-2.4-6.1h-8.7l-2.4%206.1H624l9-22.6zm5.1%2013.8-3.6-9.7-3.8%209.7h7.4zm-1.6-16.7c-.5%200-.9-.1-1.3-.2s-.7-.3-1-.5c-.3-.2-.6-.3-.9-.5-.3-.1-.6-.2-1-.2s-.6.1-.8.2-.4.3-.5.5c-.1.2-.2.4-.2.5v.3h-2c0-.2.1-.5.2-.9s.3-.8.6-1.2c.3-.4.6-.8%201-1.1.4-.3%201-.5%201.6-.5.5%200%20.9.1%201.2.2.4.1.7.3%201%20.5s.6.3.9.5c.3.1.7.2%201%20.2.4%200%20.7-.1.9-.2.2-.1.4-.3.5-.5.1-.2.2-.4.2-.5v-.3h2c0%20.1-.1.4-.2.8s-.3.8-.6%201.2c-.3.4-.6.8-1.1%201.1-.2.4-.8.6-1.5.6z%22%2F%3E%3Cpath%20id%3D%22path102%22%20class%3D%22st5%22%20d%3D%22M663.1%20532.1c-1.6%200-3.1-.3-4.4-1-1.3-.6-2.5-1.5-3.4-2.6-1-1.1-1.7-2.3-2.2-3.7-.5-1.4-.8-2.8-.8-4.2%200-1.5.3-2.9.8-4.3.6-1.4%201.3-2.6%202.3-3.7%201-1.1%202.1-1.9%203.4-2.5%201.3-.6%202.8-.9%204.3-.9%201.6%200%203.1.3%204.4%201%201.3.7%202.5%201.5%203.4%202.6.9%201.1%201.7%202.3%202.2%203.7.5%201.4.8%202.8.8%204.2%200%201.5-.3%202.9-.8%204.3s-1.3%202.6-2.3%203.6-2.1%201.9-3.5%202.5c-1.2.7-2.6%201-4.2%201zm-7.2-11.4c0%201.1.2%202.1.5%203.1s.8%201.9%201.4%202.6c.6.8%201.4%201.4%202.3%201.8.9.5%201.9.7%203%20.7s2.2-.2%203-.7%201.6-1.1%202.2-1.9%201.1-1.7%201.4-2.6c.3-1%20.5-2%20.5-3%200-1.1-.2-2.1-.5-3.1s-.8-1.9-1.4-2.6-1.4-1.4-2.3-1.8-1.9-.7-2.9-.7c-1.1%200-2.2.2-3.1.7s-1.6%201.1-2.3%201.9-1.1%201.6-1.4%202.6c-.2%201-.4%202-.4%203z%22%2F%3E%3Cpath%20id%3D%22path104%22%20class%3D%22st5%22%20d%3D%22M714.6%20528.8v3.1h-15.5v-22.6h15.2v3.1h-11.6v6.4h10.1v3h-10.1v6.9h11.9z%22%2F%3E%3Cpath%20id%3D%22path106%22%20class%3D%22st5%22%20d%3D%22M739.7%20532v-22.6h9.8c1%200%202%20.2%202.8.6.9.4%201.6%201%202.2%201.7.6.7%201.1%201.5%201.4%202.4s.5%201.8.5%202.7c0%20.8-.1%201.5-.3%202.2s-.5%201.3-.9%201.9c-.4.6-.8%201.1-1.4%201.5-.6.4-1.2.8-1.8%201l5.3%208.6h-4l-4.9-7.9h-5.2v7.9h-3.5zm3.5-11h6.2c.5%200%201-.1%201.4-.3.4-.2.8-.5%201.1-.9s.5-.8.7-1.4c.2-.5.3-1%20.3-1.6%200-.6-.1-1.1-.3-1.6s-.5-1-.8-1.3c-.3-.4-.7-.7-1.1-.9-.4-.2-.9-.3-1.4-.3h-6l-.1%208.3z%22%2F%3E%3Cpath%20id%3D%22path108%22%20class%3D%22st5%22%20d%3D%22M783%20528.8v3.1h-15.5v-22.6h15.2v3.1H771v6.4h10.1v3H771v6.9h12z%22%2F%3E%3Cpath%20id%3D%22path110%22%20class%3D%22st5%22%20d%3D%22M791.5%20520.5c0-1.4.2-2.7.7-4.1.5-1.3%201.2-2.6%202.1-3.6.9-1.1%202.1-1.9%203.5-2.6%201.4-.7%202.9-1%204.6-1%202.1%200%203.8.5%205.3%201.4%201.5.9%202.6%202.1%203.3%203.6l-2.8%201.9c-.3-.7-.7-1.3-1.1-1.7-.4-.5-.9-.8-1.5-1.1-.5-.3-1.1-.5-1.7-.6-.6-.1-1.1-.2-1.7-.2-1.2%200-2.2.2-3.1.7s-1.6%201.1-2.2%201.9c-.6.8-1.1%201.7-1.4%202.6-.3%201-.5%202-.5%202.9%200%201.1.2%202.2.5%203.1.4%201%20.9%201.9%201.5%202.6.6.8%201.4%201.4%202.3%201.8s1.9.7%202.9.7c.6%200%201.1-.1%201.7-.2.6-.1%201.1-.4%201.7-.7.5-.3%201-.7%201.5-1.2s.8-1%201.1-1.7l3%201.7c-.4.8-.9%201.6-1.5%202.2-.7.6-1.4%201.2-2.2%201.6s-1.7.8-2.6%201c-.9.2-1.8.3-2.7.3-1.6%200-3-.3-4.4-1-1.3-.7-2.4-1.6-3.4-2.7s-1.7-2.3-2.2-3.7c-.4-1-.7-2.4-.7-3.9z%22%2F%3E%3Cpath%20id%3D%22path112%22%20class%3D%22st5%22%20d%3D%22M830.7%20532.1c-1.6%200-3.1-.3-4.4-1-1.3-.6-2.5-1.5-3.4-2.6-1-1.1-1.7-2.3-2.2-3.7-.5-1.4-.8-2.8-.8-4.2%200-1.5.3-2.9.8-4.3.6-1.4%201.3-2.6%202.3-3.7%201-1.1%202.1-1.9%203.4-2.5%201.3-.6%202.8-.9%204.3-.9%201.6%200%203.1.3%204.4%201%201.3.7%202.5%201.5%203.4%202.6s1.7%202.3%202.2%203.7.8%202.8.8%204.2c0%201.5-.3%202.9-.8%204.3s-1.3%202.6-2.3%203.6-2.1%201.9-3.5%202.5c-1.2.7-2.7%201-4.2%201zm-7.2-11.4c0%201.1.2%202.1.5%203.1s.8%201.9%201.4%202.6c.6.8%201.4%201.4%202.3%201.8.9.5%201.9.7%203%20.7s2.2-.2%203-.7%201.6-1.1%202.2-1.9%201.1-1.7%201.4-2.6c.3-1%20.5-2%20.5-3%200-1.1-.2-2.1-.5-3.1s-.8-1.9-1.4-2.6-1.4-1.4-2.3-1.8-1.9-.7-2.9-.7c-1.1%200-2.2.2-3.1.7s-1.6%201.1-2.3%201.9-1.1%201.6-1.4%202.6c-.3%201-.4%202-.4%203z%22%2F%3E%3Cpath%20id%3D%22path114%22%20class%3D%22st5%22%20d%3D%22M855.5%20516.1V532H852v-22.6h2.8l12.9%2016.3v-16.3h3.6V532h-3l-12.8-15.9z%22%2F%3E%3Cpath%20id%3D%22path116%22%20class%3D%22st5%22%20d%3D%22M896.5%20514.7c-.2-.2-.5-.5-.9-.7-.4-.3-.9-.5-1.4-.7-.5-.2-1.1-.4-1.8-.6-.6-.1-1.3-.2-2-.2-1.5%200-2.6.3-3.3.8s-1.1%201.3-1.1%202.3c0%20.6.1%201%20.3%201.4.2.3.6.7%201%20.9.5.3%201%20.5%201.7.7.7.2%201.5.4%202.4.7%201.1.3%202.2.6%203.1.9.9.3%201.7.8%202.3%201.2.6.5%201.1%201.1%201.5%201.8.4.7.5%201.6.5%202.6%200%201.1-.2%202.1-.7%203s-1%201.5-1.8%202-1.6.9-2.6%201.1c-1%20.2-2.1.4-3.2.4-1.7%200-3.4-.3-5-.8s-3-1.3-4.3-2.3l1.6-3.1c.3.3.7.6%201.2.9.5.3%201.1.7%201.8.9.7.3%201.4.5%202.2.7.8.2%201.6.3%202.5.3%201.4%200%202.5-.2%203.2-.7.8-.5%201.1-1.2%201.1-2.2%200-.6-.1-1-.4-1.4-.3-.4-.7-.7-1.2-1-.5-.3-1.2-.5-1.9-.8-.8-.2-1.6-.5-2.6-.7-1.1-.3-2.1-.6-2.9-.9-.8-.3-1.5-.7-2.1-1.2s-1-1-1.3-1.6c-.3-.6-.4-1.4-.4-2.3%200-1.1.2-2.1.6-2.9.4-.9%201-1.6%201.7-2.2s1.6-1%202.6-1.3c1-.3%202.1-.4%203.2-.4%201.5%200%202.9.2%204.2.7%201.3.5%202.4%201.1%203.4%201.8l-1.2%202.9z%22%2F%3E%3Cpath%20id%3D%22path118%22%20class%3D%22st5%22%20d%3D%22M925.8%20512.5h-7.5V532h-3.6v-19.4h-7.5v-3.1h18.6v3z%22%2F%3E%3Cpath%20id%3D%22path120%22%20class%3D%22st5%22%20d%3D%22M935.6%20532v-22.6h9.8c1%200%202%20.2%202.8.6.9.4%201.6%201%202.2%201.7.6.7%201.1%201.5%201.4%202.4s.5%201.8.5%202.7c0%20.8-.1%201.5-.3%202.2s-.5%201.3-.9%201.9c-.4.6-.8%201.1-1.4%201.5-.6.4-1.2.8-1.8%201l5.3%208.6h-4l-4.9-7.9h-5.2v7.9h-3.5zm3.6-11h6.2c.5%200%201-.1%201.4-.3.4-.2.8-.5%201.1-.9.3-.4.5-.8.7-1.4.2-.5.3-1%20.3-1.6%200-.6-.1-1.1-.3-1.6s-.5-1-.8-1.3c-.3-.4-.7-.7-1.1-.9-.4-.2-.9-.3-1.4-.3h-6l-.1%208.3z%22%2F%3E%3Cpath%20id%3D%22path122%22%20class%3D%22st5%22%20d%3D%22M972.8%20528.9c1.2%200%202.2-.2%203-.7.8-.5%201.4-1.1%201.9-1.8s.8-1.6%201-2.6c.2-1%20.3-2%20.3-3v-11.5h3.6v11.5c0%201.5-.2%203-.5%204.4-.4%201.4-.9%202.6-1.7%203.6-.8%201-1.8%201.8-3%202.4-1.2.6-2.7.9-4.5.9-1.8%200-3.3-.3-4.6-.9-1.2-.6-2.2-1.5-3-2.5-.8-1-1.3-2.3-1.7-3.6-.3-1.4-.5-2.8-.5-4.2v-11.5h3.6v11.5c0%201%20.1%202%20.3%203s.5%201.8%201%202.6%201.1%201.4%201.9%201.8c.8.4%201.8.6%202.9.6z%22%2F%3E%3Cpath%20id%3D%22path124%22%20class%3D%22st5%22%20d%3D%22M1029%20509.4h3.1l8.9%2022.6h-3.8l-2.4-6.1h-8.7l-2.4%206.1h-3.8l9.1-22.6zm5.2%2013.8-3.6-9.7-3.8%209.7h7.4zm-1.7-16.7c-.5%200-.9-.1-1.3-.2s-.7-.3-1-.5c-.3-.2-.6-.3-.9-.5s-.6-.2-1-.2-.6.1-.8.2c-.2.1-.4.3-.5.5-.1.2-.2.4-.2.5v.3h-2c0-.2.1-.5.2-.9s.3-.8.6-1.2c.3-.4.6-.8%201-1.1.4-.3%201-.5%201.6-.5.5%200%20.9.1%201.2.2.3.1.7.3%201%20.5s.6.3.9.5c.3.1.7.2%201%20.2s.7-.1.9-.2c.2-.1.4-.3.5-.5.1-.2.2-.4.2-.5v-.3h2c0%20.1-.1.4-.2.8s-.3.8-.6%201.2c-.3.4-.6.8-1.1%201.1-.2.4-.8.6-1.5.6z%22%2F%3E%3Cpath%20id%3D%22path126%22%20class%3D%22st5%22%20d%3D%22M1059.1%20532.1c-1.6%200-3.1-.3-4.4-1s-2.5-1.5-3.4-2.6c-1-1.1-1.7-2.3-2.2-3.7-.5-1.4-.8-2.8-.8-4.2%200-1.5.3-2.9.8-4.3.6-1.4%201.3-2.6%202.3-3.7%201-1.1%202.1-1.9%203.4-2.5%201.3-.6%202.8-.9%204.3-.9%201.6%200%203.1.3%204.4%201%201.3.7%202.5%201.5%203.4%202.6s1.7%202.3%202.2%203.7.8%202.8.8%204.2c0%201.5-.3%202.9-.8%204.3s-1.3%202.6-2.3%203.6c-1%201-2.1%201.9-3.5%202.5-1.2.7-2.6%201-4.2%201zm-7.1-11.4c0%201.1.2%202.1.5%203.1s.8%201.9%201.4%202.6c.6.8%201.4%201.4%202.3%201.8.9.5%201.9.7%203%20.7s2.2-.2%203-.7c.9-.5%201.6-1.1%202.2-1.9s1.1-1.7%201.4-2.6c.3-1%20.5-2%20.5-3%200-1.1-.2-2.1-.5-3.1s-.8-1.9-1.4-2.6c-.6-.8-1.4-1.4-2.3-1.8-.9-.5-1.9-.7-2.9-.7-1.1%200-2.2.2-3.1.7s-1.6%201.1-2.3%201.9-1.1%201.6-1.4%202.6c-.3%201-.4%202-.4%203z%22%2F%3E%3C%2Fg%3E%3Cg%20id%3D%22g132%22%20transform%3D%22translate(-1982.62)%22%3E%3Cpath%20id%3D%22path130%22%20class%3D%22st5%22%20d%3D%22M4400.1%201425.4c-5.9-.2-11.3-1.6-16.3-4.2-5.4-2.8-10.1-6.4-14-10.9-3.9-4.5-6.9-9.6-9.1-15.3-2.2-5.7-3.3-11.5-3.3-17.5%200-5.6%201-11.1%203-16.7%202-5.5%205-10.5%208.8-14.9%203.9-4.4%208.6-8%2014.2-10.7%205.6-2.7%2011.9-4.1%2019-4.1%208.5%200%2015.7%201.9%2021.7%205.6%206%203.7%2010.6%208.6%2013.6%2014.6l-11.5%207.7c-1.3-2.8-2.9-5.1-4.7-7.1-1.8-1.9-3.8-3.4-6-4.6-2.2-1.1-4.4-1.9-6.8-2.4-2.4-.5-4.6-.7-6.8-.7-4.9%200-9.2%201-12.8%202.9-3.7%202-6.7%204.6-9.2%207.8-2.5%203.2-4.4%206.8-5.6%2010.9-1.3%204-1.9%208-1.9%2012%200%204.5.7%208.8%202.2%2012.9%201.5%204.1%203.6%207.7%206.2%2010.9%202.7%203.1%205.8%205.6%209.5%207.5%203.7%201.9%207.7%202.8%2012%202.8%202.3%200%204.6-.3%207-.8%202.4-.6%204.7-1.5%206.9-2.7%202.2-1.3%204.3-2.9%206.1-4.8%201.9-1.9%203.4-4.2%204.6-6.9l12.2%206.9c-1.5%203.5-3.6%206.6-6.3%209.2-2.7%202.7-5.8%204.9-9.1%206.7-3.4%201.8-7%203.2-10.8%204.2-2.1.5-4.3.9-6.4%201.2%204.2%205.7%2010.9%2011.9%206.9%2019.7-5.6%2011-22.9%205.3-28.3%202.9l3.6-8.2s9.8%207.2%2016.3%202.4c6.5-4.4-.1-9.8-4.9-16.3z%22%2F%3E%3C%2Fg%3E%3Cg%20id%3D%22g136%22%20transform%3D%22matrix(1%200%200%20.62835%200%20258.324)%22%3E%3Cpath%20id%3D%22rect134%22%20class%3D%22st0%22%20d%3D%22M330.8%20840.5H551v628.4H330.8z%22%2F%3E%3C%2Fg%3E%3Cg%20id%3D%22g140%22%20transform%3D%22matrix(1%200%200%20.40133%200%20273.834)%22%3E%3Cpath%20id%3D%22rect138%22%20class%3D%22st1%22%20d%3D%22M330.8%20692.8H551v628.4H330.8z%22%2F%3E%3C%2Fg%3E%3Cg%20id%3D%22g144%22%20transform%3D%22matrix(.64967%200%200%20.59934%2067.494%20183.368)%22%3E%3Cpath%20id%3D%22path142%22%20class%3D%22st0%22%20d%3D%22m1142%20614.8%20377.3%20629.5H1142V614.8z%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E")}body.contraste #footer-brasil{background:#000 !important}@media screen and (min-width: 960px){#wrapper-footer-brasil{width:960px}}@media print{#wrapper-footer-brasil{border-top:2px solid #dfdfdf}#wrapper-footer-brasil:before{content:"Barra GovBr";color:#606060;font-size:12px;font-family:"Open Sans",Arial,Helvetica,sans-serif}}</style><style>[vw] [vw-access-button]{display:none;flex-direction:row-reverse;width:40px;height:40px;cursor:pointer;overflow:hidden;position:absolute;border-radius:8px;transition:all .5s ease;right:0;left:auto}[vw] [vw-access-button] img{max-height:40px;transition:all .5s ease;border-radius:8px;opacity:1 !important;visibility:visible !important}[vw] [vw-access-button] .access-button{width:40px;height:40px;z-index:1}[vw] [vw-access-button] .pop-up{position:absolute;height:40px;min-width:150px;z-index:0;left:0;right:auto}[vw] [vw-access-button]:hover{width:200px}[vw] [vw-access-button].isLeft{flex-direction:row;left:0;right:auto}[vw] [vw-access-button].isLeft .pop-up{left:auto;right:0}[vw] [vw-access-button].isTopOrBottom:hover{bottom:-20px;top:0;margin-right:-80px}[vw] [vw-access-button].active{display:flex}
+</style><style>[vw].left [vw-plugin-wrapper]{float:left}[vw] [vw-plugin-wrapper]{position:relative;display:none;width:300px;height:100%;float:right;background:white;-webkit-box-shadow:0px 0px 15px rgba(0,0,0,0.2);-moz-box-shadow:0px 0px 15px rgba(0,0,0,0.2);box-shadow:0px 0px 15px rgba(0,0,0,0.2);border-radius:12px;-moz-border-radius:12px;-webkit-border-radius:12px}[vw] [vw-plugin-wrapper].active{display:-webkit-flex;display:flex;flex-direction:column;-webkit-flex-direction:column;height:450px;max-width:100%;min-height:100%}
+</style><style>div[vw]{position:fixed;max-width:95vw;min-height:40px;min-width:40px;right:0;top:50%;transform:translateY(-50%);z-index:2147483647 !important;display:none;margin:10px !important}div[vw].enabled{display:block}div[vw].active{margin-top:-285px}div[vw].left{left:0;right:initial}
+</style></head>
+<body><div id="barra-brasil"><div id="wrapper-barra-brasil"> <div class="brasil-flag"><a href="https://gov.br/" class="link-barra">Brasil</a></div> <nav> <ul id="lista-barra-brasil" class="list"> <li><a href="https://servidores.blumenau.ufsc.br/servidores-docentes/#" id="menu-icon"></a></li> <li class="list-item"><a href="http://www.gov.br/economia/pt-br/canais_atendimento/ouvidoria/simplifique" class="link-barra">Simplifique!</a></li> <li class="list-item"><a href="https://www.gov.br/secom/pt-br/acesso-a-informacao/comunicabr/" class="link-barra">Comunica BR</a></li> <li class="list-item"><a href="https://www.gov.br/pt-br/participacao-social/" class="link-barra">Participe</a></li> <li class="list-item"><a href="http://www.gov.br/acessoainformacao/" class="link-barra">Acesso à informação</a></li> <li class="list-item"><a href="http://www.planalto.gov.br/legislacao" class="link-barra">Legislação</a></li> <li class="list-item last last-item"><a href="https://gov.br/pt-br/canais-do-executivo-federal" class="link-barra">Canais</a></li> </ul> </nav> <span id="brasil-vlibras"><a class="logo-vlibras" id="logovlibras" href="https://servidores.blumenau.ufsc.br/servidores-docentes/#"></a><span class="link-vlibras"><img src="https://barra.brasil.gov.br/imagens/vlibras.gif" class="barralazy" data-src="//barra.brasil.gov.br/imagens/vlibras.gif" width="132" height="116">&nbsp;<br>O conteúdo desse portal pode ser acessível em Libras usando o <a href="http://www.vlibras.gov.br/">VLibras</a></span></span> </div></div>
+
+<div id="wrapper">
+    <header id="header">
+            <div id="header_grid" class="grid">
+            <div>
+                <ul id="shortcuts" class="hide_mobile">
+                    <li><a accesskey="1" href="https://servidores.blumenau.ufsc.br/servidores-docentes/#conteudo">Ir para o conteúdo <span>1</span></a></li>
+                    <li><a accesskey="2" href="https://servidores.blumenau.ufsc.br/servidores-docentes/#menu">Ir para o menu <span>2</span></a></li>
+                    <li><a accesskey="3" href="https://servidores.blumenau.ufsc.br/servidores-docentes/#busca">Ir para a busca <span>3</span></a></li>
+                    <li><a accesskey="4" href="https://servidores.blumenau.ufsc.br/servidores-docentes/#rodape">Ir para o rodapé <span>4</span></a></li>
+                </ul>
+                <ul id="topbar">
+                    <li><a accesskey="7" href="http://ufsc.br/acessibilidade/">Acessibilidade</a></li>
+                    <li><a accesskey="8" href="https://servidores.blumenau.ufsc.br/servidores-docentes/#" id="contrast">Alto Contraste</a></li>
+                    <li><a accesskey="9" href="https://servidores.blumenau.ufsc.br/mapa-do-site">Mapa do Site</a></li>
+                </ul>
+                <div id="logo">
+                    <a href="https://servidores.blumenau.ufsc.br/" accesskey="0" id="portal-logo">
+                        <img id="brasaoUfsc_Header" src="./Servidores UFSC – Blumenau_files/brasao_site_ufsc.svg" alt="Brasão da UFSC: A parte central do brasão é composta por uma flâmula. Ela é azul na porção superior e amarela na inferior. Sobre o azul, à esquerda, cinco estrelas brancas formam o cruzeiro do sul; à direita, uma faixa branca tem o texto escrito em vermelho: ars et scientia. Centralizada na parte amarela, há uma roda dentada vermelha quebrada na seção inferior. Duas folhas verdes de palma estão encaixadas no eixo da roda. Uma folha pende para o lado direito e a outra para o lado esquerdo. Atrás da flâmula há uma tocha amarela, da qual enxergamos os extremos: acima, com o fogo desenhado em vermelho, e abaixo, a parte inferior do bastão. Do lado esquerdo da flâmula, há um ramo verde de carvalho e do lado direito um ramo verde de louro. A parte inferior do brasão é composta por uma faixa estreita vermelha, escrito em branco: Universidade Federal de Santa Catarina. Abaixo da faixa, escrito em fonte maiúscula azul: UFSC.">
+                        <h1>Servidores UFSC – Blumenau</h1>
+                    </a>
+                </div>
+                <form action="https://servidores.blumenau.ufsc.br/" method="get" name="busca">
+                    <input type="text" placeholder="Buscar no portal" id="s" name="s" class="placeholder">
+                    <input type="submit" id="submit" value="">
+                </form>
+                <ul id="social" class="hide_mobile">
+                    <li><a href="https://servidores.blumenau.ufsc.br/servidores-docentes/" title="Curta no Facebook" class="icon-facebook"></a></li>
+                    <li><a href="https://twitter.com/ufsc" title="Siga no Twitter" class="icon-twitter"></a></li>
+                    <li><a href="https://www.youtube.com/user/tvufsc" title="Vídeos no Youtube" class="icon-youtube"></a></li>
+                    <li><a href="https://www.instagram.com/universidadeufsc" title="Veja no Instagram" class="icon-camera"></a></li>
+                    <li><a href="https://servidores.blumenau.ufsc.br/feed" title="Assine as atualizações via RSS" class="icon-feed"></a></li>
+                </ul>
+            </div>
+        </div>
+
+        
+        <div id="menu-nav">
+            <ul>
+                <li id="menu-link-nav-acessoRestrito">
+                    <a href="http://servidoresbnu.paginas.ufsc.br/wp-admin">
+                        Área Restrita                    </a>
+                    <a href="https://servidores.blumenau.ufsc.br/?administradores" class="thickbox" title="Lista de Administradores deste Site">
+                        Administradores do Site                    </a>
+                </li>
+            </ul>
+            <a href="https://servidores.blumenau.ufsc.br/servidores-docentes/#dropmenu" class="menu-link"><span aria-hidden="true" class="icon-menu"></span> Menu</a>
+                    </div>
+    </header>
+    <section id="home" class="grid section group clearfix ">
+
+
+
+
+
+
+
+
+
+
+                
+<section id="home" class="section group clearfix">  
+
+    <div id="sidebar_left" name="menu" class="hide_mobile">
+    <div id="menu_secundario_logo" class="hide_mobile">
+                <a id="atalho-navegacao" href="https://servidores.blumenau.ufsc.br/">
+            <img src="./Servidores UFSC – Blumenau_files/cropped-Brasao_Servidores-1.png" alt="Menu de Navegação">
+        </a>
+    </div>
+
+    <ul role="navigation">
+        <li>
+            <dl id="margin_space">
+                <div class="pagenav"><ul id="menu-cursos" class="pagenav"><li id="menu-item-53" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-53"><a target="_blank" href="http://blumenau.ufsc.br/">UFSC Blumenau</a></li>
+<li id="menu-item-5" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5"><a target="_blank" href="http://blumenau.ufsc.br/cursos">Graduação »</a>
+<ul>
+	<li id="menu-item-9" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9"><a target="_blank" href="http://automacao.blumenau.ufsc.br/">Engenharia de Controle e Automação</a></li>
+	<li id="menu-item-10" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10"><a target="_blank" href="http://materiais.blumenau.ufsc.br/">Engenharia de Materiais</a></li>
+	<li id="menu-item-11" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11"><a target="_blank" href="http://textil.blumenau.ufsc.br/">Engenharia Têxtil</a></li>
+	<li id="menu-item-12" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12"><a target="_blank" href="http://matematica.blumenau.ufsc.br/">Matemática (Licenciatura)</a></li>
+	<li id="menu-item-13" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13"><a target="_blank" href="http://quimica.blumenau.ufsc.br/">Química (Licenciatura e Bacharelado)</a></li>
+</ul>
+</li>
+<li id="menu-item-8" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-8"><a target="_blank" href="http://mestrado.blumenau.ufsc.br/">Pós-Graduação »</a>
+<ul>
+	<li id="menu-item-14" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14"><a target="_blank" href="http://profmat.blumenau.ufsc.br/">Mestrado Profissional em Matemática (PROFMAT)</a></li>
+	<li id="menu-item-15" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15"><a target="_blank" href="http://mnpef.blumenau.ufsc.br/">Mestrado Profissional em Ensino de Física (MNPEF)</a></li>
+	<li id="menu-item-794" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-794"><a target="_blank" href="http://pgetex.blumenau.ufsc.br/">Mestrado em Engenharia Têxtil (PGETEX)</a></li>
+	<li id="menu-item-837" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-837"><a target="_blank" href="http://ppgnpmat.blumenau.ufsc.br/">Mestrado em Nanociência, Processos e Materiais Avançados (PPGNPMat)</a></li>
+</ul>
+</li>
+</ul></div>            </dl>
+        </li>
+    </ul>
+    <ul id="nav_menu-5" class="widget widget_nav_menu"><li><h2>Institucional</h2><div class="pagenav"><ul id="menu-institucional" class="menu hide_mobile"><li id="menu-item-1219" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1219"><a href="https://servidores.blumenau.ufsc.br/agentes-pessoas/">Agentes de Desenvolvimento e Gestão de Pessoas</a></li>
+<li id="menu-item-1221" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-28 current_page_item menu-item-1221"><a href="https://servidores.blumenau.ufsc.br/servidores-docentes/">Contatos – Docentes</a></li>
+<li id="menu-item-1220" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1220"><a href="https://servidores.blumenau.ufsc.br/servidores-tae/">Contatos – Técnicos Administrativos</a></li>
+</ul></div></li></ul><ul id="nav_menu-3" class="widget widget_nav_menu"><li><h2>Vida Funcional</h2><div class="pagenav"><ul id="menu-servidores" class="menu hide_mobile"><li id="menu-item-1490" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1490"><a href="https://acolheufsc.ufsc.br/servico-de-acolhimento-campus-blumenau/">Acolhe UFSC</a></li>
+<li id="menu-item-1222" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1222"><a href="https://servidores.blumenau.ufsc.br/adicionais-ocupacionais/">Adicionais Ocupacionais</a></li>
+<li id="menu-item-57" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-57"><a target="_blank" href="http://servidor.ufsc.br/">Espaço do Novo Servidor</a></li>
+<li id="menu-item-133" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-133"><a target="_blank" href="http://cppd.ufsc.br/estagio-probatorio/">Estágio Probatório e Progressão Docente</a></li>
+<li id="menu-item-132" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-132"><a target="_blank" href="https://cadc.ufsc.br/">Estágio Probatório e Progressão TAE</a></li>
+<li id="menu-item-130" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-130"><a href="https://servidores.blumenau.ufsc.br/licencas/">Licenças e Afastamentos</a></li>
+<li id="menu-item-134" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-134"><a target="_blank" href="http://prodegesp.ufsc.br/ddp/coordenadoria-de-dimensionamento-e-movimentacao/">Movimentação externa e outras unidades UFSC</a></li>
+<li id="menu-item-1800" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1800"><a href="https://forms.gle/WLKNHErccjWuD5z67">Banco de movimentação interna</a></li>
+<li id="menu-item-131" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-131"><a target="_blank" href="http://capacitacao.ufsc.br/">Portal da Capacitação</a></li>
+<li id="menu-item-31" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31"><a target="_blank" href="http://nupe.blumenau.ufsc.br/profor-cursos/">PROFOR</a></li>
+</ul></div></li></ul><ul id="nav_menu-4" class="widget widget_nav_menu"><li><h2>Utilitários</h2><div class="pagenav"><ul id="menu-utilitarios" class="menu hide_mobile"><li id="menu-item-850" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-850"><a href="http://cae.ufsc.br/docencia-acessivel/">Acessibilidade</a></li>
+<li id="menu-item-140" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-140"><a href="https://servidores.blumenau.ufsc.br/acesso-wireless/">Acesso Wireless</a></li>
+<li id="menu-item-118" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-118"><a href="https://servidores.blumenau.ufsc.br/compras/">Compras</a></li>
+<li id="menu-item-1155" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1155"><a href="https://servidores.blumenau.ufsc.br/comunicacao-do-acidente/">Comunicação do Acidente de Trabalho</a></li>
+<li id="menu-item-119" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-119"><a href="https://servidores.blumenau.ufsc.br/convenios/">Convênios</a></li>
+<li id="menu-item-1846" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1846"><a href="https://blumenau.ufsc.br/estacionamento/">Estacionamento</a></li>
+<li id="menu-item-381" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-381"><a href="https://servidores.blumenau.ufsc.br/formularios/">Formulários CAMPUS</a></li>
+<li id="menu-item-1214" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1214"><a href="https://servidores.blumenau.ufsc.br/mapeamento-de-processos/">Mapeamento de Processos</a></li>
+<li id="menu-item-638" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-638"><a href="https://servidores.blumenau.ufsc.br/projetores/">Projetores</a></li>
+<li id="menu-item-851" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-851"><a href="https://servidores.blumenau.ufsc.br/substituicoes-de-chefia/">Substituições de Chefia</a></li>
+</ul></div></li></ul><ul id="nav_menu-2" class="widget widget_nav_menu"><li><h2>Reservas</h2><div class="pagenav"><ul id="menu-reservas" class="menu hide_mobile"><li id="menu-item-16" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16"><a target="_blank" href="https://adm.blumenau.ufsc.br/salas/">Salas blocos A, B e C</a></li>
+<li id="menu-item-17" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-17"><a target="_blank" href="https://adm.blumenau.ufsc.br/auditorio/">Auditório – Bloco B</a></li>
+<li id="menu-item-21" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21"><a target="_blank" href="https://adm.blumenau.ufsc.br/reuniaobloco_c/">Salas de reunião – Bloco C</a></li>
+<li id="menu-item-1223" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1223"><a href="https://adm.blumenau.ufsc.br/veiculos/">Transporte Oficial</a></li>
+</ul></div></li></ul><ul id="nav_menu-6" class="widget widget_nav_menu"><li><h2>Sistemas Campus Blumenau</h2><div class="pagenav"><ul id="menu-sistemas-campus-blumenau" class="menu hide_mobile"><li id="menu-item-1797" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1797"><a href="https://adm.blumenau.ufsc.br/sistema/">Acesso Administrador/Aprovador de Sistemas</a></li>
+<li id="menu-item-1798" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1798"><a href="https://adm.blumenau.ufsc.br/ajusteMATRICULA/">Ajuste de matrícula – Aluno</a></li>
+<li id="menu-item-1796" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1796"><a href="https://sgfc.blumenau.ufsc.br/sugestao/">Caixa de sugestões</a></li>
+<li id="menu-item-1795" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1795"><a href="https://adm.blumenau.ufsc.br/planosENSINO/">Consulta a Planos de Ensino</a></li>
+</ul></div></li></ul></div>
+<script>
+    "use strict";
+    var menus = document.querySelectorAll(".widget_nav_menu > li");
+    for(var i = 0; i < menus.length; i++) {
+        if(menus[i].children.length == 1) {
+            menus[i].remove();
+        }
+    }
+</script>
+	<div class="col" name="conteudo">
+	    <section id="content">
+
+    
+        <ul id="breadcrumbs" class="hide_mobile"><li><a href="https://servidores.blumenau.ufsc.br/" title="Ir para a página inicial" class="home"><span aria-hidden="true" class="icon-home"></span></a></li><li style="width: 729px; overflow: hidden; white-space: nowrap;"><a href="https://servidores.blumenau.ufsc.br/servidores-docentes/" class="current">Contatos – Docentes</a></li></ul>
+        
+            <article class="post" id="post-28">
+                <h2><a href="https://servidores.blumenau.ufsc.br/servidores-docentes/">Contatos – Docentes</a></h2>
+
+                <div class="meta_header clearfix">
+                                        <span class="pu-share">
+                        
+                        <a href="http://twitter.com/home?status=Contatos%20%E2%80%93%20Docentes%20-%20https://servidores.blumenau.ufsc.br/servidores-docentes/" title="Compartilhar no Twitter">
+                        <img src="./Servidores UFSC – Blumenau_files/twitter.png"></a>
+
+                        <a href="http://www.facebook.com/sharer.php?u=https://servidores.blumenau.ufsc.br/servidores-docentes/&amp;t=Contatos%20%E2%80%93%20Docentes" title="Compartilhar no Facebook">
+                        <img src="./Servidores UFSC – Blumenau_files/facebook.png"></a>
+
+                        <a href="whatsapp://send?text=Contatos%20%E2%80%93%20Docenteshttps://servidores.blumenau.ufsc.br/servidores-docentes/" title="Compartilhar no WhatsApp">
+                        <img src="./Servidores UFSC – Blumenau_files/whatsapp.png"></a>
+                    </span>
+                </div>
+
+                <div class="content clearfix">
+
+                    <p><strong>Atenção!</strong> Os telefones com DDD 47 estão temporariamente indisponíveis. Todos os números com DDD 48 estão funcionando normalmente.</p>
+<h3><strong>Coordenadoria Especial de Engenharia de Materiais (EMT)</strong></h3>
+
+<div class="dataTables_wrapper" id="wp-table-reloaded-id-34-no-1_wrapper"><div class="dataTables_filter" id="wp-table-reloaded-id-34-no-1_filter"><label>Buscar: <input class="right" type="text"></label></div><table id="wp-table-reloaded-id-34-no-1" class="wp-table-reloaded wp-table-reloaded-id-34">
+<thead>
+	<tr class="row-1 odd"><th class="column-1 sorting" rowspan="1" colspan="1" style="width: 101px;">Professores</th><th class="column-2 sorting" rowspan="1" colspan="1" style="width: 169px;">E-mail</th><th class="column-3 sorting" rowspan="1" colspan="1" style="width: 95px;">Telefones<br>
+</th><th class="column-4 sorting" rowspan="1" colspan="1" style="width: 95px;">Sala</th><th class="column-5 sorting" rowspan="1" colspan="1" style="width: 149px;">Função</th><th class="column-6 sorting" rowspan="1" colspan="1" style="width: 95px;">Lattes e Site</th></tr>
+</thead>
+
+<tbody><tr class="row-2 even">
+		<td class="column-1"><a href="http://servidoresbnu.paginas.ufsc.br/files/2019/07/claudia_merlini.jpg" target="_blank" class="thickbox no_icon" rel="gallery-25"> Claudia Merlini</a></td><td class="column-2"><a href="mailto:claudia.merlini@ufsc.br">claudia.merlini@ufsc.br&nbsp;</a></td><td class="column-3">(48) 3721-3387<br>
+(47) 3232-5187</td><td class="column-4">C101</td><td class="column-5">Coordenadora do Programa de Pós-Graduação em Nanociência, Processos e Materiais Avançados (PPGNPMat)</td><td class="column-6"><center> <a href="http://lattes.cnpq.br/4597248797452360" target="_blank"> <img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"></center></td>
+	</tr><tr class="row-3 odd">
+		<td class="column-1">Claudio Michel Poffo</td><td class="column-2"><a href="mailto:claudio.poffo@ufsc.br">claudio.poffo@ufsc.br</a></td><td class="column-3">(48) 3721-3340<br>
+(47) 3232-5140</td><td class="column-4">A310</td><td class="column-5">Coordenador do Curso de Engenharia de Materiais</td><td class="column-6"><center> <a href="http://lattes.cnpq.br/1162807476567596" target="_blank"> <img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"></center></td>
+	</tr><tr class="row-4 even">
+		<td class="column-1">Cristiano da Silva Teixeira</td><td class="column-2"><a href="mailto:c.teixeira@ufsc.br" target="_blank">c.teixeira@ufsc.br</a></td><td class="column-3">(48) 3721-3387<br>
+(47) 3232-5187</td><td class="column-4">C101</td><td class="column-5"></td><td class="column-6"><center> <a href="http://lattes.cnpq.br/6337841325451411" target="_blank"> <img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <a href="http://teixeira.prof.ufsc.br/" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"></a></center></td>
+	</tr><tr class="row-5 odd">
+		<td class="column-1">Johnny de Nardi Martins</td><td class="column-2"><a href="mailto:johnny.martins@ufsc.br" target="_blank">johnny.martins@ufsc.br</a></td><td class="column-3">(48) 3721-3387<br>
+(47) 3232-5187</td><td class="column-4">C101</td><td class="column-5">Subchefe da Coordenadoria Especial/Coordenador de Ensino</td><td class="column-6"><center> <a href="http://lattes.cnpq.br/1402838812912034" target="_blank"> <img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"></center></td>
+	</tr><tr class="row-6 even">
+		<td class="column-1">Laura Ximena Lovisa Oliveira</td><td class="column-2"><a href="mailto:laura.lovisa@ufsc.br">laura.lovisa@ufsc.br</a></td><td class="column-3">(48) 3721-3387<br>
+(47) 3232-5187</td><td class="column-4">C101</td><td class="column-5"></td><td class="column-6"><center> <a href="cv: http://lattes.cnpq.br/3096918631525114"> <img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"></center></td>
+	</tr><tr class="row-7 odd">
+		<td class="column-1">Larissa Nardini Carli</td><td class="column-2"><a href="mailto:larissa.carli@ufsc.br">larissa.carli@ufsc.br</a></td><td class="column-3">(48) 3721-3387<br>
+(47) 3232-5187</td><td class="column-4">C101</td><td class="column-5">Coordenadora de Pesquisa/Coordenadora de TCC</td><td class="column-6"><center> <a href="http://lattes.cnpq.br/4271669335170532" target="_blank"> <img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"></center></td>
+	</tr><tr class="row-8 even">
+		<td class="column-1">Kethlinn Ramos</td><td class="column-2"><a href="mailto:kethlinn.ramos@ufsc.br">kethlinn.ramos@ufsc.br</a></td><td class="column-3">(48) 3721-3387<br>
+(47) 3232-5187</td><td class="column-4">C101</td><td class="column-5">Coordenadora de Extensão do Curso</td><td class="column-6"><center> <a href="http://lattes.cnpq.br/5856791042277661"> <img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"></center></td>
+	</tr><tr class="row-9 odd">
+		<td class="column-1"><a href="http://servidoresbnu.paginas.ufsc.br/files/2019/07/leonardo_lopes.jpg" target="_blank" class="thickbox no_icon" rel="gallery-25"> Leonardo Ulian Lopes</a></td><td class="column-2"><a href="mailto:leonardo.ulian@ufsc.br">leonardo.ulian@ufsc.br</a></td><td class="column-3">(48) 3721-3387<br>
+(47) 3232-5187</td><td class="column-4">C101</td><td class="column-5">Subcoordenador Curso Engenharia de Materiais / Coordenador de Estágio</td><td class="column-6"><center> <a href="http://lattes.cnpq.br/9072738007817399" target="_blank"> <img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"></center></td>
+	</tr><tr class="row-10 even">
+		<td class="column-1">Luciana Maccarini Schabbach</td><td class="column-2"><a href="mailto:luciana.maccarini@ufsc.br" target="_blank">luciana.maccarini@ufsc.br</a></td><td class="column-3">(48) 3721-3387<br>
+(47) 3232-5187</td><td class="column-4">C101</td><td class="column-5"></td><td class="column-6"><center> <a href="http://lattes.cnpq.br/4027790963404018" target="_blank"> <img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"></center></td>
+	</tr><tr class="row-11 odd">
+		<td class="column-1">Marcio Roberto da Rocha</td><td class="column-2">&nbsp;<a href="mailto:marcio.rocha@ufsc.br">marcio.rocha@ufsc.br</a></td><td class="column-3">(48) 3721-3331<br>
+(47) 3232-5131</td><td class="column-4">C101</td><td class="column-5">Subcoordenador do Programa de Pós-Graduação em Nanociência, Processos e Materiais Avançados (PPGNPMat)</td><td class="column-6"><center> <a href="http://lattes.cnpq.br/6926668249593915" target="_blank"> <img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"></center></td>
+	</tr><tr class="row-12 even">
+		<td class="column-1">Wanderson Santana da Silva</td><td class="column-2"><a href="mailto:w.santana@ufsc.br" target="_blank">w.santana@ufsc.br</a></td><td class="column-3">(48) 3721-3387<br>
+(47) 3232-5187</td><td class="column-4">C101</td><td class="column-5">Chefe da Coordenadoria Especial</td><td class="column-6"><center> <a href="http://lattes.cnpq.br/9769266691967919" target="_blank"> <img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"></center></td>
+	</tr></tbody></table></div>
+
+<p>&nbsp;</p>
+<h3><strong>Departamento de&nbsp;Ciências Exatas e Educação (CEE)</strong></h3>
+
+<div class="dataTables_wrapper" id="wp-table-reloaded-id-11-no-1_wrapper"><div class="dataTables_filter" id="wp-table-reloaded-id-11-no-1_filter"><label>Buscar: <input class="right" type="text"></label></div><table id="wp-table-reloaded-id-11-no-1" class="wp-table-reloaded wp-table-reloaded-id-11">
+<thead>
+	<tr class="row-1 odd"><th class="column-1 sorting" rowspan="1" colspan="1" style="width: 105px;">Professores</th><th class="column-2 sorting" rowspan="1" colspan="1" style="width: 182px;">E-mail</th><th class="column-3 sorting" rowspan="1" colspan="1" style="width: 98px;">Telefones<br>
+</th><th class="column-4 sorting" rowspan="1" colspan="1" style="width: 98px;">Sala</th><th class="column-5 sorting" rowspan="1" colspan="1" style="width: 121px;">Função</th><th class="column-6 sorting" rowspan="1" colspan="1" style="width: 98px;">Lattes e Site</th></tr>
+</thead>
+
+<tbody><tr class="row-2 even">
+		<td class="column-1"><a href="http://servidoresbnu.paginas.ufsc.br/files/2019/07/aldo_sena_oliveira.jpg" target="_blank" class="thickbox no_icon" rel="gallery-25"> Aldo Sena de Oliveira </a></td><td class="column-2"><a href="mailto:aldo.sena@ufsc.br">aldo.sena@ufsc.br</a></td><td class="column-3">(48) 3721-3379<br>
+(47) 3232-5179</td><td class="column-4">C205</td><td class="column-5"></td><td class="column-6"><center> <a href="http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4253810D6" target="_blank"> <img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <a href="http://nuquiocat.quimica.blumenau.ufsc.br/aldo-sena-de-oliveira/" target="_blank">  <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"></a><br>
+</center></td>
+	</tr><tr class="row-3 odd">
+		<td class="column-1">Alfredo Alberto Muxel</td><td class="column-2"><a href="mailto:alfredo.muxel@ufsc.br">alfredo.muxel@ufsc.br</a></td><td class="column-3">(48) 3721-3339<br>
+(47) 3232-5139</td><td class="column-4">A306</td><td class="column-5">Coordenador do Curso de Graduação em Química</td><td class="column-6"><center> <a href="http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4702874D3" target="_blank"> <img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <a href="http://amuxel.paginas.ufsc.br/" target="_blank">  <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"></a><br>
+</center></td>
+	</tr><tr class="row-4 even">
+		<td class="column-1">Amarildo Otávio Martins</td><td class="column-2"><a href="mailto:amarildo.martins@ufsc.br">amarildo.martins@ufsc.br</a></td><td class="column-3">(48) 3721-3379<br>
+(47) 3232-5179</td><td class="column-4">C205</td><td class="column-5">Coordenador de TCC</td><td class="column-6"><center> <a href="http://lattes.cnpq.br/2378825410173036" target="_blank"> <img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <a href="http://amarildo.paginas.ufsc.br/" target="_blank">  <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"></a><br>
+</center></td>
+	</tr><tr class="row-5 odd">
+		<td class="column-1">Cíntia Rosa da Silva</td><td class="column-2"><a href="mailto:cintia.r@ufsc.br" target="_blank">cintia.r@ufsc.br</a></td><td class="column-3">(48) 3721-3383<br>
+(47) 3232-5183</td><td class="column-4">C102</td><td class="column-5">Coordenadora de Ensino</td><td class="column-6"><center> <a href="http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4252360H5" target="_blank"> <img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center><br>
+</td>
+	</tr><tr class="row-6 even">
+		<td class="column-1"><a href="http://servidoresbnu.paginas.ufsc.br/files/2019/07/daniel_fagundes.jpg" target="_blank" class="thickbox no_icon" rel="gallery-25"> Daniel Almeida Fagundes </a></td><td class="column-2"><a href="mailto:daniel.fagundes@ufsc.br" target="_blank">daniel.fagundes@ufsc.br</a></td><td class="column-3">(48) 3721-3386<br>
+(47) 3232-5186</td><td class="column-4">C201</td><td class="column-5"></td><td class="column-6"><center> <a href="http://lattes.cnpq.br/2442195224442173" target="_blank"> <img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-7 odd">
+		<td class="column-1">Daniel Girardi</td><td class="column-2"><a href="mailto:d.girardi@ufsc.br" target="_blank">d.girardi@ufsc.br&nbsp;</a></td><td class="column-3">(48) 3721-3386<br>
+(47) 3232-5186</td><td class="column-4">C201</td><td class="column-5"></td><td class="column-6"><center> <a href="http://buscatextual.cnpq.br/buscatextual/visualizacv.do?metodo=apresentar&amp;id=K4764232D4" target="_blank"> <img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <a href="http://girardi.blumenau.ufsc.br/" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"></a><br>
+</center></td>
+	</tr><tr class="row-8 even">
+		<td class="column-1">Daniela Brondani</td><td class="column-2">&nbsp;<a href="mailto:daniela.brondani@ufsc.br" target="_blank">daniela.brondani@ufsc.br</a></td><td class="column-3">(48) 3721-3379<br>
+(47) 3232-5179</td><td class="column-4">C205</td><td class="column-5"></td><td class="column-6"><center> <a href="http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4260911T1" target="_blank"> <img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <a href="http://laes.paginas.ufsc.br/profa-dra-daniela-brondani" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"></a><br>
+</center></td>
+	</tr><tr class="row-9 odd">
+		<td class="column-1">Daniela Pires Gouvêa (Substituta)</td><td class="column-2">&nbsp;<a href="mailto:daniela.p.gouvea@ufsc.br" target="_blank">daniela.p.gouvea@ufsc.brr</a></td><td class="column-3">(48) 3721-3379<br>
+(47) 3232-5179</td><td class="column-4">C205</td><td class="column-5"></td><td class="column-6"><center> <a href="http://lattes.cnpq.br/0976409536383320" target="_blank"> <img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-10 even">
+		<td class="column-1">Edilaine Aparecida Vieira</td><td class="column-2">&nbsp;<a href="mailto:edilaine.vieira@ufsc.br" target="_blank">edilaine.vieira@ufsc.br</a></td><td class="column-3">(48) 3721-3392<br>
+(47) 3232-5192</td><td class="column-4">C203</td><td class="column-5"></td><td class="column-6"><center> <a href="http://lattes.cnpq.br/6618395673193179" target="_blank"> <img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-11 odd">
+		<td class="column-1">Eduardo Zapp</td><td class="column-2"><a href="mailto:eduardo.zapp@ufsc.br" target="blank">eduardo.zapp@ufsc.br</a></td><td class="column-3">(48) 3721-3379<br>
+(47) 3232-5179</td><td class="column-4">C205</td><td class="column-5"></td><td class="column-6"><center> <a href="http://lattes.cnpq.br/3475389236546683" target="_blank"> <img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-12 even">
+		<td class="column-1">Eslley Scatena Gonçales</td><td class="column-2">&nbsp;<a href="mailto:e.scatena@ufsc.br">e.scatena@ufsc.br</a></td><td class="column-3">(48) 3721-3386<br>
+(47) 3232-5186</td><td class="column-4">C201</td><td class="column-5">Coordenador de Extensão do Departamento</td><td class="column-6"><center> <a href="http://lattes.cnpq.br/7845996954125088" target="_blank"> <img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <a href="https://galileu.blumenau.ufsc.br/" target="_blank">  <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"></a></center></td>
+	</tr><tr class="row-13 odd">
+		<td class="column-1">Fabiana Schmitt Corrêa</td><td class="column-2">&nbsp;<a href="mailto:fabiana.s.c@ufsc.br">fabiana.s.c@ufsc.br</a></td><td class="column-3">(48) 3721-3392<br>
+(47) 3232-5192</td><td class="column-4">C203</td><td class="column-5"></td><td class="column-6"><center> <a href="http://lattes.cnpq.br/8320299026140150" target="_blank"> <img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-14 even">
+		<td class="column-1">Fernando Fuzinatto Dall'Agnol </td><td class="column-2">&nbsp;<a href="mailto:fernando.dallagnol@ufsc.br" target="_blank">fernando.dallagnol@ufsc.br</a></td><td class="column-3">(48) 3721-3386<br>
+(47) 3232-5186</td><td class="column-4">C201</td><td class="column-5">Subcoordenador do Mestrado Profissional em Ensino de Física</td><td class="column-6"><center> <a href="http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4703517A4" target="_blank"> <img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center><br>
+</td>
+	</tr><tr class="row-15 odd">
+		<td class="column-1">Franciellen Rodrigues da Silva Costa</td><td class="column-2"><a href="mailto:franciellen.costa@ufsc.br">franciellen.costa@ufsc.br</a></td><td class="column-3">(48) 3721-3392<br>
+(47) 3232-5192</td><td class="column-4">C203</td><td class="column-5"></td><td class="column-6"><center> <a href="http://lattes.cnpq.br/1527516424814738" target="_blank"> <img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-16 even">
+		<td class="column-1">Gláucio Régis Nagurniak</td><td class="column-2"><a href="mailto:glaucio.nagurniak@ufsc.br" target="_blank">glaucio.nagurniak@ufsc.br</a></td><td class="column-3">(48) 3721-3392<br>
+(47) 3232-5192</td><td class="column-4">C203</td><td class="column-5"></td><td class="column-6"><center> <a href="http://lattes.cnpq.br/3686554750849426" target="_blank"> <img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center><br>
+</td>
+	</tr><tr class="row-17 odd">
+		<td class="column-1">Guilherme Wagner</td><td class="column-2"><a href="mailto:guilherme.w@ufsc.br" target="_blank">guilherme.w@ufsc.br</a></td><td class="column-3">(48) 3721-3383<br>
+(47) 3232-5183</td><td class="column-4">C102</td><td class="column-5">Coordenador de Estágio Licenciatura em Matemática</td><td class="column-6"><center> <a href="http://lattes.cnpq.br/0685108230667408" target="_blank"> <img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center><br>
+</td>
+	</tr><tr class="row-18 even">
+		<td class="column-1">Graziela Piccoli Richetti </td><td class="column-2"><a href="mailto:graziela.richetti@ufsc.br" target="_blank">graziela.richetti@ufsc.br</a></td><td class="column-3">(48) 3721-3383<br>
+(47) 3232-5183</td><td class="column-4">C102</td><td class="column-5"></td><td class="column-6"><center> <a href="http://lattes.cnpq.br/9128328286908246" target="_blank"> <img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-19 odd">
+		<td class="column-1"><a href="http://servidoresbnu.paginas.ufsc.br/files/2019/07/ismael_bellettini.jpg" target="_blank" class="thickbox no_icon" rel="gallery-25"> Ismael Casagrande Bellettini  </a></td><td class="column-2"><a href="mailto:ismael.bellettini@ufsc.br" target="blank">ismael.bellettini@ufsc.br</a></td><td class="column-3">(48) 3721-3379<br>
+(47) 3232-5179</td><td class="column-4">C205</td><td class="column-5"></td><td class="column-6"><center> <a href="http://lattes.cnpq.br/3051183459850022" target="_blank"> <img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-20 even">
+		<td class="column-1"><a href="http://servidoresbnu.paginas.ufsc.br/files/2019/07/jorge_cassio_costa_nobriga.jpg" target="_blank" class="thickbox no_icon" rel="gallery-25"> Jorge Cássio Costa Nóbriga  </a></td><td class="column-2"><a href="mailto:j.cassio@ufsc.br" target="blank">j.cassio@ufsc.br</a></td><td class="column-3">(48) 3721-3383<br>
+(47) 3232-5183</td><td class="column-4">C102</td><td class="column-5">Subchefe de Departamento</td><td class="column-6"><center> <a href="http://lattes.cnpq.br/3101261113805428" target="_blank"> <img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-21 odd">
+		<td class="column-1">José Wilmo da Cruz Junior</td><td class="column-2"><a href="mailto:jose.w.cruz@ufsc.br">jose.w.cruz@ufsc.br</a></td><td class="column-3">(48) 3721-3379<br>
+(47) 3232-5179</td><td class="column-4">C205</td><td class="column-5">Coordenação de Extensão do Curso de Graduação em Química</td><td class="column-6"><center> <a href="http://lattes.cnpq.br/7986883288512102" target="_blank"> <img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-22 even">
+		<td class="column-1">Julio Faria Corrêa </td><td class="column-2"><a href="mailto:correa.j@ufsc.br" target="_blank">correa.j@ufsc.br</a></td><td class="column-3">(48) 3721-3385<br>
+(47) 3232-5185</td><td class="column-4">C204</td><td class="column-5">Chefe de Departamento</td><td class="column-6"><center> <a href="http://lattes.cnpq.br/6127076214335915" target="_blank"> <img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-23 odd">
+		<td class="column-1">Keysy Solange Costa Nogueira</td><td class="column-2"><a href="mailto:keysy.nogueira@ufsc.br" target="_blank">keysy.nogueira@ufsc.br</a></td><td class="column-3">(48) 3721-3392<br>
+(47) 3232-5192</td><td class="column-4">C203</td><td class="column-5">Subcoordenadora do Curso de Graduação em Química</td><td class="column-6"><center> <a href="http://lattes.cnpq.br/7692328438196107" target="_blank"> <img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-24 even">
+		<td class="column-1">Lara Fernandes dos Santos Lavelli </td><td class="column-2"><a href="mailto:lara.fernandes@ufsc.br" target="_blank">lara.fernandes@ufsc.br</a></td><td class="column-3">(48) 3721-3386<br>
+(47) 3232-5186</td><td class="column-4">C201</td><td class="column-5"></td><td class="column-6"><center> <a href="http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4772147T2" target="_blank"> <img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-25 odd">
+		<td class="column-1">Lidiane Meier</td><td class="column-2"><a href="mailto:lidiane.meier@ufsc.br">lidiane.meier@ufsc.br</a></td><td class="column-3">(48) 3721-3379<br>
+(47) 3232-5179</td><td class="column-4">C205</td><td class="column-5"></td><td class="column-6"><center> <a href="http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4770256H9" target="_blank"> <img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <a href="http://nuquiocat.paginas.ufsc.br/profa-dra-lidiane-meier" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"></a><br>
+</center></td>
+	</tr><tr class="row-26 even">
+		<td class="column-1">Lucas Chavero </td><td class="column-2"><a href="mailto:l.chavero@ufsc.br">l.chavero@ufsc.br</a></td><td class="column-3">(48) 3721-3386<br>
+(47) 3232-5186</td><td class="column-4">C201</td><td class="column-5">Coordenador do Mestrado Profissional em Ensino de Física</td><td class="column-6"><center> <a href="http://lattes.cnpq.br/0066833613689975" target="_blank"> <img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-27 odd">
+		<td class="column-1">Luciane Schulz (Substituta)</td><td class="column-2"><a href="mailto:luciane.s@ufsc.br">luciane.s@ufsc.br</a></td><td class="column-3">(48) 3721-3392<br>
+(47) 3232-5192</td><td class="column-4">C203</td><td class="column-5"></td><td class="column-6"><center> <a href="http://lattes.cnpq.br/4849634713589430" target="_blank"> <img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-28 even">
+		<td class="column-1">Marcelo Dallagnol Alloy</td><td class="column-2"><a href="mailto:marcelo.alloy@ufsc.br">marcelo.alloy@ufsc.br</a></td><td class="column-3">(48) 3721-3386<br>
+(47) 3232-5186</td><td class="column-4">C201</td><td class="column-5">Coordenador de Pesquisa</td><td class="column-6"><center> <a href="http://lattes.cnpq.br/2631610079464320" target="_blank"> <img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-29 odd">
+		<td class="column-1"><a href="http://servidoresbnu.paginas.ufsc.br/files/2022/04/foto-Nara.jpg" target="_blank" class="thickbox no_icon" rel="gallery-25"> Nara Rubiano da Silva </a></td><td class="column-2"><a href="mailto:nara.rubiano@ufsc.br">nara.rubiano@ufsc.br</a></td><td class="column-3">(48) 3721-3386<br>
+(47) 3232-5186</td><td class="column-4">C201</td><td class="column-5"></td><td class="column-6"><center> <a href="http://lattes.cnpq.br/6786027983522928" target="_blank"> <img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-30 even">
+		<td class="column-1"><a href="http://servidoresbnu.paginas.ufsc.br/files/2019/07/patricia_bulegon_brondani.jpg" target="_blank" class="thickbox no_icon" rel="gallery-25"> Patricia Bulegon Brondani   </a></td><td class="column-2"><a href="mailto:p.b.brondani@ufsc.br">p.b.brondani@ufsc.br</a></td><td class="column-3">(48) 3721-3379<br>
+(47) 3232-5179</td><td class="column-4">C205</td><td class="column-5">Coordenadora de Estágio da Graduação em Química</td><td class="column-6"><center> <a href="http://lattes.cnpq.br/6888039221421877" target="_blank"> <img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-31 odd">
+		<td class="column-1">Rafael Leonardo Novak</td><td class="column-2"><a href="mailto:rafael.novak@ufsc.br">rafael.novak@ufsc.br</a></td><td class="column-3">(48) 3721-3386<br>
+(47) 3232-5186</td><td class="column-4">C201</td><td class="column-5"></td><td class="column-6"><center> <a href="http://lattes.cnpq.br/3151891674277904" target="_blank"> <img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-32 even">
+		<td class="column-1">Renata Orlandi </td><td class="column-2"><a href="mailto:renata.orlandi@ufsc.br">renata.orlandi@ufsc.br</a></td><td class="column-3">(48) 3721-3392<br>
+(47) 3232-5192</td><td class="column-4">C203</td><td class="column-5"></td><td class="column-6"><center> <a href="http://lattes.cnpq.br/6020272863162799" target="_blank"> <img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-33 odd">
+		<td class="column-1">Silmar José Spinardi Franchi</td><td class="column-2"><a href="mailto:silmar.franchi@ufsc.br">silmar.franchi@ufsc.br</a></td><td class="column-3">(48) 3721-3379<br>
+(47) 3232-5179</td><td class="column-4">C205</td><td class="column-5"></td><td class="column-6"><center> <a href="http://lattes.cnpq.br/0328917527382379" target="_blank"> <img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr></tbody></table></div>
+
+<p>&nbsp;</p>
+<h3><strong>Departamento de Engenharia de Controle, Automação e Computação (CAC)</strong></h3>
+
+<div class="dataTables_wrapper" id="wp-table-reloaded-id-3-no-1_wrapper"><div class="dataTables_filter" id="wp-table-reloaded-id-3-no-1_filter"><label>Buscar: <input class="right" type="text"></label></div><table id="wp-table-reloaded-id-3-no-1" class="wp-table-reloaded wp-table-reloaded-id-3">
+<thead>
+	<tr class="row-1 odd"><th class="column-1 sorting" rowspan="1" colspan="1" style="width: 104px;">Professores</th><th class="column-2 sorting" rowspan="1" colspan="1" style="width: 194px;">E-mail</th><th class="column-3 sorting" rowspan="1" colspan="1" style="width: 97px;">Telefones<br>
+</th><th class="column-4 sorting" rowspan="1" colspan="1" style="width: 97px;">Sala</th><th class="column-5 sorting" rowspan="1" colspan="1" style="width: 114px;">Função</th><th class="column-6 sorting" rowspan="1" colspan="1" style="width: 97px;">Lattes e Site</th></tr>
+</thead>
+
+<tbody><tr class="row-2 even">
+		<td class="column-1"><a href="http://servidoresbnu.paginas.ufsc.br/files/2019/07/adao_boava.jpg" target="_blank" class="thickbox no_icon" rel="gallery-25"> Adão Boava</a></td><td class="column-2"><a href="mailto:adao.boava@ufsc.br">adao.boava@ufsc.br&nbsp;</a></td><td class="column-3">(48) 3721-3373<br>
+(47) 3232-5173</td><td class="column-4">C303</td><td class="column-5"></td><td class="column-6"><center> <a href="http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4784746A9" target="_blank"> <img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-3 odd">
+		<td class="column-1"><a href="http://servidoresbnu.paginas.ufsc.br/files/2019/07/adriano_peres.jpg" target="_blank" class="thickbox no_icon" rel="gallery-25"> Adriano Peres</a></td><td class="column-2"><a href="mailto:adriano.peres@ufsc.br">adriano.peres@ufsc.br&nbsp;</a></td><td class="column-3">(48) 3721-3395<br>
+(47) 3232-5195</td><td class="column-4">C202</td><td class="column-5">Diretor do Centro/Campus</td><td class="column-6"><center> <a href="http://lattes.cnpq.br/9400088490932529" target="_blank"> <img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <a href="https://adrianoperes.paginas.ufsc.br/" target="_blank">  <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"></a></center></td>
+	</tr><tr class="row-4 even">
+		<td class="column-1">Alex Fabiano Bueno</td><td class="column-2"><a href="mailto:alex.bueno@ufsc.br">alex.bueno@ufsc.br</a></td><td class="column-3">(48) 3721-3347<br>
+(47) 3232-5147</td><td class="column-4">B118</td><td class="column-5">Subchefe do Departamento/ Coordenador de Ensino</td><td class="column-6"><center> <a href="http://lattes.cnpq.br/6205616798272731" target="_blank"> <img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-5 odd">
+		<td class="column-1">Anelize Zomkowski Salvi</td><td class="column-2"><a href="mailto:anelize.salvi@ufsc.br">anelize.salvi@ufsc.br</a></td><td class="column-3">(48) 3721-3374<br>
+(47) 3232-5174</td><td class="column-4">C304</td><td class="column-5"></td><td class="column-6"><center><a href="http://lattes.cnpq.br/7158908862708476" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-6 even">
+		<td class="column-1">Brenda Teresa Porto de Matos</td><td class="column-2"><a href="mailto:brenda.matos@ufsc.br" target="_blank">brenda.matos@ufsc.br</a></td><td class="column-3">(48) 3721-3383<br>
+(47) 3232-5183</td><td class="column-4">C102</td><td class="column-5"></td><td class="column-6"><center> <a href="http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4723314H5" target="_blank"> <img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-7 odd">
+		<td class="column-1">Carlos Roberto Moratelli </td><td class="column-2"><a href="mailto:carlos.moratelli@ufsc.br" target="_blank">carlos.moratelli@ufsc.br</a></td><td class="column-3">(48) 3721-3373<br>
+(47) 3232-5173</td><td class="column-4">C303</td><td class="column-5"></td><td class="column-6"><center> <a href="http://lattes.cnpq.br/2046018185848153" target="_blank"> <img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-8 even">
+		<td class="column-1">Ciro André Pitz </td><td class="column-2"><a href="mailto:ciro.pitz@ufsc.br" target="_blank">ciro.pitz@ufsc.br</a></td><td class="column-3">(48) 3721-3373<br>
+(47) 3232-5173</td><td class="column-4">C303</td><td class="column-5">Coordenador de TCC </td><td class="column-6"><center> <a href="http://lattes.cnpq.br/9027168373303781" target="_blank"> <img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-9 odd">
+		<td class="column-1">Cristina Luz Cardoso </td><td class="column-2"><a href="mailto:cristina.cardoso%20at%20ufsc.br">cristina.cardoso@ufsc.br</a></td><td class="column-3">(48) 3721-3383<br>
+(47) 3232-5183</td><td class="column-4">C102</td><td class="column-5">Coordenadora de Extensão do Curso e do Departamento</td><td class="column-6"><center> <a href="http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4533509Y9" target="_blank"> <img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <a href="http://cristinacardoso.paginas.ufsc.br/" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"></a><br>
+</center></td>
+	</tr><tr class="row-10 even">
+		<td class="column-1">Daniel Alejandro Ponce Saldías</td><td class="column-2"><a href="mailto:daniel.alejandro@ufsc.br" target="_blank">daniel.alejandro@ufsc.br</a></td><td class="column-3">(48) 3721-3374<br>
+(47) 3232-5174</td><td class="column-4">C304</td><td class="column-5"></td><td class="column-6"><center> <a href="http://lattes.cnpq.br/0400321536793591" target="_blank"> <img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-11 odd">
+		<td class="column-1"><a href="http://servidoresbnu.paginas.ufsc.br/files/2019/07/daniel_lima.jpg" target="_blank" class="thickbox no_icon" rel="gallery-25">Daniel Martins Lima</a></td><td class="column-2">&nbsp;<a href="mailto:daniel.lima@ufsc.br">daniel.lima@ufsc.br</a></td><td class="column-3">(48) 3721-3337<br>
+(47) 3232-5137</td><td class="column-4">B119</td><td class="column-5">Coordenador do Curso de Engenharia de Controle e Automação</td><td class="column-6"><center> <a href="http://lattes.cnpq.br/6432435778545120" target="_blank"> <img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <a href="http://danielml.paginas.ufsc.br/" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"></a><br>
+</center></td>
+	</tr><tr class="row-12 even">
+		<td class="column-1">Ebrahim Samer El Youssef</td><td class="column-2"><a href="mailto:ebrahim.el.youssef@ufsc.br" target="blank">ebrahim.el.youssef@ufsc.br</a></td><td class="column-3">(48) 3721-3373<br>
+(47) 3232-5173</td><td class="column-4">C303</td><td class="column-5"></td><td class="column-6"><center> <a href="http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4106298Y8" target="_blank"> <img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-13 odd">
+		<td class="column-1">Fábio Rafael Segundo</td><td class="column-2"><a href="mailto:fabio.segundo@ufsc.br" target="_blank">fabio.segundo@ufsc.br</a></td><td class="column-3">(48) 3721-3374<br>
+(47) 3232-5174</td><td class="column-4">C304</td><td class="column-5"></td><td class="column-6"><center><img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-14 even">
+		<td class="column-1">Fernando Luis Peixoto </td><td class="column-2"><a href="mailto:fernando.l.peixoto@ufsc.br" target="_blank">fernando.l.peixoto@ufsc.br</a></td><td class="column-3">(48) 3721-3383<br>
+(47) 3232-5183</td><td class="column-4">C102</td><td class="column-5"></td><td class="column-6"><center><a href="http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4793637D9" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-15 odd">
+		<td class="column-1">Gledson Heidemann (Substituto)</td><td class="column-2"><a href="mailto:gledson.heidemann@ufsc.br" target="_blank">gledson.heidemann@ufsc.br</a></td><td class="column-3">(48) 3721-3383<br>
+(47) 3232-5183</td><td class="column-4">C102</td><td class="column-5"></td><td class="column-6"><center><a href="http://lattes.cnpq.br/2596357546212838" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-16 even">
+		<td class="column-1">Guilherme Brasil Pintarelli</td><td class="column-2"><a href="mailto:guilherme.pintarelli@ufsc.br">guilherme.pintarelli@ufsc.br</a></td><td class="column-3">(48) 3721-3373<br>
+(47) 3232-5173</td><td class="column-4">C303</td><td class="column-5"></td><td class="column-6"><center> <a href="http://lattes.cnpq.br/6921758272697669" _blank"=""> <img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"></center></td>
+	</tr><tr class="row-17 odd">
+		<td class="column-1">Hugo José Lara Urdaneta</td><td class="column-2">&nbsp;<a href="mailto:hugo.lara.urdaneta@ufsc.br">hugo.lara.urdaneta@ufsc.br</a></td><td class="column-3">(48) 3721-3332<br>
+(47) 3232-5132</td><td class="column-4">C306</td><td class="column-5">Chefe de Departamento</td><td class="column-6"><center><a href="http://lattes.cnpq.br/0145810830131742" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-18 even">
+		<td class="column-1"><a href="http://servidoresbnu.paginas.ufsc.br/files/2019/07/janaina_guimaraes.jpg" target="_blank" class="thickbox no_icon" rel="gallery-25">Janaina Gonçalves Guimarães</a></td><td class="column-2"><a href="mailto:janaina.guimaraes@ufsc.br" target="blank">janaina.guimaraes@ufsc.br</a></td><td class="column-3"></td><td class="column-4">B023</td><td class="column-5"></td><td class="column-6"><center><a href="http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4794488A2" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-19 odd">
+		<td class="column-1">Leonardo Mejia Rincon </td><td class="column-2"><a href="mailto:leonardo.mejia.rincon@ufsc.br">leonardo.mejia.rincon@ufsc.br</a></td><td class="column-3">(48) 3721-3374<br>
+(47) 3232-5174</td><td class="column-4">C304</td><td class="column-5"></td><td class="column-6"><center><a href="http://lattes.cnpq.br/8120573115155464" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-20 even">
+		<td class="column-1"><a href="http://servidoresbnu.paginas.ufsc.br/files/2019/07/luiz_antonio_maccari-Jr.jpg" target="_blank" class="thickbox no_icon" rel="gallery-25">Luiz Antonio Maccari Junior </a></td><td class="column-2"><a href="mailto:luiz.maccari@ufsc.br">luiz.maccari@ufsc.br</a></td><td class="column-3">(48) 3721-3374<br>
+(47) 3232-5174</td><td class="column-4">C304</td><td class="column-5"></td><td class="column-6"><center><a href="http://lattes.cnpq.br/1429520330620696" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-21 odd">
+		<td class="column-1">Maiquel de Brito </td><td class="column-2"><a href="mailto:maiquel.b@ufsc.br">maiquel.b@ufsc.br</a></td><td class="column-3">(48) 3721-3374<br>
+(47) 3232-5174</td><td class="column-4">C304</td><td class="column-5">Coordenador de Pesquisa</td><td class="column-6"><center><a href="http://lattes.cnpq.br/7806025869273339" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-22 even">
+		<td class="column-1">Marcos Vinicius Matsuo </td><td class="column-2"><a href="mailto:marcos.matsuo@ufsc.br">marcos.matsuo@ufsc.br</a></td><td class="column-3">(48) 3721-3374<br>
+(47) 3232-5174</td><td class="column-4">C304</td><td class="column-5">Coordenador de Estágio da Engenharia de Controle e Automação</td><td class="column-6"><center><a href="http://lattes.cnpq.br/7814364769055539" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-23 odd">
+		<td class="column-1">Marilise Luiza Martins dos Reis Sayão </td><td class="column-2"><a href="mailto:marilise.reis@ufsc.br">marilise.reis@ufsc.br</a></td><td class="column-3">(48) 3721-4268</td><td class="column-4">Reitoria I - Térreo</td><td class="column-5">Diretora de Ações Afirmativas e Equidade / PROAFE</td><td class="column-6"><center><a href="http://lattes.cnpq.br/6870080805428165" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-24 even">
+		<td class="column-1">Mauri Ferrandin</td><td class="column-2"><a href="mailto:mauri.ferrandin@ufsc.br">mauri.ferrandin@ufsc.br</a></td><td class="column-3">(48) 3721-3373<br>
+(47) 3232-5173</td><td class="column-4">C303</td><td class="column-5"></td><td class="column-6"><center><a href="http://lattes.cnpq.br/4132238007682356" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-25 odd">
+		<td class="column-1"><a href="http://servidoresbnu.paginas.ufsc.br/files/2019/07/sergio.jpg" target="_blank" class="thickbox no_icon" rel="gallery-25">Sérgio Luiz Ferreira </a></td><td class="column-2"><a href="mailto:sergio.ferreira@ufsc.br">sergio.ferreira@ufsc.br</a></td><td class="column-3">(48) 3721-6212 <br>
+(48) 3721-6284</td><td class="column-4">Sala 401- Reitoria II</td><td class="column-5">Presidente da CPA</td><td class="column-6"><center><a href="http://lattes.cnpq.br/3896051805181654" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-26 even">
+		<td class="column-1">Sheila Santisi Travessa (Substituto)</td><td class="column-2"></td><td class="column-3">(48) 3721-3383<br>
+(47) 3232-5183</td><td class="column-4">C102</td><td class="column-5"></td><td class="column-6"><center><a href="http://lattes.cnpq.br/4535345919814997" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-27 odd">
+		<td class="column-1">Steffan Macali Werner (Substituto)</td><td class="column-2"><a href="mailto:steffan.werner@ufsc.br">steffan.werner@ufsc.br</a></td><td class="column-3">(48) 3721-3383<br>
+(47) 3232-5183</td><td class="column-4">C102</td><td class="column-5"></td><td class="column-6"><center><a href="http://lattes.cnpq.br/9433166869230570" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-28 even">
+		<td class="column-1"><a href="http://servidoresbnu.paginas.ufsc.br/files/2019/07/tiago_busarello.jpg" target="_blank" class="thickbox no_icon" rel="gallery-25">Tiago Davi Curi Busarello  </a></td><td class="column-2"><a href="mailto:tiago.busarello@ufsc.br">tiago.busarello@ufsc.br</a></td><td class="column-3"></td><td class="column-4">B114</td><td class="column-5">Subcoordenador do Curso de Engenharia de Controle e Automação</td><td class="column-6"><center><a href="http://lattes.cnpq.br/9413842904460527" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <a href="http://busarello.prof.ufsc.br/" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"></a><br>
+</center></td>
+	</tr></tbody></table></div>
+
+<p>&nbsp;</p>
+<h3><strong>Departamento de Engenharia Têxtil (DET)</strong></h3>
+
+<div class="dataTables_wrapper" id="wp-table-reloaded-id-9-no-1_wrapper"><div class="dataTables_filter" id="wp-table-reloaded-id-9-no-1_filter"><label>Buscar: <input class="right" type="text"></label></div><table id="wp-table-reloaded-id-9-no-1" class="wp-table-reloaded wp-table-reloaded-id-9">
+<thead>
+	<tr class="row-1 odd"><th class="column-1 sorting" rowspan="1" colspan="1" style="width: 106px;">Professores</th><th class="column-2 sorting" rowspan="1" colspan="1" style="width: 177px;">E-mail</th><th class="column-3 sorting" rowspan="1" colspan="1" style="width: 99px;">Telefones<br>
+</th><th class="column-4 sorting" rowspan="1" colspan="1" style="width: 99px;">Sala</th><th class="column-5 sorting" rowspan="1" colspan="1" style="width: 122px;">Função</th><th class="column-6 sorting" rowspan="1" colspan="1" style="width: 99px;">Lattes e Site</th></tr>
+</thead>
+
+<tbody><tr class="row-2 even">
+		<td class="column-1">Alexandre José Sousa Ferreira (Em afastamento)</td><td class="column-2"><a href="mailto:alexandre.ferreira@ufsc.br" target="_blank">alexandre.ferreira@ufsc.br</a></td><td class="column-3">(48) 3721-3377<br>
+(47) 3232-5177</td><td class="column-4">C305</td><td class="column-5">Coordenador de TCC</td><td class="column-6"><center><a href="http://lattes.cnpq.br/9421456809868235" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-3 odd">
+		<td class="column-1"><a href="http://servidoresbnu.paginas.ufsc.br/files/2019/07/ana_julia.jpg" target="_blank" class="thickbox no_icon" rel="gallery-25">Ana Julia Dal Forno </a></td><td class="column-2"><a href="mailto:ana.forno@ufsc.br" target="_blank">ana.forno@ufsc.br&nbsp;</a></td><td class="column-3">(48) 3721-3377<br>
+(47) 3232-5177</td><td class="column-4">B110</td><td class="column-5">Coordenadora de Extensão do Curso de Engenharia Têxtil</td><td class="column-6"><center><a href="http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4776393Z0" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-4 even">
+		<td class="column-1"><a href="http://servidoresbnu.paginas.ufsc.br/files/2019/07/andrea_bierhalz.jpg" target="_blank" class="thickbox no_icon" rel="gallery-25">Andrea Cristiane Krause Bierhalz</a></td><td class="column-2"><a href="mailto:andrea.krause@ufsc.br">andrea.krause@ufsc.br</a></td><td class="column-3">(48) 3721-3376<br>
+(47) 3232-5176</td><td class="column-4">C302</td><td class="column-5"></td><td class="column-6"><center><a href="http://lattes.cnpq.br/0650350516727137" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-5 odd">
+		<td class="column-1"><a href="http://servidoresbnu.paginas.ufsc.br/files/2022/11/Brenno.jpg" _blank"="" class="thickbox no_icon" rel="gallery-25"> Brenno Henrique Silva Felipe</a></td><td class="column-2"><a href="mailto:brenno.henrique@ufsc.br">brenno.henrique@ufsc.br</a></td><td class="column-3">(48) 3721-3377<br>
+(47) 3232-5177</td><td class="column-4">C305</td><td class="column-5">Coordenador de Ensino</td><td class="column-6"><center><a href="http://lattes.cnpq.br/4520242315652155" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-6 even">
+		<td class="column-1">Carlos Rafael Silva de Oliveira</td><td class="column-2"><a href="mailto:carlos.oliveira@ufsc.br">carlos.oliveira@ufsc.br</a></td><td class="column-3">(48) 3721-3377<br>
+(47) 3232-5177</td><td class="column-4">C305</td><td class="column-5">Coordenador de Extensão do Curso</td><td class="column-6"><center><a href="http://lattes.cnpq.br/9188584202485334" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-7 odd">
+		<td class="column-1">Catia Rosana Lange de Aguiar</td><td class="column-2"><a href="mailto:catia.lange@ufsc.br" target="blank">catia.lange@ufsc.br</a></td><td class="column-3">(48) 3721-3330<br>
+(47) 3232-5130</td><td class="column-4">A003</td><td class="column-5">Coordenadora de Estágio do Curso de Engenharia Têxtil</td><td class="column-6"><center><a href="http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4758250Z2" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-8 even">
+		<td class="column-1">Cristiane da Costa</td><td class="column-2"><a href="mailto:cristiane.costa@ufsc.br">cristiane.costa@ufsc.br</a></td><td class="column-3">(48) 3721-3376<br>
+(47) 3232-5176</td><td class="column-4">C302</td><td class="column-5">Subcoordenadora do Mestrado em Engenharia Têxtil </td><td class="column-6"><center><a href="http://lattes.cnpq.br/6818033315642897" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-9 odd">
+		<td class="column-1">Fabiana Raupp</td><td class="column-2"><a href="mailto:fabiana.raupp@ufsc.br" target="blank">fabiana.raupp@ufsc.br</a></td><td class="column-3">(48) 3721-3397<br>
+(47) 3232-5197</td><td class="column-4">C204</td><td class="column-5">Chefe do Departamento</td><td class="column-6"><center><a href="http://lattes.cnpq.br/1370621716446031" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-10 even">
+		<td class="column-1"><a href="http://servidoresbnu.paginas.ufsc.br/files/2019/07/fernanda_teffens.jpg" target="_blank" class="thickbox no_icon" rel="gallery-25">Fernanda Steffens</a></td><td class="column-2"><a href="mailto:fernanda.steffens@ufsc.br">fernanda.steffens@ufsc.br</a></td><td class="column-3">(48) 3721-3376<br>
+(47) 3232-5176</td><td class="column-4">C302</td><td class="column-5">Coordenadora do Mestrado em Engenharia Têxtil</td><td class="column-6"><center><a href="http://lattes.cnpq.br/0837537872624684" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-11 odd">
+		<td class="column-1">Franciely Velozo Aragão</td><td class="column-2"><a href="mailto:franciely.aragao@ufsc.br">franciely.aragao@ufsc.br</a></td><td class="column-3">(48) 3721-3377<br>
+(47) 3232-5177</td><td class="column-4">C305</td><td class="column-5"></td><td class="column-6"><center><a href="http://lattes.cnpq.br/2906185447993807" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"></center></td>
+	</tr><tr class="row-12 even">
+		<td class="column-1">Grazyella Cristina Oliveira de Aguiar</td><td class="column-2">&nbsp;<a href="mailto:grazyella.oliveira@ufsc.br">grazyella.oliveira@ufsc.br</a></td><td class="column-3">(48) 3721-3330</td><td class="column-4">A213</td><td class="column-5">Coordenadora do Curso de Engenharia Têxtil</td><td class="column-6"><center><a href="http://lattes.cnpq.br/5493911035968207" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-13 odd">
+		<td class="column-1"><a href="http://servidoresbnu.paginas.ufsc.br/files/2019/07/jose_alexandre.jpg" target="_blank" class="thickbox no_icon" rel="gallery-25">José Alexandre Borges Valle </a></td><td class="column-2"><a href="mailto:alexandre.valle@ufsc.br" target="blank">alexandre.valle@ufsc.br</a></td><td class="column-3">(48) 3721-3376<br>
+(47) 3232-5176</td><td class="column-4">C302</td><td class="column-5"></td><td class="column-6"><center><a href="http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4798651E2" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-14 even">
+		<td class="column-1">Joziel Aparecido da Cruz (Substituto)</td><td class="column-2"><a href="mailto:joziel.cruz@ufsc.br" target="blank">joziel.cruz@ufsc.br</a></td><td class="column-3">(48) 3721-3380<br>
+(47) 3232-5180</td><td class="column-4">B003</td><td class="column-5"></td><td class="column-6"><center><a href="http://lattes.cnpq.br/6736633340174737" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-15 odd">
+		<td class="column-1">Maria Elisa Philippsen Missner </td><td class="column-2"><a href="mailto:elisa.p.missner@ufsc.br">elisa.p.missner@ufsc.br</a></td><td class="column-3">(48) 3721-3377<br>
+(47) 3232-5177</td><td class="column-4">C305</td><td class="column-5"></td><td class="column-6"><center><a href="http://lattes.cnpq.br/6173762154408817" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-16 even">
+		<td class="column-1"><a href="http://servidoresbnu.paginas.ufsc.br/files/2019/07/miguel_granato.jpg" target="_blank" class="thickbox no_icon" rel="gallery-25">Miguel Angelo Granato</a></td><td class="column-2"><a href="mailto:m.a.granato@ufsc.br">m.a.granato@ufsc.br</a></td><td class="column-3">(48) 3721-3376<br>
+(47) 3232-5176</td><td class="column-4">B117/C302</td><td class="column-5">Subcoordenador do Curso de Engenharia Têxtil</td><td class="column-6"><center><a href="http://lattes.cnpq.br/6469448712482072" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-17 odd">
+		<td class="column-1">Odinei Hess Gonçalves</td><td class="column-2"><a href="mailto:odinei.hg@ufsc.br">odinei.hg@ufsc.br</a></td><td class="column-3">(48) 3721-3377<br>
+(47) 3232-5177</td><td class="column-4">C305</td><td class="column-5">Coordenador de Pesquisa</td><td class="column-6"><center><a href="http://lattes.cnpq.br/2485580934187356" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-18 even">
+		<td class="column-1">Rita de Cassia Siqueira Curto Valle </td><td class="column-2"><a href="mailto:rita.valle@ufsc.br">rita.valle@ufsc.br</a></td><td class="column-3">(48) 3721-3376<br>
+(47) 3232-5176</td><td class="column-4">C302</td><td class="column-5"></td><td class="column-6"><center><a href="http://lattes.cnpq.br/2850858459374057" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-19 odd">
+		<td class="column-1">Selene de Souza Siqueira Soares </td><td class="column-2"><a href="mailto:selene.soares@ufsc.br">selene.soares@ufsc.br</a></td><td class="column-3">(48) 3721-3377<br>
+(47) 3232-5177</td><td class="column-4">C305</td><td class="column-5">Subchefe do Departamento</td><td class="column-6"><center><a href="http://lattes.cnpq.br/1373686436888322" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr></tbody></table></div>
+
+<p>&nbsp;</p>
+<h3><strong>Departamento de&nbsp;Matemática (MAT)</strong></h3>
+
+<div class="dataTables_wrapper" id="wp-table-reloaded-id-10-no-1_wrapper"><div class="dataTables_filter" id="wp-table-reloaded-id-10-no-1_filter"><label>Buscar: <input class="right" type="text"></label></div><table id="wp-table-reloaded-id-10-no-1" class="wp-table-reloaded wp-table-reloaded-id-10">
+<thead>
+	<tr class="row-1 odd"><th class="column-1 sorting" rowspan="1" colspan="1" style="width: 107px;">Professores</th><th class="column-2 sorting" rowspan="1" colspan="1" style="width: 178px;">E-mail</th><th class="column-3 sorting" rowspan="1" colspan="1" style="width: 100px;">Telefones<br>
+</th><th class="column-4 sorting" rowspan="1" colspan="1" style="width: 100px;">Sala</th><th class="column-5 sorting" rowspan="1" colspan="1" style="width: 117px;">Função</th><th class="column-6 sorting" rowspan="1" colspan="1" style="width: 100px;">Lattes e Site</th></tr>
+</thead>
+
+<tbody><tr class="row-2 even">
+		<td class="column-1"><a href="http://servidoresbnu.paginas.ufsc.br/files/2019/07/Andre-Vanderlinde.png" target="_blank" class="thickbox no_icon" rel="gallery-25">André Vanderlinde da Silva  </a></td><td class="column-2"><a href="mailto:andre.vanderlinde@ufsc.br">andre.vanderlinde@ufsc.br</a></td><td class="column-3">(48) 3721-3345<br>
+(47) 3232-5145</td><td class="column-4">C301</td><td class="column-5">Subchefe do Departamento</td><td class="column-6"><center><a href="http://lattes.cnpq.br/4273751126197151" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-3 odd">
+		<td class="column-1">Bruno Tadeu Costa<br>
+</td><td class="column-2"><a href="mailto:b.t.costa@ufsc.br" target="_blank">b.t.costa@ufsc.br</a></td><td class="column-3">(48) 3721-3345<br>
+(47) 3232-5145</td><td class="column-4">C301</td><td class="column-5">Coordenador de Ensino</td><td class="column-6"><center><a href="http://lattes.cnpq.br/3884550963192168" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-4 even">
+		<td class="column-1">Cleison dos Santos Ramthun (Substituto)</td><td class="column-2"><a href="mailto:cleison.ramthun@ufsc.br" target="_blank">cleison.ramthun@ufsc.br</a></td><td class="column-3">(48) 3721-3384<br>
+(47) 3232-5184</td><td class="column-4">C306</td><td class="column-5"></td><td class="column-6"><center><a href="http://lattes.cnpq.br/2222545508712238" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-5 odd">
+		<td class="column-1"><a href="http://servidoresbnu.paginas.ufsc.br/files/2024/03/foto-Darlyn.jpg" target="_blank" class="thickbox no_icon" rel="gallery-25"> Darlyn Walter Huamán Vargas (Substituto)</a></td><td class="column-2"><a href="mailto:darlyn.vargas@ufsc.br" target="_blank">darlyn.vargas@ufsc.br</a></td><td class="column-3">(48) 3721-3345<br>
+(47) 3232-5145</td><td class="column-4">C301</td><td class="column-5"></td><td class="column-6"><center><a href="http://lattes.cnpq.br/5513750652702077" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-6 even">
+		<td class="column-1">Eleomar Cardoso Júnior</td><td class="column-2"><a href="mailto:eleomar.junior@ufsc.br">eleomar.junior@ufsc.br</a></td><td class="column-3">(48) 3721-3345<br>
+(47) 3232-5145</td><td class="column-4">C301</td><td class="column-5">Subcoordenador do Mestrado Profissional em Matemática</td><td class="column-6"><center><a href="http://lattes.cnpq.br/3586827614269014" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-7 odd">
+		<td class="column-1">Felipe Delfini Caetano Fidalgo </td><td class="column-2"><a href="mailto:felipe.fidalgo@ufsc.br" target="_blank">felipe.fidalgo@ufsc.br</a></td><td class="column-3">(48) 3721-3384<br>
+(47) 3232-5184</td><td class="column-4">C306</td><td class="column-5">Coordenador do Mestrado Profissional em Matemática</td><td class="column-6"><center><a href="http://lattes.cnpq.br/2447150127495829" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <a href="http://felipefidalgo.paginas.ufsc.br/" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"></a><br>
+</center></td>
+	</tr><tr class="row-8 even">
+		<td class="column-1">Felipe Vieira </td><td class="column-2"><a href="mailto:f.vieira@ufsc.br" target="_blank">f.vieira@ufsc.br</a></td><td class="column-3">(48) 3721-3345<br>
+(47) 3232-5145</td><td class="column-4">C301</td><td class="column-5">Coordenador de Extensão do Curso de Licenciatura em Matemática</td><td class="column-6"><center><a href="http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4550317T8" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <a href="http://fvieira.paginas.ufsc.br/" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"></a><br>
+</center></td>
+	</tr><tr class="row-9 odd">
+		<td class="column-1">Francis Felix Cordova Puma</td><td class="column-2"><a href="mailto:francis.cordova@ufsc.br" target="_blank">francis.cordova@ufsc.br</a></td><td class="column-3">(48) 3721-3339<br>
+(47) 3232-5139</td><td class="column-4">A306</td><td class="column-5">Coordenador do Curso de Licenciatura em Matemática</td><td class="column-6"><center><a href="http://lattes.cnpq.br/0984985253008832" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-10 even">
+		<td class="column-1">Javier Esneider Méndez Alfonso (Substituto)</td><td class="column-2"><a href="mailto:javier.mendez@ufsc.br" target="_blank">javier.mendez@ufsc.br</a></td><td class="column-3">(48) 3721-3345<br>
+(47) 3232-5145</td><td class="column-4">C301</td><td class="column-5"></td><td class="column-6"><center><a href="http://lattes.cnpq.br/6109886425922101" _blank"=""><img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-11 odd">
+		<td class="column-1">João Luiz Martins</td><td class="column-2"><a href="mailto:martins.j@ufsc.br" target="blank">martins.j@ufsc.br</a></td><td class="column-3">(48) 3721-3393<br>
+(47) 3232-5193</td><td class="column-4">Reitoria</td><td class="column-5">Diretor Geral do Gabinete da Reitoria</td><td class="column-6"><center><a href="http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4793949P1" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-12 even">
+		<td class="column-1">Jorge Luiz Deolindo Silva</td><td class="column-2">&nbsp;<a href="mailto:jorge.deolindo@ufsc.br">jorge.deolindo@ufsc.br</a></td><td class="column-3">(48) 3721-3345<br>
+(47) 3232-5145</td><td class="column-4">C301</td><td class="column-5"></td><td class="column-6"><center><a href="http://lattes.cnpq.br/2047718879205987" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-13 odd">
+		<td class="column-1">Louise Reips</td><td class="column-2"><a href="mailto:r.reips@ufsc.br">l.reips@ufsc.br</a></td><td class="column-3">(48) 3721-3389<br>
+(47) 3232-5189</td><td class="column-4">C301</td><td class="column-5">Coordenadora de Extensão do Departamento de Matemática</td><td class="column-6"><center><a href="http://lattes.cnpq.br/0095093244682529" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-14 even">
+		<td class="column-1">Luiz Rafael dos Santos</td><td class="column-2"><a href="mailto:l.r.santos@ufsc.br">l.r.santos@ufsc.br</a></td><td class="column-3">(48) 3721-3384<br>
+(47) 3232-5184</td><td class="column-4">C306</td><td class="column-5"></td><td class="column-6"><center><a href="http://lattes.cnpq.br/8148144650071227" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-15 odd">
+		<td class="column-1">Maicon José Benvenutti (Licença)</td><td class="column-2"><a href="mailto:m.benvenutti@ufsc.br">m.benvenutti@ufsc.br</a></td><td class="column-3">(48) 3721-3345<br>
+(47) 3232-5145</td><td class="column-4">C301</td><td class="column-5"></td><td class="column-6"><center><a href="http://lattes.cnpq.br/6823359903850096" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-16 even">
+		<td class="column-1">Márcio de Jesus Soares</td><td class="column-2"><a href="mailto:marcio.j.soares@ufsc.br">marcio.j.soares@ufsc.br</a></td><td class="column-3">(48) 3721-3345<br>
+(47) 3232-5145</td><td class="column-4">C301</td><td class="column-5"></td><td class="column-6"><center><a href="http://lattes.cnpq.br/3273672989988386" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-17 odd">
+		<td class="column-1">Naiara Vergian de Paulo Costa</td><td class="column-2"><a href="mailto:naiara.vergian@ufsc.br">naiara.vergian@ufsc.br</a></td><td class="column-3">(48) 3721-3345<br>
+(47) 3232-5145</td><td class="column-4">C301</td><td class="column-5">Coordenadora de TCC</td><td class="column-6"><center><a href="http://lattes.cnpq.br/7544815481177473" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-18 even">
+		<td class="column-1">Rafael Aleixo de Carvalho</td><td class="column-2"><a href="mailto:rafael.aleixo@ufsc.br">rafael.aleixo@ufsc.br</a></td><td class="column-3">(48) 3721-3384<br>
+(47) 3232-5184</td><td class="column-4">C306</td><td class="column-5">Subcoordenador do Curso de Licenciatura em Matemática</td><td class="column-6"><center> <a href="http://lattes.cnpq.br/7777729152508878" target="_blank"> <img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <a href="https://aleixo.paginas.ufsc.br/" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"></a></center></td>
+	</tr><tr class="row-19 odd">
+		<td class="column-1">Rafael dos Reis Abreu</td><td class="column-2"><a href="mailto:rafael.abreu@ufsc.br">rafael.abreu@ufsc.br</a></td><td class="column-3">(48) 3721-3349<br>
+(47) 3232-5149</td><td class="column-4">C202</td><td class="column-5">Vice-Diretor do Centro/Campus</td><td class="column-6"><center><a href="http://lattes.cnpq.br/2902733308833713" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-20 even">
+		<td class="column-1">Renan Gambale Romano</td><td class="column-2"><a href="mailto:r.g.romano@ufsc.br">r.g.romano@ufsc.br</a></td><td class="column-3">(48) 3721-3384<br>
+(47) 3232-5184</td><td class="column-4">C306</td><td class="column-5">Coordenador de Pesquisa</td><td class="column-6"><center><a href="http://lattes.cnpq.br/2317413965575635" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr><tr class="row-21 odd">
+		<td class="column-1">Roger Behling</td><td class="column-2"><a href="mailto:roger.behling@ufsc.br">roger.behling@ufsc.br</a></td><td class="column-3">(48) 3721-3346<br>
+(47) 3232-5146</td><td class="column-4">C204</td><td class="column-5">Chefe do Departamento</td><td class="column-6"><center><a href="http://lattes.cnpq.br/3957328123845118" target="_blank"><img src="./Servidores UFSC – Blumenau_files/icon_lattes.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Currículo lattes"></a> <img src="./Servidores UFSC – Blumenau_files/icon_home.png" width="25" height="25" class="alignnone wp-image-454 size-full" title="Páginas UFSC"><br>
+</center></td>
+	</tr></tbody></table></div>
+
+<p><strong>&nbsp;</strong></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>                                    </div>
+                                        
+            </article>
+
+                    
+    
+        
+    
+        
+
+</section>
+	</div>
+
+	<div id="sidebar_right">
+<div id="text-15" class="widget widget_text">			<div class="textwidget"><a href="https://conselhouniversitario.paginas.ufsc.br/files/2012/10/Minuta-RN-185-Calend%C3%A1rio-Acad%C3%AAmico-de-Gradua%C3%A7%C3%A3o-2024-Campus-Blumenau-final-assinada.pdf" target="_blank"><img src="./Servidores UFSC – Blumenau_files/calendario2024.png"></a></div>
+		</div><div id="text-9" class="widget widget_text">			<div class="textwidget"><a href="https://servidores.blumenau.ufsc.br/servidores-tae/"><img src="./Servidores UFSC – Blumenau_files/ContatoTAES.png" alt="”Contatos TAES"></a></div>
+		</div><div id="text-14" class="widget widget_text">			<div class="textwidget"><a href="https://servidores.blumenau.ufsc.br/servidores-docentes/"><img src="./Servidores UFSC – Blumenau_files/ContatosDocentes.png" alt="”Contatos Docentes"></a></div>
+		</div><div id="text-17" class="widget widget_text">			<div class="textwidget"><a href="https://servidores.blumenau.ufsc.br/teletrabalho-e-flexibilizacao/"><img src="./Servidores UFSC – Blumenau_files/BANNER-TELE-FLEX.png" alt="”Contatos Docentes"></a></div>
+		</div><div id="text-16" class="widget widget_text">			<div class="textwidget"><a href="https://adrh.sistemas.ufsc.br/csocial/restrito/servidor/index.xhtml">
+<img src="./Servidores UFSC – Blumenau_files/Captura-de-tela-CSocial-ADRH.png"></a></div>
+		</div><div id="text-4" class="widget widget_text">			<div class="textwidget"><a href="https://prodegesp.ufsc.br/categoria/folha-de-pagamento/" target="_blank">
+<img src="./Servidores UFSC – Blumenau_files/folha10.png"></a></div>
+		</div><div id="text-3" class="widget widget_text">			<div class="textwidget"><div style="height:100px;width:100px;float:left;margin-right:5px">
+<a href="http://blumenau.ufsc.br/licitacoes">
+<img src="./Servidores UFSC – Blumenau_files/licita.png" alt="Licitações" width="100" height="100"></a>
+</div>
+
+<div style="height:92px;width:50%;float:left;padding-top:8px">
+<a style="color:#000" href="https://compras.ufsc.br/"><h4 align="center"> Publicação de Editais <br>
+  de Pregão Eletrônico </h4> </a>
+
+</div></div>
+		</div><div id="text-8" class="widget widget_text">			<div class="textwidget"><div style="height:100px;width:100px;float:left;margin-right:5px">
+<a href="http://ru.blumenau.ufsc.br/" target="_blank">
+<img src="./Servidores UFSC – Blumenau_files/ru2.png" alt="Restaurante Universitário"></a>
+</div>
+
+<div style="height:82px;width:50%;float:left;padding-top:18px">
+<a href="http://ru.blumenau.ufsc.br/" target="_blank" style="color:#000">
+<h4 align="center"> Restaurante <br>
+  Universitário<br>
+Blumenau
+</h4> </a>
+
+</div></div>
+		</div><div id="text-11" class="widget widget_text"><h2>Telefones e e-mails</h2>			<div class="textwidget">  <div id="linha_1" style="width:100%;height:20px;float:left">
+        <div style="text-align: left;font-size:12px;width:50%;height:20px;float:left">Docentes</div>
+		<div style="text-align: center;width:50%;height:20px;float:left"><a href="http://servidores.blumenau.ufsc.br/servidores-docentes/" title="veja a lista" target="_blank">Acesse</a></div>
+  </div>
+  
+  <div id="linha_2" style="width:100%;height:20px;float:left">
+        <div style="text-align: left;font-size:12px;width:50%;height:20px;float:left">Téc. Administrativos</div>
+		<div style="text-align: center;width:50%;height:20px;float:left"><a href="http://servidores.blumenau.ufsc.br/servidores-tae/" title="veja a lista" target="_blank">Acesse</a></div>
+  </div>
+  
+   <div id="linha_2" style="width:100%;height:20px;float:left">
+        <div style="text-align: left;font-size:12px;width:50%;height:20px;float:left">Catálogo Completo</div>
+		<div style="text-align: center;width:50%;height:20px;float:left"><a href="http://telefones.ufsc.br/public/" title="veja a lista completa" target="_blank">Acesse</a></div>
+  </div></div>
+		</div>    <ul id="pu-contatos" class="last">
+        <li><h2>Contatos</h2>
+            <p>
+                <b>Catieli Nunes de Figueredo Beléia </b><br>
+<i> Agente de Desenvolvimento e Gestão de Pessoas </i><br>
+<br>
+<b>Telefone Direto:</b> <br>
+(47) 3232-5134 | (48) 3721-3334<br>
+<br>
+<b>Email:</b><br>
+<a href="mailto:%3Cimg%20src=&#39;http://servidoresbnu.paginas.ufsc.br/wp-content/blogs.dir/2749/files/graphicmail/caffa79406ce027c94af95f394433c94.png&#39;%20border=&#39;0&#39;%20class=&#39;email&#39;%20alt=&#39;Esta%20imagem%20cont%C3%A9m%20um%20endere%C3%A7o%20de%20e-mail.%20%C3%89%20uma%20imagem%20de%20modo%20que%20spam%20n%C3%A3o%20pode%20colher.&#39;/%3E"><img src="./Servidores UFSC – Blumenau_files/caffa79406ce027c94af95f394433c94.png" border="0" class="email" alt="Esta imagem contém um endereço de e-mail. É uma imagem de modo que spam não pode colher."></a>            </p>
+        </li>
+    </ul>
+
+</div>
+
+
+</section>
+
+<footer id="footer" class="clearfix" name="footer">
+    <section id="rodape">
+        <script defer="defer" src="./Servidores UFSC – Blumenau_files/barra.js.download" type="text/javascript"></script>
+        <div id="footer_links" class="grid clearfix" name="footer_links">
+                    <div id="sponsors">
+                        <dl>
+                    <dt>
+                        <a href="http://prodegesp.ufsc.br/" target="_blank">
+                            <img src="./Servidores UFSC – Blumenau_files/cropped-apoio-prodegesp-150x60.png" alt="">
+                        </a>
+                        <span></span>
+                    </dt>
+                </dl>
+                </div>
+                </div>
+        <div id="footer-brasil"><div id="wrapper-footer-brasil"><a href="http://www.gov.br/acessoainformacao/"><span class="logo-acesso-footer"></span></a><a class="logo-governo-federal" href="http://www.brasil.gov.br/" alt="Governo Federal" title="Governo Federal"></a></div></div>
+    </section>
+</footer>
+
+<div class="extra-footer">
+    <ul>
+        <li> Desenvolvido com o CMS de código aberto <a href="https://br.wordpress.org/.org">Wordpress</a></li>
+        <li class="last-update">Última atualização do site foi em 19 de junho 2024 - 8:05:22</li>
+    </ul>
+</div>
+
+<!-- Google tag (gtag.js) -->
+<script async="" src="./Servidores UFSC – Blumenau_files/js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2LJ98VTMN0');
+</script>
+
+<script src="./Servidores UFSC – Blumenau_files/ga.js.download"></script>
+<script type="text/javascript">
+var pageTracker2 = _gat._getTracker('UA-102900848-1');
+pageTracker2._initData();
+pageTracker2._trackPageview();
+</script><script type="text/javascript" src="./Servidores UFSC – Blumenau_files/jquery.datatables.min.js.download"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+jQuery(document).ready(function($){
+	$("#wp-table-reloaded-id-34-no-1").dataTable({"oLanguage":{"sUrl": "https://servidores.blumenau.ufsc.br/wp-content/plugins/wp-table-reloaded/languages/datatables/lang-pt_BR.txt"}, "aaSorting": [], "bSortClasses": false, "asStripClasses":['even','odd'], "bPaginate": false, "bInfo": false});
+	$("#wp-table-reloaded-id-11-no-1").dataTable({"oLanguage":{"sUrl": "https://servidores.blumenau.ufsc.br/wp-content/plugins/wp-table-reloaded/languages/datatables/lang-pt_BR.txt"}, "aaSorting": [], "bSortClasses": false, "asStripClasses":['even','odd'], "bPaginate": false, "bInfo": false});
+	$("#wp-table-reloaded-id-3-no-1").dataTable({"oLanguage":{"sUrl": "https://servidores.blumenau.ufsc.br/wp-content/plugins/wp-table-reloaded/languages/datatables/lang-pt_BR.txt"}, "aaSorting": [], "bSortClasses": false, "asStripClasses":['even','odd'], "bPaginate": false, "bInfo": false});
+	$("#wp-table-reloaded-id-9-no-1").dataTable({"oLanguage":{"sUrl": "https://servidores.blumenau.ufsc.br/wp-content/plugins/wp-table-reloaded/languages/datatables/lang-pt_BR.txt"}, "aaSorting": [], "bSortClasses": false, "asStripClasses":['even','odd'], "bPaginate": false, "bInfo": false});
+	$("#wp-table-reloaded-id-10-no-1").dataTable({"oLanguage":{"sUrl": "https://servidores.blumenau.ufsc.br/wp-content/plugins/wp-table-reloaded/languages/datatables/lang-pt_BR.txt"}, "aaSorting": [], "bSortClasses": false, "asStripClasses":['even','odd'], "bPaginate": false, "bInfo": false});
+});
+/* ]]> */
+</script><script type="text/javascript" src="./Servidores UFSC – Blumenau_files/auto-thickbox.min.js.download"></script>
+<script type="text/javascript" src="./Servidores UFSC – Blumenau_files/core.min.js.download"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"https:\/\/servidores.blumenau.ufsc.br\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"},"recaptcha":{"messages":{"empty":"Verifique se voc\u00ea n\u00e3o \u00e9 um rob\u00f4."}},"jqueryUi":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Servidores UFSC – Blumenau_files/scripts.js.download"></script>
+<script type="text/javascript" src="./Servidores UFSC – Blumenau_files/datepicker.min.js.download"></script>
+<script type="text/javascript">
+jQuery(document).ready(function(jQuery){jQuery.datepicker.setDefaults({"closeText":"Fechar","currentText":"Hoje","monthNames":["janeiro","fevereiro","mar\u00e7o","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"],"monthNamesShort":["jan","fev","mar","abr","maio","jun","jul","ago","set","out","nov","dez"],"nextText":"Pr\u00f3ximo","prevText":"Anterior","dayNames":["domingo","segunda-feira","ter\u00e7a-feira","quarta-feira","quinta-feira","sexta-feira","s\u00e1bado"],"dayNamesShort":["dom","seg","ter","qua","qui","sex","s\u00e1b"],"dayNamesMin":["D","S","T","Q","Q","S","S"],"dateFormat":"d \\dd\\e MM \\dd\\e yy","firstDay":0,"isRTL":false});});
+</script>
+<script type="text/javascript" src="./Servidores UFSC – Blumenau_files/widget.min.js.download"></script>
+<script type="text/javascript" src="./Servidores UFSC – Blumenau_files/button.min.js.download"></script>
+<script type="text/javascript" src="./Servidores UFSC – Blumenau_files/spinner.min.js.download"></script>
+<script type="text/javascript" src="./Servidores UFSC – Blumenau_files/wp-embed.js.download"></script>
+        <script type="text/javascript">
+            function AI_responsive_widget() {
+                jQuery('object.StefanoAI-youtube-responsive').each(function () {
+                    jQuery(this).parent('.fluid-width-video-wrapper').removeClass('fluid-width-video-wrapper').removeAttr('style').css('width', '100%').css('display', 'block');
+                    jQuery(this).children('.fluid-width-video-wrapper').removeClass('fluid-width-video-wrapper').removeAttr('style').css('width', '100%').css('display', 'block');
+                    var width = jQuery(this).parent().innerWidth();
+                    var maxwidth = jQuery(this).css('max-width').replace(/px/, '');
+                    var pl = parseInt(jQuery(this).parent().css('padding-left').replace(/px/, ''));
+                    var pr = parseInt(jQuery(this).parent().css('padding-right').replace(/px/, ''));
+                    width = width - pl - pr;
+                    if (maxwidth < width) {
+                        width = maxwidth;
+                    }
+                    jQuery(this).css('width', width + "px");
+                    jQuery(this).css('height', width / (16 / 9) + "px");
+                    jQuery(this).find('iframe').css('width', width + "px");
+                    jQuery(this).find('iframe').css('height', width / (16 / 9) + "px");
+                });
+            }
+            if (typeof jQuery !== 'undefined') {
+                jQuery(document).ready(function () {
+                    var tag = document.createElement('script');
+                    tag.src = "https://www.youtube.com/iframe_api";
+                    var firstScriptTag = document.getElementsByTagName('script')[0];
+                    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+                    AI_responsive_widget();
+                });
+                jQuery(window).resize(function () {
+                    AI_responsive_widget();
+                });
+            }
+                </script>
+        </section></div><div><div vw="" class="enabled" style="left: initial; right: 0px; top: 50%; bottom: initial; transform: translateY(calc(-50% - 10px));"><div vw-access-button="" class="active"><img class="access-button" data-src="assets/access_icon.svg" alt="Conteúdo acessível em Libras usando o VLibras Widget com opções dos Avatares Ícaro, Hosana ou Guga." src="./Servidores UFSC – Blumenau_files/access_icon.svg">
+<img class="pop-up" data-src="assets/access_popup.jpg" alt="Conteúdo acessível em Libras usando o VLibras Widget com opções dos Avatares Ícaro, Hosana ou Guga." src="./Servidores UFSC – Blumenau_files/access_popup.jpg"></div><div vw-plugin-wrapper=""><div vp="">
+  <div vp-box=""></div>
+  <div vp-message-box=""></div>
+  <div vp-settings=""></div>
+  <div vp-dictionary=""></div>
+  <div vp-settings-btn=""></div>
+  <div vp-info-screen=""></div>
+  <div vp-suggestion-screen=""></div>
+  <div vp-translator-screen=""></div>
+  <div vp-main-guide-screen=""></div>
+  <div vp-suggestion-button=""></div>
+  <div vp-rate-box=""></div>
+  <div vp-change-avatar=""></div>
+  <div vp-additional-options=""></div>
+  <div vp-controls=""></div>
+  <span vp-click-blocker=""></span>
+</div></div></div></div><script src="./Servidores UFSC – Blumenau_files/vlibras-plugin.js.download" type="text/javascript"></script></body></html>

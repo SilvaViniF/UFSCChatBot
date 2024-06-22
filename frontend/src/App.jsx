@@ -4,7 +4,7 @@ import { GlobalStyle } from "./assets/styles/reset";
 function App() {
   return (
     <div>
-      <GlobalStyle />
+      <GlobalStyle />      
       <ChatUfscPage />
     </div>
   );

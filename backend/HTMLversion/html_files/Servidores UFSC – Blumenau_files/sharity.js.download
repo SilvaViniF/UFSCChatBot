@@ -1,0 +1,48 @@
+var http_req = false;
+
+// Função que verifica se os campos estão corretos ou em branco, e faz o submit do formulário //
+function SharitySubmit(url){
+    //!NOT YET FUNCTIONAL!//
+    _sn=document.getElementById("SharitySenderNameField");
+    _sm=document.getElementById("SharitySenderMailField");
+    _fn=document.getElementById("SharityFriendNameField");
+    _fm=document.getElementById("SharityFriendMailField");
+    _cp=document.getElementById("SharityResultField");
+        
+    if(_sn.value==""){
+        document.getElementById('SharityMessage').innerHTML = "Digite seu nome.";
+        _sn.focus();
+        return false;    
+    }else if(_sm.value==""){
+        document.getElementById('SharityMessage').innerHTML = "Digite seu e-mail."
+        _sm.focus();
+        return false;    
+    }else if(_sm.value!="" && (_sm.value.indexOf("@",0)==-1 || _sm.value.indexOf(".",0)==-1)){
+        document.getElementById('SharityMessage').innerHTML = "Digite um e-mail válido.";
+        _sm.focus();
+        _sm.select();
+        return false;
+    }else if(_fn.value==""){
+        document.getElementById('SharityMessage').innerHTML = "Digite o nome do destinatário.";
+        _fn.focus();
+        return false;    
+    }else if(_fm.value==""){
+        document.getElementById('SharityMessage').innerHTML = "Digite o e-mail do destinatário.";
+        _fm.focus();
+        return false;    
+    }else if(_fm.value!="" && (_fm.value.indexOf("@",0)==-1 || _fm.value.indexOf(".",0)==-1)){
+        document.getElementById('SharityMessage').innerHTML = "Digite um e-mail válido.";
+        _fm.focus();
+        _fm.select();
+        return false;
+    }else if(_cp.value==""){
+        document.getElementById('SharityMessage').innerHTML = "Digite o código de verificação.";
+        _cm.focus();
+        return false;    
+    }else{
+        target = url+'sharity-email.php';
+        var theForm = document.getElementById("SharityForm");
+        theForm.action = target;
+        document.SharityForm.submit();
+    }    
+}

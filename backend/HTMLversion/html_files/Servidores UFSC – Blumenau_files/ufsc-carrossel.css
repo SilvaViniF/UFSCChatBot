@@ -1,0 +1,138 @@
+/*Slideshow*/
+
+#slideshowenv {
+    margin-bottom: 7em;
+    overflow: hidden;
+}
+
+
+#slideshow {
+    background: white;
+    /*margin-bottom: 7em;*/
+    overflow: hidden;
+}
+
+#slideshow img {
+
+    display: block;
+    top:0;
+    left:0;
+    min-height: 100%;
+    max-height: 100%;
+    min-width: 100%;
+    max-width: 100%;
+}
+
+#slideshow .item {
+    width: auto;
+    height: 100%;
+    background: url(img/default.jpg) repeat 0 0;
+}
+
+#slideshow .item .shade {
+    width: 100%;
+    height: 100%;
+    background: url(img/shade.png) repeat 0 0;
+    position: absolute;
+}
+#slideshow .item .text {
+    position: absolute;
+    width: 770px;
+    padding:  1.4em 0 0 0;
+    color: #ffffff;
+    overflow: hidden;
+    display: block;
+    max-height: 75px;
+    min-height: 98px;
+}
+#slideshow .item .text h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align: left;
+}
+#slideshow .item .text h3 a {
+    color: #172938;
+    text-decoration: none;
+    font-size: 1.6em;
+}
+
+#slide-controls {
+    width : 100%;
+    height : 46px;
+}
+
+#slide-controls #slide-nav {
+    float : right;
+    height : 24px;
+    display : inline;
+    margin : 11px 0 0 0;
+}
+
+#slide-controls #slide-nav a {
+    color : white;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    float : left;
+    width : 20px;
+    height : 20px;
+    display : inline;
+    font-size : 10px;
+    margin : 0 5px 0 0;
+    line-height : 20px;
+    font-weight : bold;
+    text-align : center;
+    text-decoration : none;
+    background-position : 0 0;
+    background-repeat : no-repeat;
+    background-color: rgb(0,0,0); /* The Fallback */
+    background-color: rgba(0,0,0,0.45);
+}
+
+#slide-controls #slide-nav a.on {
+    display: inline;
+    background-color: rgb(0,56,101); /* The Fallback */
+    background-color: rgba(0,56,101,0.85);
+}
+
+#slide-controls #slideshow-button {
+    float : left;
+    height : 24px;
+    display : inline;
+    margin : 11px 0 0 0;
+}
+
+#slide-controls #slideshow-button.disable {
+    filter: alpha(opacity=0);
+    -moz-opacity: 0.0;
+    -khtml-opacity: 0.0;
+    opacity: 0.0;
+}
+
+#slide-controls #slideshow-button a {
+    color : white;
+    font-size : 9px;
+    font-weight : bold;
+    text-decoration: none;
+    padding: 1px 4px 2px 4px;
+    background-color: rgb(0,56,101); /* The Fallback */
+    background-color: rgba(0,56,101,0.65);
+}
+
+/*@media screen and (max-width: 650px){
+        #slideshow {
+                position:relative;
+                left: 100px;
+
+        }
+
+        #slideshow img {
+                width: 120%;
+        }
+
+        .span_6_of_12 {
+                width:180%;
+        }
+
+}*/

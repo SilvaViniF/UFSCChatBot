@@ -1,0 +1,68 @@
+jQuery(document).ready(function () {
+
+    var cont = 1;
+    var jqItem;
+    jQuery('.post_column ul li:eq(0)').addClass('highlight');
+
+
+    // Adiciona classe hide_mobile nos elementos do sidebar_left
+    // A linha abaixo foi comentada para aparecer o Navigation no Menu
+    //jQuery('#sidebar_left ul:first').addClass("hide_mobile");
+    jQuery('#sidebar_left ul.widget li ul').addClass("hide_mobile");
+    jQuery('#sidebar_left').addClass("hide_mobile");
+
+    // Redimensiona as imagens do plugin simple_instagram
+    if (jQuery('.si_feed_list .si_item').size() < 3) {
+        var largura = 100 / jQuery('.si_feed_list .si_item').size();
+        jQuery('.si_feed_list .si_item').css("width", largura + "%");
+    }
+
+    jQuery('.menu-link').click(function () {
+        if (jQuery(window).width() < 720) {
+            if (jQuery('#sidebar_left').hasClass("hide_mobile")) {
+                jQuery('#sidebar_left').hide();
+                jQuery('#sidebar_left').removeClass("hide_mobile");
+                jQuery('#sidebar_left').slideDown(400);
+            }
+            else {
+                jQuery('#sidebar_left').slideUp(400, function() {
+                    jQuery('#sidebar_left').addClass("hide_mobile");
+                    jQuery('#sidebar_left').show();
+                });
+            }
+        }
+    });
+
+    jQuery('#sidebar_left ul.widget').children('li').click(function () {
+        if (jQuery(window).width() < 720) {
+            if (jQuery(this).children('.pagenav').children('ul.menu').length) {
+                if (jQuery(this).children('.pagenav').children('ul.menu').hasClass("hide_mobile")) {
+                    jQuery(this).children('.pagenav').children('ul.menu').hide();
+                    jQuery(this).children('.pagenav').children('ul.menu').removeClass("hide_mobile");
+                    jQuery(this).children('.pagenav').children('ul.menu').slideDown(400);
+                }
+                else {
+                    jQuery(this).children('.pagenav').children('ul.menu').slideUp(400, function() {
+                        jQuery(this).addClass("hide_mobile");
+                        jQuery(this).show();
+                    });
+                }
+            }
+
+            if (jQuery(this).children('ul').length){
+                if (jQuery(this).children('ul').hasClass("hide_mobile")) {
+                    jQuery(this).children('ul').hide();
+                    jQuery(this).children('ul').removeClass("hide_mobile");
+                    jQuery(this).children('ul').slideDown(400);
+                }
+                else {
+                    jQuery(this).children('ul').slideUp(400, function() {
+                        jQuery(this).addClass("hide_mobile");
+                        jQuery(this).show();
+                    });
+                }
+            }
+        }
+    });
+});
+
