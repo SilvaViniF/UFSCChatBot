@@ -1,81 +1,139 @@
-from transformers import BitsAndBytesConfig,AutoTokenizer, AutoModelForCausalLM, AutoModel
-import torch,requests
-from urllib.parse import urljoin
-from bs4 import BeautifulSoup
-from flask import Flask, jsonify, request
-from flask_cors import CORS
+import gradio as gr
+from datasets import load_dataset
+
 import os
-app = Flask(__name__)
-CORS(app)
+import spaces
+from transformers import AutoModelForCausalLM, AutoTokenizer, TextIteratorStreamer, BitsAndBytesConfig
+import torch
+from threading import Thread
+from sentence_transformers import SentenceTransformer
+from datasets import load_dataset
+import time
 
-model_id = "nvidia/Llama3-ChatQA-1.5-8B"
-tokenizer = AutoTokenizer.from_pretrained(model_id)
-model = AutoModelForCausalLM.from_pretrained(model_id, torch_dtype=torch.float16, device_map="auto")
+token = "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"
+ST = SentenceTransformer("mixedbread-ai/mxbai-embed-large-v1")
 
-retriever_tokenizer = AutoTokenizer.from_pretrained('nvidia/dragon-multiturn-query-encoder')
-query_encoder = AutoModel.from_pretrained('nvidia/dragon-multiturn-query-encoder')
-context_encoder = AutoModel.from_pretrained('nvidia/dragon-multiturn-context-encoder')
+dataset = load_dataset("SilvaFV/UFSCdatabase",revision = "embedded")
+
+data = dataset["train"]
+data = data.add_faiss_index("embeddings") # column name that has the embeddings of the dataset
+
+
+model_id = "meta-llama/Meta-Llama-3-8B-Instruct"
+
+# use quantization to lower GPU usage
+bnb_config = BitsAndBytesConfig(
+    load_in_4bit=True, bnb_4bit_use_double_quant=True, bnb_4bit_quant_type="nf4", bnb_4bit_compute_dtype=torch.bfloat16
+)
+
+tokenizer = AutoTokenizer.from_pretrained(model_id,token=token)
+model = AutoModelForCausalLM.from_pretrained(
+    model_id,
+    torch_dtype=torch.bfloat16,
+    device_map="auto",
+    quantization_config=bnb_config,
+    token=token
+)
 terminators = [
     tokenizer.eos_token_id,
     tokenizer.convert_tokens_to_ids("<|eot_id|>")
 ]
 
+SYS_PROMPT = """Você é um assistente para responder perguntas sobre a UFSC Blumenau.
+Você recebe as partes extraídas de um documento longo e uma pergunta. Forneça uma resposta com base nas informações no documento.
+Responda em Portugues Brasileiro.
+Se você não souber a resposta, basta dizer “Não sei”. Não invente uma resposta."""
 
 
-# Format input/context
-def get_formatted_input(messages, context):
-    system = "Sistema: Esta é uma conversa entre um usuário e um assistente de inteligência artificial. O assistente fornece respostas úteis, detalhadas e educadas às perguntas do usuário com base no contexto. O assistente também deve indicar quando a resposta não pode ser encontrada no contexto."
-    instruction = "Por favor, dê uma resposta completa e detalhada à pergunta."
 
-    for item in messages:
-        if item['role'] == "user":
-            ## only apply this instruction for the first user turn
-            item['content'] = instruction + " " + item['content']
-            break
+def search(query: str, k: int = 3 ):
+    """a function that embeds a new query and returns the most probable results"""
+    embedded_query = ST.encode(query) # embed new query
+    scores, retrieved_examples = data.get_nearest_examples( # retrieve results
+        "embeddings", embedded_query, # compare our new embedded query with the dataset embeddings
+        k=k # get only top k results
+    )
+    return scores, retrieved_examples
 
-    conversation = '\n\n'.join(["User: " + item["content"] if item["role"] == "user" else "Assistant: " + item["content"] for item in messages]) + "\n\nAssistant:"
-    formatted_input = system + "\n\n" + context + "\n\n" + conversation
+def format_prompt(prompt,retrieved_documents,k):
+    """using the retrieved documents we will prompt the model to generate our responses"""
+    PROMPT = f"Question:{prompt}\nContext:"
+    for idx in range(k) :
+        PROMPT+= f"{retrieved_documents['content'][idx]}\n"
+    return PROMPT
+
+
+@spaces.GPU(duration=150)
+def talk(prompt,history):
+    k = 3 # number of retrieved documents
+    scores , retrieved_documents = search(prompt, k)
+    print(retrieved_documents)
+    formatted_prompt = format_prompt(prompt,retrieved_documents,k)
+    formatted_prompt = formatted_prompt[:2000] # to avoid GPU OOM
+    print(formatted_prompt)
+    messages = [{"role":"system","content":SYS_PROMPT},{"role":"user","content":formatted_prompt}]
+    # tell the model to generate
+    input_ids = tokenizer.apply_chat_template(
+      messages,
+      add_generation_prompt=True,
+      return_tensors="pt"
+    ).to(model.device)
+    outputs = model.generate(
+      input_ids,
+      max_new_tokens=1024,
+      eos_token_id=terminators,
+      do_sample=True,
+      temperature=0.6,
+      top_p=0.9,
+    )
+    streamer = TextIteratorStreamer(
+            tokenizer, timeout=10.0, skip_prompt=True, skip_special_tokens=True
+        )
+    generate_kwargs = dict(
+        input_ids= input_ids,
+        streamer=streamer,
+        max_new_tokens=1024,
+        do_sample=True,
+        top_p=0.95,
+        temperature=0.75,
+        eos_token_id=terminators,
+    )
+    t = Thread(target=model.generate, kwargs=generate_kwargs)
+    t.start()
+
+    outputs = []
+    for text in streamer:
+        outputs.append(text)
+        print(outputs)
+        yield "".join(outputs)
+
+
+TITLE = "# RAG"
+
+DESCRIPTION = """
+A rag pipeline with a chatbot feature
+Resources used to build this project :
+* embedding model : https://huggingface.co/mixedbread-ai/mxbai-embed-large-v1
+* dataset : https://huggingface.co/datasets/not-lain/wikipedia
+* faiss docs : https://huggingface.co/docs/datasets/v2.18.0/en/package_reference/main_classes#datasets.Dataset.add_faiss_index 
+* chatbot : https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct
+"""
+
+
+demo = gr.ChatInterface(
+    fn=talk,
+    chatbot=gr.Chatbot(
+        show_label=True,
+        show_share_button=True,
+        show_copy_button=True,
+        likeable=True,
+        layout="bubble",
+        bubble_full_width=False,
+    ),
+    theme="Soft",
+    examples=[["what's anarchy ? "]],
+    title=TITLE,
+    description=DESCRIPTION,
     
-    return formatted_input
-
-# Running retrieval
-def retrieval(messages):
-    formatted_query_for_retriever = '\n'.join([turn['role'] + ": " + turn['content'] for turn in messages]).strip()
-    query_input = retriever_tokenizer(formatted_query_for_retriever, return_tensors='pt')
-    ctx_input = retriever_tokenizer(chunk_list, padding=True, truncation=True, max_length=512, return_tensors='pt')
-    query_emb = query_encoder(**query_input).last_hidden_state[:, 0, :]
-    ctx_emb = context_encoder(**ctx_input).last_hidden_state[:, 0, :]
-    ## Compute similarity scores using dot product and rank the similarity
-    similarities = query_emb.matmul(ctx_emb.transpose(0, 1)) # (1, num_ctx)
-    ranked_results = torch.argsort(similarities, dim=-1, descending=True) # (1, num_ctx)
-    ## get top-n chunks (n=5)
-    retrieved_chunks = [chunk_list[idx] for idx in ranked_results.tolist()[0][:5]]
-    context = "\n\n".join(retrieved_chunks)
-
-    ### running text generation
-    formatted_input = get_formatted_input(messages, context)
-    tokenized_prompt = tokenizer(tokenizer.bos_token + formatted_input, return_tensors="pt").to(model.device)
-    outputs = model.generate(quantization_config=bnb_config,input_ids=tokenized_prompt.input_ids, attention_mask=tokenized_prompt.attention_mask, max_new_tokens=128, eos_token_id=terminators)
-
-    response = outputs[0][tokenized_prompt.input_ids.shape[-1]:]
-    teste = tokenizer.decode(response, skip_special_tokens=True)
-    return teste
-
-
-# API endpoint to handle user input
-@app.route("/api/userinput", methods=["POST"])
-def user_input():
-    user_message = request.json.get('message')
-    messages = [{"role": "user", "content": user_message}]
-    print(messages)
-    #torch.cuda.empty_cache()
-    ai_response = retrieval(messages)
-    print(ai_response)
-    return jsonify({"response": ai_response})
-
-@app.route("/api/home", methods=['GET'])
-def return_home():
-    return jsonify({'message': "Hello"})
-
-if __name__ == "__main__":
-    app.run(debug=True, host='0.0.0.0', port=8080)
+)
+demo.launch(debug=True,share=True)
