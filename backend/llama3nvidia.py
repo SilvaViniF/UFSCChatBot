@@ -1,34 +1,38 @@
-from transformers import AutoTokenizer, AutoModelForCausalLM, AutoModel
+from transformers import AutoModelForCausalLM, AutoTokenizer, TextIteratorStreamer, BitsAndBytesConfig
 import torch
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 from datasets import load_dataset
 import spaces
-from transformers import AutoModelForCausalLM, AutoTokenizer, TextIteratorStreamer, BitsAndBytesConfig
 from threading import Thread
 from sentence_transformers import SentenceTransformer
 from datasets import load_dataset
 import time
-
+#region Inicialização
 app = Flask(__name__)
 CORS(app)
 
-token = "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"
+token = ""
 ST = SentenceTransformer("mixedbread-ai/mxbai-embed-large-v1")
 
 dataset = load_dataset("SilvaFV/UFSCdatabase",revision = "embedded")
 
 data = dataset["train"]
-data = data.add_faiss_index("embeddings") # column name that has the embeddings of the dataset
+data = data.add_faiss_index("embeddings") # Coluna do dataset com embeddings
 
 
 model_id = "meta-llama/Meta-Llama-3-8B-Instruct"
+#endregion
 
-# use quantization to lower GPU usage
+
+#region Quantização
 bnb_config = BitsAndBytesConfig(
     load_in_4bit=True, bnb_4bit_use_double_quant=True, bnb_4bit_quant_type="nf4", bnb_4bit_compute_dtype=torch.bfloat16
 )
+#endregion
 
+
+#region Tokenizers
 tokenizer = AutoTokenizer.from_pretrained(model_id,token=token)
 model = AutoModelForCausalLM.from_pretrained(
     model_id,
@@ -41,23 +45,28 @@ terminators = [
     tokenizer.eos_token_id,
     tokenizer.convert_tokens_to_ids("<|eot_id|>")
 ]
+#endregion
 
+
+#region Geração
 SYS_PROMPT = """Você é um assistente para responder perguntas de alunos sobre a UFSC Blumenau.
 Você recebe documentos e uma pergunta. Deve analisar a pergunta e responder com base nos documentos mais parecidos.
 Suas respostas devem ser em portugues brasileiro.
 Se você não souber a resposta, basta dizer “Essa informação não está disponível”. Não invente uma resposta."""
 
+#Caso você saiba a resposta, você deve falar onde essa informação pode ser encontrada
+
 def search(query: str, k: int = 5 ):
-    """a function that embeds a new query and returns the most probable results"""
-    embedded_query = ST.encode(query) # embed new query
-    scores, retrieved_examples = data.get_nearest_examples( # retrieve results
-        "embeddings", embedded_query, # compare our new embedded query with the dataset embeddings
-        k=k # get only top k results
+    """Uma função que faz embed tha nova query e retorna os resultados mais provaveis"""
+    embedded_query = ST.encode(query)
+    scores, retrieved_examples = data.get_nearest_examples(
+        "embeddings", embedded_query, # comparando
+        k=k # quantos resultados pegar
     )
     return scores, retrieved_examples
 
 def format_prompt(prompt,retrieved_documents,k):
-    """using the retrieved documents we will prompt the model to generate our responses"""
+    """Usando os documentos fornecidos, vamos montar nosso contexto"""
     PROMPT = f"Pergunta:{prompt}\nContexto:"
     for idx in range(k) :
         PROMPT+= f"{retrieved_documents['content'][idx]}\n"
@@ -65,13 +74,13 @@ def format_prompt(prompt,retrieved_documents,k):
 
 @spaces.GPU(duration=150) #max duration of talk
 def talk(prompt):
-    k = 5 # number of retrieved documents
+    k = 5 # documentos recuparados
     scores , retrieved_documents = search(prompt, k)
     formatted_prompt = format_prompt(prompt,retrieved_documents,k)
-    formatted_prompt = formatted_prompt[:3500] # to avoid GPU OOM
+    formatted_prompt = formatted_prompt[:3500] # evitar OOM
     print(formatted_prompt)
     messages = [{"role":"system","content":SYS_PROMPT},{"role":"user","content":formatted_prompt}]
-    # tell the model to generate
+    # geração
     input_ids = tokenizer.apply_chat_template(
       messages,
       add_generation_prompt=True,
@@ -79,7 +88,7 @@ def talk(prompt):
     ).to(model.device)
     outputs = model.generate(
       input_ids,
-      max_new_tokens=2048,
+      max_new_tokens=1024,
       eos_token_id=terminators,
       do_sample=True,
       temperature=0.6,
@@ -91,7 +100,7 @@ def talk(prompt):
     generate_kwargs = dict(
         input_ids= input_ids,
         streamer=streamer,
-        max_new_tokens=2048,
+        max_new_tokens=1024,
         do_sample=True,
         top_p=0.95,
         temperature=0.6,
@@ -107,8 +116,12 @@ def talk(prompt):
         print(outputs[-1])
     return outputs
 
+#endregion
 
-# API endpoint to handle user input
+
+#region API
+asda
+
 @app.route("/api/userinput", methods=["POST"])
 def user_input():
     prompt = request.json.get('message')
@@ -122,3 +135,5 @@ def return_home():
 
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0', port=8080)
+
+    #endregion 

@@ -8,7 +8,7 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 
 # Define the folder containing the files
 folder_path = "RAG_test"
-token = "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"
+token = ""
 
 # Function to extract information from a single HTML file
 def extract_info_from_html(file_path, index):
