@@ -68,6 +68,7 @@ export function ChatUfscPage() {
         {isChatOpen && (
           <ChatBox onClick={(e) => e.stopPropagation()}>
             <ChatBoxHeader>
+              <ChatBoxTitle>ChatUFSC</ChatBoxTitle>
               <CloseButton onClick={toggleChat}>Fechar</CloseButton>
             </ChatBoxHeader>
             <MessagesContainer ref={messagesContainerRef}>
@@ -140,7 +141,14 @@ const ChatBox = styled.div`
 
 const ChatBoxHeader = styled.div`
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+`;
+
+const ChatBoxTitle = styled.h3`
+  font-size: 18px;
+  margin: 0;
 `;
 
 const MessagesContainer = styled.div`

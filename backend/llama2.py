@@ -10,7 +10,7 @@ from sentence_transformers import SentenceTransformer
 from datasets import load_dataset
 import time
 
-token = "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"
+token = "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"
 ST = SentenceTransformer("mixedbread-ai/mxbai-embed-large-v1")
 
 dataset = load_dataset("SilvaFV/UFSCdatabase",revision = "embedded")
@@ -63,14 +63,14 @@ def format_prompt(prompt,retrieved_documents,k):
     return PROMPT
 
 
-@spaces.GPU(duration=150)
+@spaces.GPU(duration=150) #max duration of talk
 def talk(prompt,history):
-    k = 3 # number of retrieved documents
+    print(prompt)
+    k = 1 # number of retrieved documents
     scores , retrieved_documents = search(prompt, k)
-    print(retrieved_documents)
     formatted_prompt = format_prompt(prompt,retrieved_documents,k)
     formatted_prompt = formatted_prompt[:2000] # to avoid GPU OOM
-    print(formatted_prompt)
+    #print(formatted_prompt)
     messages = [{"role":"system","content":SYS_PROMPT},{"role":"user","content":formatted_prompt}]
     # tell the model to generate
     input_ids = tokenizer.apply_chat_template(
