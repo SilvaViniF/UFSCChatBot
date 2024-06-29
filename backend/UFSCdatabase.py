@@ -2,15 +2,14 @@ import os
 import pandas as pd
 from bs4 import BeautifulSoup
 from datasets import Dataset, DatasetDict
-from huggingface_hub import HfApi, login
-import fitz  # PyMuPDF
+from huggingface_hub import login
+import fitz
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 
-# Define the folder containing the files
+
 folder_path = "RAG_test"
 token = ""
-
-# Function to extract information from a single HTML file
+#not being used now
 def extract_info_from_html(file_path, index):
     with open(file_path, "r", encoding="utf-8") as file:
         soup = BeautifulSoup(file, "html.parser")
@@ -22,7 +21,7 @@ def extract_info_from_html(file_path, index):
         
         return {"ID": index, "url": url, "Title": title, "content": content}
 
-# Function to extract information from a single PDF file
+
 def extract_info_from_pdf(file_path, index):
     try:
         doc = fitz.open(file_path)
@@ -36,7 +35,7 @@ def extract_info_from_pdf(file_path, index):
         print(f"Error processing {file_path}: {e}")
         return {"ID": index, "url": "URL not found", "Title": "Title not applicable", "content": ""}
 
-# Function to extract information from a single CSV file
+
 def extract_info_from_csv(file_path, index):
     try:
         df = pd.read_csv(file_path, on_bad_lines='skip')
@@ -48,13 +47,12 @@ def extract_info_from_csv(file_path, index):
         print(f"Error processing {file_path}: {e}")
         return {"ID": index, "url": "URL not found", "Title": "Title not applicable", "content": ""}
 
-# Function to split content into chunks
+
 def split_into_chunks(content, chunk_size=500, chunk_overlap=100):
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=chunk_size, chunk_overlap=chunk_overlap)
     chunks = text_splitter.split_text(content)
     return chunks
 
-# Iterate over all files in the folder and extract information
 data = []
 chunk_id = 1
 for index, file_name in enumerate(os.listdir(folder_path), start=1):
@@ -73,26 +71,25 @@ for index, file_name in enumerate(os.listdir(folder_path), start=1):
         data.append({"ID": f"{index}_{chunk_id}", "url": info["url"], "Title": info["Title"], "content": chunk})
         chunk_id += 1
 
-# Create a DataFrame from the extracted data
+
 df = pd.DataFrame(data)
 
-# Create a Hugging Face Dataset from the DataFrame
+
 dataset = Dataset.from_pandas(df)
 
-# Create a DatasetDict with the dataset
+
 dataset_dict = DatasetDict({"train": dataset})
 
-# Login to Hugging Face
-login(token)  # Ensure you are logged in
 
-# Push the dataset to the Hugging Face Hub
+login(token) 
+
 try:
     dataset_dict.push_to_hub("SilvaFV/UFSCdatabase")
 except Exception as e:
     print(f"An error occurred: {e}")
     print("Please ensure you are logged in and have the correct permissions.")
 
-# Embed Data
+
 from datasets import load_dataset
 dataset = load_dataset("SilvaFV/UFSCdatabase")
 
