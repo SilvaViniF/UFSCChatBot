@@ -88,3 +88,4 @@ backend/HTMLversion/html_files/www.setic.ufsc.br#rodape.html
 backend/projetoideias.txt
 token
 backend/csvctest.py
+backend/config.py

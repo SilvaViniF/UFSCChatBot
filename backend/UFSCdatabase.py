@@ -5,10 +5,10 @@ from datasets import Dataset, DatasetDict
 from huggingface_hub import login
 import fitz
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-
+import config
 
 folder_path = "RAG_test"
-token = ""
+token = config.token
 #not being used now
 def extract_info_from_html(file_path, index):
     with open(file_path, "r", encoding="utf-8") as file:
