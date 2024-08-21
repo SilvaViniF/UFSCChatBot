@@ -4,6 +4,8 @@ import json
 import datasets
 from huggingface_hub import InferenceClient, login, create_repo
 import config
+import os
+import pickle
 
 # Hugging Face login
 login(token=config.token)
@@ -29,6 +31,7 @@ text_splitter = RecursiveCharacterTextSplitter(
 docs_processed = []
 for doc in langchain_docs:
     docs_processed += text_splitter.split_documents([doc])
+    
 
 # Initialize Inference Client
 repo_id = "mistralai/Mixtral-8x7B-Instruct-v0.1"
@@ -43,8 +46,6 @@ def call_llm(inference_client: InferenceClient, prompt: str):
         },
     )
     return json.loads(response.decode())[0]["generated_text"]
-
-call_llm(llm_client, "This is a test context")
 
 QA_generation_prompt = """
 Your task is to write a factoid question and an answer given a context.
@@ -66,24 +67,38 @@ Output:::
 
 import random
 
-N_GENERATIONS = 10
-outputs = []
-for sampled_context in tqdm(random.sample(docs_processed, N_GENERATIONS)):
-    output_QA_couple = call_llm(llm_client, QA_generation_prompt.format(context=sampled_context.page_content))
-    try:
-        question = output_QA_couple.split("Factoid question: ")[-1].split("Answer: ")[0]
-        answer = output_QA_couple.split("Answer: ")[-1]
-        assert len(answer) < 300, "Answer is too long"
-        outputs.append(
-            {
-                "context": sampled_context.page_content,
-                "question": question,
-                "answer": answer,
-                "source_doc": sampled_context.metadata["Title"],
-            }
-        )
-    except:
-        continue
+N_GENERATIONS = 200
+outputs_file = "outputs.pkl"
+
+# Load existing outputs if file exists
+if os.path.exists(outputs_file):
+    with open(outputs_file, "rb") as f:
+        outputs = pickle.load(f)
+else:
+    outputs = []
+
+# Determine remaining generations
+remaining_generations = N_GENERATIONS - len(outputs)
+if remaining_generations > 0:
+    for sampled_context in tqdm(random.sample(docs_processed, remaining_generations)):
+        output_QA_couple = call_llm(llm_client, QA_generation_prompt.format(context=sampled_context.page_content))
+        try:
+            question = output_QA_couple.split("Factoid question: ")[-1].split("Answer: ")[0]
+            answer = output_QA_couple.split("Answer: ")[-1]
+            assert len(answer) < 300, "Answer is too long"
+            outputs.append(
+                {
+                    "context": sampled_context.page_content,
+                    "question": question,
+                    "answer": answer,
+                    "source_doc": sampled_context.metadata["Title"],
+                }
+            )
+            # Save outputs to file
+            with open(outputs_file, "wb") as f:
+                pickle.dump(outputs, f)
+        except:
+            continue
 
 question_groundedness_critique_prompt = """
 You will be given a context and a question.
@@ -104,9 +119,10 @@ Question: {question}\n
 Context: {context}\n
 Answer::: """
 
+
 question_relevance_critique_prompt = """
-You will be given a question.
-Your task is to provide a 'total rating' representing how useful this question can be to machine learning developers building NLP applications with the Hugging Face ecosystem.
+You will receive a question.
+Your task is to provide a 'total rating' representing how useful this question can be for answering queries from students in the automation course at UFSC Blumenau.
 Give your answer on a scale of 1 to 5, where 1 means that the question is not useful at all, and 5 means that the question is extremely useful.
 
 Provide your answer as follows:
@@ -122,14 +138,13 @@ Now here is the question.
 Question: {question}\n
 Answer::: """
 
-question_standalone_critique_prompt = """
-You will be given a question.
-Your task is to provide a 'total rating' representing how context-independant this question is.
-Give your answer on a scale of 1 to 5, where 1 means that the question depends on additional information to be understood, and 5 means that the question makes sense by itself.
-For instance, if the question refers to a particular setting, like 'in the context' or 'in the document', the rating must be 1.
-The questions can contain obscure technical nouns or acronyms like Gradio, Hub, Hugging Face or Space and still be a 5: it must simply be clear to an operator with access to documentation what the question is about.
 
-For instance, "What is the name of the checkpoint from which the ViT model is imported?" should receive a 1, since there is an implicit mention of a context, thus the question is not independant from the context.
+question_standalone_critique_prompt = """
+You will receive a question.
+Your task is to provide a 'total rating' representing how independent from context this question is.
+Give your answer on a scale of 1 to 5, where 1 means that the question depends on additional information to be understood, and 5 means that the question makes sense by itself.
+For example, if the question refers to a specific setting, like 'in the context' or 'in the document', the rating should be 1.
+The questions can contain technical nouns or obscure acronyms like SIARE, UFSC and still receive a rating of 5: it just needs to be clear to an operator with access to documentation what the question is about.
 
 Provide your answer as follows:
 
@@ -144,8 +159,22 @@ Now here is the question.
 Question: {question}\n
 Answer::: """
 
-print("Generating critique for each QA couple...")
-for output in tqdm(outputs):
+# File to save critiques
+critiques_file = "critiques.pkl"
+
+# Load existing critiques if file exists
+if os.path.exists(critiques_file):
+    with open(critiques_file, "rb") as f:
+        critiques = pickle.load(f)
+else:
+    critiques = []
+
+
+    remaining_outputs = [output for output in outputs if output not in critiques]
+
+    print(f"Generating critique for {len(remaining_outputs)} QA couples...")
+
+for output in tqdm(remaining_outputs):
     evaluations = {
         "groundedness": call_llm(
             llm_client,
@@ -172,36 +201,27 @@ for output in tqdm(outputs):
                     f"{criterion}_eval": eval,
                 }
             )
+        
+        # Save the critique for this output
+        critiques.append(output)
+
+        # Save critiques to file
+        with open(critiques_file, "wb") as f:
+            pickle.dump(critiques, f)
+            
     except Exception as e:
         continue
 
 import pandas as pd
 
-generated_questions = pd.DataFrame.from_dict(outputs)
+pd.set_option("display.max_colwidth", None)
 
-print(len(generated_questions))
+generated_questions = pd.DataFrame.from_dict(critiques)
 
-print(generated_questions)
-
-generated_questions = generated_questions.loc[
-    (generated_questions["groundedness_score"] >= 4)
-    & (generated_questions["relevance_score"] >= 4)
-    & (generated_questions["standalone_score"] >= 4)
-]
-
-print(len(generated_questions))
-
-print(generated_questions)
-
-eval_dataset = datasets.Dataset.from_pandas(generated_questions, preserve_index=False)
-
-print(len(eval_dataset))
-
-print(eval_dataset.info)
+eval_dataset = datasets.Dataset.from_pandas(generated_questions, split="train", preserve_index=False)
 
 # Create new dataset repository
 repo_id = "SilvaFV/UFSC_eval"
-create_repo(repo_id, repo_type="dataset")
 
 # Push dataset to Hugging Face Hub
 eval_dataset.push_to_hub(repo_id)
