@@ -1,0 +1,23 @@
+---
+dataset_info:
+  features:
+  - name: ID
+    dtype: string
+  - name: url
+    dtype: string
+  - name: Title
+    dtype: string
+  - name: content
+    dtype: string
+  splits:
+  - name: train
+    num_bytes: 4371310
+    num_examples: 1354
+  download_size: 1680749
+  dataset_size: 4371310
+configs:
+- config_name: default
+  data_files:
+  - split: train
+    path: data/train-*
+---

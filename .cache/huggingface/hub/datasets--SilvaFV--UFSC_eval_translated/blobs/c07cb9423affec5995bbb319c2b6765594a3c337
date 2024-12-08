@@ -1,0 +1,37 @@
+---
+dataset_info:
+  features:
+  - name: context
+    dtype: string
+  - name: question
+    dtype: string
+  - name: answer
+    dtype: string
+  - name: source_doc
+    dtype: string
+  - name: groundedness_score
+    dtype: int64
+  - name: groundedness_eval
+    dtype: string
+  - name: relevance_score
+    dtype: int64
+  - name: relevance_eval
+    dtype: string
+  - name: standalone_score
+    dtype: int64
+  - name: standalone_eval
+    dtype: string
+  - name: text
+    dtype: string
+  splits:
+  - name: train
+    num_bytes: 385568
+    num_examples: 235
+  download_size: 91185
+  dataset_size: 385568
+configs:
+- config_name: default
+  data_files:
+  - split: train
+    path: data/train-*
+---

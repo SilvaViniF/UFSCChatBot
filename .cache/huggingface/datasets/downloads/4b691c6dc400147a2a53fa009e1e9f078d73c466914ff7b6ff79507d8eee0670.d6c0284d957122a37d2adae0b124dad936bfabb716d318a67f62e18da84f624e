@@ -1,0 +1,25 @@
+---
+dataset_info:
+  features:
+  - name: ID
+    dtype: string
+  - name: url
+    dtype: string
+  - name: Title
+    dtype: string
+  - name: content
+    dtype: string
+  - name: embeddings
+    sequence: float32
+  splits:
+  - name: train
+    num_bytes: 2512124
+    num_examples: 1209
+  download_size: 2950017
+  dataset_size: 2512124
+configs:
+- config_name: default
+  data_files:
+  - split: train
+    path: data/train-*
+---

@@ -1,0 +1,22 @@
+
+Grounded QA dataset created from reports collected from https://www.amnesty.org/en/research/
+
+## Example
+
+```
+{'question': 'Which private companies in the Americas are the largest GHG emitters according to the Carbon Majors database?',
+ 'ground_truths': ['The largest private companies in the Americas that are the largest GHG emitters according to the Carbon Majors database are ExxonMobil, Chevron, and Peabody.'],
+ 'answer': 'According to the Carbon Majors database, the largest private companies in the Americas that are the largest GHG emitters are:\n\n1. Chevron Corporation (United States)\n2. ExxonMobil Corporation (United States)\n3. ConocoPhillips Company (United States)\n4. BP plc (United Kingdom, but with significant operations in the Americas)\n5. Royal Dutch Shell plc (Netherlands, but with significant operations in the Americas)\n6. Peabody Energy Corporation (United States)\n7. Duke Energy Corporation (United States)\n8. TotalEnergies SE (France, but with significant operations in the Americas)\n9. BHP Group Limited (Australia, but with significant operations in the Americas)\n10. Rio Tinto Group (United Kingdom/Australia, but with significant operations in the Americas)\n\nPlease note that the rankings may change over time as new data becomes available.',
+ 'contexts': ['The private companies responsible for the most emissions during this period, according to the database, are from the United States: ExxonMobil, Chevron and Peabody.\nThe largest emitter amongst state-owned companies in the Americas is Mexican company Pemex, followed by Venezuelan company Petróleos de Venezuela, S.A.']}
+```
+
+Available languages : English, Malayalam, Hindi
+
+## Usage
+
+Note: Only the `"eval"` split is available for this dataset.
+```python
+from datasets import load_dataset
+malayalam_dataset = load_dataset("explodinggradients/amnesty_qa","malayalam")
+malayalam_dataset["eval"]
+```
