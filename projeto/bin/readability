@@ -1,3 +1,0 @@
-#!/home/grupoh/projeto/bin/python
-import readability
-readability.main()
