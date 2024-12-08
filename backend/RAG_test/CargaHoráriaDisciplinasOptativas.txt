@@ -1,0 +1,16 @@
+Dúvida: Carga Horária em Disciplinas Optativas
+
+Pergunta: Como funciona o cálculo da carga horária em disciplinas optativas no curso de Engenharia de Controle e Automação?
+
+Resposta: Para facilitar o cálculo da carga horária das disciplinas optativas, a coordenação desenvolveu um Web App. Ele ajuda tanto os alunos quanto a coordenação a contabilizar a carga horária de maneira mais simples.
+
+Web App: https://daniellima.sites.ufsc.br/contabilizaHoras/contabiliza.php
+
+O sistema contém disciplinas do currículo da ECA dos anos 2014/1 e 2023/2, além de outras disciplinas comuns. Ele pode não incluir todas as disciplinas possíveis, mas já facilita bastante o processo.
+
+Contato:
+
+Coordenador: Prof. Dr. Daniel Martins Lima
+Subcoordenador: Prof. Dr. Tiago Davi Curi Busarello
+Telefones: (48) 3721-3340, (47) 3232-5140
+E-mail: automacao-bnu@mailman.ufsc.br

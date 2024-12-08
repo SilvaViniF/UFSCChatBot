@@ -1,0 +1,9 @@
+./llama2/questoes_with_answers_scored.csv: 0.31
+./llama3_chunk512_50/questoes_with_answers_v2_temp05_scored.csv: 0.35
+./llama3_chunk512_50/questoes_with_answers_v1_scored.csv: 0.44
+./llama3_chunk512_50/questoes_with_answers_v3_temp1_scored.csv: 0.35
+./llama3_1/questoes_with_answers_scored.csv: 0.42
+./llama3_chunk1024_100/questoes_with_answersv_k=20_scored.csv: 0.44
+./llama3_chunk1024_100/questoes_with_answers_k=10_scored.csv: 0.41
+./llama3_chunk1024_100/questoes_with_answersk=40_scored.csv: 0.38
+./mistral/questoes_with_answers_scored.csv: 0.37
