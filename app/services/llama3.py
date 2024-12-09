@@ -3,7 +3,7 @@ import multiprocessing
 import re,fitz
 from bs4 import BeautifulSoup
 import pandas as pd
-from transformers import AutoModelForCausalLM, AutoTokenizer, TextIteratorStreamer, BitsAndBytesConfig 
+
 import torch 
 import numpy as np
 from flask import Flask, jsonify, request  
@@ -163,7 +163,7 @@ documents = get_documents(file_path, cache_file='documents_cache.pkl')
 cache_file = 'cache_embeddings.mmap'
 
 document_embeddings = generate_and_cache_embeddings(ST, documents, cache_file,'embedding_mapping.csv')
-model_id = "meta-llama/Meta-Llama-3.1-8B-Instruct"
+model_id = "meta-llama/Meta-Llama-3-8B-Instruct"
 
 
 #region busca híbrida
