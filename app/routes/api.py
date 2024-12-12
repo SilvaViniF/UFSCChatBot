@@ -1,13 +1,13 @@
 from fastapi import APIRouter, HTTPException
-from services.generation import talk
-from app.models.search import SearchQuery,SearchResults
+from services.search import talk
+from models.search import SearchQuery,SearchResults
 
 router = APIRouter()
 
 @router.post("/query", response_model=SearchResults)
 async def hybrid_search(query: SearchQuery):
     try:
-        results = talk(query.text, query.top_k)
+        results = talk(query.text)
         return {"results": results}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))

@@ -1,4 +1,6 @@
 from pydantic import BaseSettings
+from transformers import BitsAndBytesConfig
+import torch
 
 class Settings(BaseSettings):
     embedding_model: str = "mixedbread-ai/mxbai-embed-large-v1"
@@ -7,6 +9,12 @@ class Settings(BaseSettings):
 
 settings = Settings()
 
+bnb_config = BitsAndBytesConfig(
+    load_in_4bit=True,
+    bnb_4bit_use_double_quant=False,
+    bnb_4bit_quant_type="nf4",
+    bnb_4bit_compute_dtype=torch.bfloat16
+)
 
 #region Geração
 """SYS_PROMPT = Você é um assistente para responder perguntas de alunos sobre a UFSC Blumenau.
@@ -23,15 +31,4 @@ Se a pergunta não tiver relação com os documentos, ou se você não souber a 
 Priorize informações precisas e úteis.
 Não repita a pergunta na sua resposta, apenas a responda."""
 
-#ST = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
-ST = SentenceTransformer("mixedbread-ai/mxbai-embed-large-v1", truncate_dim=EMBEDDING_DIMENSION)
-from pathlib import Path
-folder_path = Path('/home/grupoh/backend/RAG_test')
-file_path = [str(folder_path / f.name) for f in folder_path.iterdir() if f.is_file()]
-
-documents = get_documents(file_path, cache_file='documents_cache.pkl')
-cache_file = 'cache_embeddings.mmap'
-
-document_embeddings = generate_and_cache_embeddings(ST, documents, cache_file,'embedding_mapping.csv')
-model_id = "meta-llama/Meta-Llama-3.1-8B-Instruct"
 
