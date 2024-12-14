@@ -4,11 +4,11 @@ from models.search import SearchQuery,SearchResults
 
 router = APIRouter()
 
-@router.post("/query", response_model=SearchResults)
+@router.post("/query", response_model=str)
 async def hybrid_search(query: SearchQuery):
     try:
         results = talk(query.text)
-        return {"results": results}
+        return results
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 

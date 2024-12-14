@@ -8,3 +8,5 @@ projeto
 .local
 .env
 venv
+frontend
+__pycache__

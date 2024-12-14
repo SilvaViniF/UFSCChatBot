@@ -1,13 +1,6 @@
-from pydantic import BaseSettings
 from transformers import BitsAndBytesConfig
 import torch
 
-class Settings(BaseSettings):
-    embedding_model: str = "mixedbread-ai/mxbai-embed-large-v1"
-    faiss_dimension: int = 512
-    stopwords_language: str = "portuguese"
-
-settings = Settings()
 
 bnb_config = BitsAndBytesConfig(
     load_in_4bit=True,
