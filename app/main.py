@@ -1,12 +1,18 @@
 from fastapi import FastAPI
 from routes import api
 import uvicorn
+from txtai import Embeddings
+import services.search
 
 def create_app() -> FastAPI:
 
     app = FastAPI(title="RAG API", version="1.0.0")
 
     app.include_router(api.router, prefix="/search", tags=["Search"])
+    
+    embeddings = Embeddings(content=True,path="thenlper/gte-base")
+    services.search.index_chunks(embeddings)
+    #TODO fix chunking
 
     @app.get("/")
     async def root():

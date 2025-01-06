@@ -4,7 +4,7 @@ from config.settings import bnb_config
 from dotenv import load_dotenv
 import torch
 import os
-
+from config.settings import SYS_PROMPT
 load_dotenv()
 
 def index_chunks(embeddings: Embeddings):
@@ -15,21 +15,28 @@ def index_chunks(embeddings: Embeddings):
         chunk_list = get_documents(os.getenv('FILES'),int(os.getenv('MAX_LENGTH')))
         embeddings.index(chunk_list)
         embeddings.save("test")
+        
+
+embeddings = Embeddings()
+index_chunks(embeddings)
+
+llm = LLM(os.getenv("MODEL_ID"),
+torch_dtype=torch.bfloat16,
+device_map="auto",
+quantization_config=bnb_config,
+)
+
     
 def talk(prompt: str):
-    
-    embeddings = Embeddings(content=True)
-    index_chunks(embeddings)
+    rag = RAG(
+        similarity=embeddings,
+        path=llm,
+        template=prompt,
+        minscore=0.8,
+        system=SYS_PROMPT,
+        max_length=int(os.getenv('MAX_LENGTH')),
+        )
 
-    llm = LLM(os.getenv("MODEL_ID"),
-        torch_dtype=torch.bfloat16,
-        device_map="auto",
-        quantization_config=bnb_config
-    )
+    answer = rag(prompt,max_length=int(os.getenv('MAX_LENGTH')))
 
-    rag = RAG(embeddings, llm, template=prompt)
-    
-
-    answer = rag(prompt)
-    print(answer)
     return answer['answer']

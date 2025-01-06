@@ -22,6 +22,8 @@ Você recebe um contexto relevante e uma pergunta. Deve analisar a pergunta e re
 Suas respostas devem ser em português brasileiro, claras e concisas.
 Se a pergunta não tiver relação com os documentos, ou se você não souber a resposta, basta dizer "Essa informação não está disponível". Não invente uma resposta.
 Priorize informações precisas e úteis.
-Não repita a pergunta na sua resposta, apenas a responda."""
+Não repita a pergunta na sua resposta, apenas a responda.
+
+Esse é o contexto: {context}"""
 
 

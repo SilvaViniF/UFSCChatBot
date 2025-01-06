@@ -9,4 +9,7 @@ projeto
 .env
 venv
 frontend
-__pycache__/
+**/__pycache__/
+.bash_history
+.lesshst
+.python_history
