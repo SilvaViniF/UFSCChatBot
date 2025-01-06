@@ -28,7 +28,8 @@ def talk(prompt: str):
     )
 
     rag = RAG(embeddings, llm, template=prompt)
+    
 
     answer = rag(prompt)
-    
+    print(answer)
     return answer['answer']

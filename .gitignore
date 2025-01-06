@@ -9,4 +9,4 @@ projeto
 .env
 venv
 frontend
-__pycache__
+__pycache__/
