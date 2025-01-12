@@ -6,7 +6,7 @@ router = APIRouter()
 
 search_service = SearchService()
 
-@router.post("/query", response_model=str)
+@router.post("/query")
 async def hybrid_search(query: SearchQuery):
     try:
         results = search_service.talk(prompt=query.text, topn=query.top_n)
