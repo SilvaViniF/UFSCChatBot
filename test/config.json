@@ -1,18 +1,28 @@
 {
   "content": true,
-  "path": "thenlper/gte-base",
-  "autoid": 39,
+  "path": "sentence-transformers/nli-mpnet-base-v2",
+  "backend": "hnsw",
+  "hybrid": true,
+  "scoring": {
+    "method": "bm25",
+    "terms": true,
+    "normalize": true
+  },
+  "autoid": 40,
   "dimensions": 768,
-  "backend": "faiss",
-  "offset": 39,
+  "metric": "ip",
+  "offset": 40,
+  "deletes": 0,
   "build": {
-    "create": "2025-01-06T19:07:23Z",
+    "create": "2025-01-12T14:19:12Z",
     "python": "3.10.12",
     "settings": {
-      "components": "IDMap,Flat"
+      "efconstruction": 200,
+      "m": 16,
+      "seed": 100
     },
     "system": "Linux (x86_64)",
-    "txtai": "8.0.0"
+    "txtai": "8.2.0"
   },
-  "update": "2025-01-06T19:07:23Z"
+  "update": "2025-01-12T14:19:12Z"
 }

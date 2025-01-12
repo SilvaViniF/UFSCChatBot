@@ -1,0 +1,270 @@
+Professor: Claudia Merlini
+Email: claudia.merlini@ufsc.br
+Telefone: (48) 3721-3387, (47) 3232-5187
+Localização: SN - B114
+Cargo: Coordenadora do Programa de Pós-Graduação em Nanociência, Processos e Materiais Avançados (PPGNPMat)
+
+Professor: Claudio Michel Poffo
+Email: claudio.poffo@ufsc.br
+Telefone: (48) 3721-3340, (47) 3232-5140
+Localização: A310
+Cargo: Coordenador do Curso de Engenharia de Materiais
+
+Professor: Cristiano da Silva Teixeira
+Email: c.teixeira@ufsc.br
+Telefone: (48) 3721-3387, (47) 3232-5187
+Localização: SN - B114
+Cargo: 
+
+Professor: Johnny de Nardi Martins
+Email: johnny.martins@ufsc.br
+Telefone: (48) 3721-3387, (47) 3232-5187
+Localização: SN - B114
+Cargo: Subchefe da Coordenadoria Especial/Coordenador de Ensino
+
+Professor: Laura Ximena Lovisa Oliveira
+Email: laura.lovisa@ufsc.br
+Telefone: (48) 3721-3387, (47) 3232-5187
+Localização: SN - B114
+Cargo: 
+
+Professor: Larissa Nardini Carli
+Email: larissa.carli@ufsc.br
+Telefone: (48) 3721-3387, (47) 3232-5187
+Localização: SN - B114
+Cargo: Coordenadora de Pesquisa/Coordenadora de TCC
+
+Professor: Kethlinn Ramos
+Email: kethlinn.ramos@ufsc.br
+Telefone: (48) 3721-3387, (47) 3232-5187
+Localização: SN - B114
+Cargo: Coordenadora de Extensão do Departamento
+
+Professor: Leonardo Ulian Lopes
+Email: leonardo.ulian@ufsc.br
+Telefone: (48) 3721-3387, (47) 3232-5187
+Localização: SN - B114
+Cargo: Subcoordenador Curso Engenharia de Materiais / Coordenador de Estágio
+
+Professor: Luciana Maccarini Schabbach
+Email: luciana.maccarini@ufsc.br
+Telefone: (48) 3721-3387, (47) 3232-5187
+Localização: SN - B114
+Cargo: Coordenadora de Extensão do Curso
+
+Professor: Marcio Roberto da Rocha
+Email: marcio.rocha@ufsc.br
+Telefone: (48) 3721-3331, (47) 3232-5131
+Localização: SN - B114
+Cargo: Subcoordenador do Programa de Pós-Graduação em Nanociência, Processos e Materiais Avançados (PPGNPMat)
+
+Professor: Wanderson Santana da Silva
+Email: w.santana@ufsc.br
+Telefone: (48) 3721-3387, (47) 3232-5187
+Localização: SN - B114
+Cargo: Chefe da Coordenadoria Especial
+
+Professor: Aldo Sena de Oliveira
+Email: aldo.sena@ufsc.br
+Telefone: (48) 3721-3379, (47) 3232-5179
+Localização: SN - B107
+Cargo: 
+
+Professor: Professor
+Email: Email
+Telefone: Telefone
+Localização: Localização
+Cargo: Cargo
+
+Professor: Alfredo Alberto Muxel
+Email: alfredo.muxel@ufsc.br
+Telefone: (48) 3721-3339, (47) 3232-5139
+Localização: A306
+Cargo: Coordenador do Curso de Graduação em Química
+
+Professor: Amarildo Otávio Martins
+Email: amarildo.martins@ufsc.br
+Telefone: (48) 3721-3379, (47) 3232-5179
+Localização: SN - B107
+Cargo: Coordenador de TCC
+
+Professor: Cíntia Rosa da Silva
+Email: cintia.r@ufsc.br
+Telefone: (48) 3721-3383, (47) 3232-5183
+Localização: SN - B115
+Cargo: Coordenadora de Ensino
+
+Professor: Daniel Almeida Fagundes
+Email: daniel.fagundes@ufsc.br
+Telefone: (48) 3721-3386, (47) 3232-5186
+Localização: SN - B105
+Cargo: 
+
+Professor: Daniel Girardi
+Email: d.girardi@ufsc.br
+Telefone: (48) 3721-3386, (47) 3232-5186
+Localização: SN - B105
+Cargo: 
+
+Professor: Daniela Brondani
+Email: daniela.brondani@ufsc.br
+Telefone: (48) 3721-3379, (47) 3232-5179
+Localização: SN - B107
+Cargo: 
+
+Professor: Daniela Pires Gouvêa (Substituta)
+Email: daniela.p.gouvea@ufsc.br
+Telefone: (48) 3721-3379, (47) 3232-5179
+Localização: SN - B107
+Cargo: 
+
+Professor: Edilaine Aparecida Vieira
+Email: edilaine.vieira@ufsc.br
+Telefone: (48) 3721-3392, (47) 3232-5192
+Localização: SN - B106
+Cargo: 
+
+Professor: Eduardo Zapp
+Email: eduardo.zapp@ufsc.br
+Telefone: (48) 3721-3379, (47) 3232-5179
+Localização: SN - B107
+Cargo: 
+
+Professor: Eslley Scatena Gonçales
+Email: e.scatena@ufsc.br
+Telefone: (48) 3721-3386, (47) 3232-5186
+Localização: SN - B105
+Cargo: Coordenador de Extensão do Departamento
+
+Professor: Fabiana Schmitt Corrêa
+Email: fabiana.s.c@ufsc.br
+Telefone: (48) 3721-3392, (47) 3232-5192
+Localização: SN - B106
+Cargo: 
+
+Professor: Professor
+Email: Email
+Telefone: Telefone
+Localização: Localização
+Cargo: Cargo
+
+Professor: Fernando Fuzinatto Dall'Agnol
+Email: fernando.dallagnol@ufsc.br
+Telefone: (48) 3721-3386, (47) 3232-5186
+Localização: SN - B105
+Cargo: Subcoordenador do Mestrado Profissional em Ensino de Física
+
+Professor: Franciellen Rodrigues da Silva Costa
+Email: franciellen.costa@ufsc.br
+Telefone: (48) 3721-3392, (47) 3232-5192
+Localização: SN - B106
+Cargo: 
+
+Professor: Gláucio Régis Nagurniak
+Email: glaucio.nagurniak@ufsc.br
+Telefone: (48) 3721-3392, (47) 3232-5192
+Localização: SN - B106
+Cargo: 
+
+Professor: Guilherme Wagner
+Email: guilherme.w@ufsc.br
+Telefone: (48) 3721-3383, (47) 3232-5183
+Localização: SN - B115
+Cargo: Coordenador de Estágio Licenciatura em Matemática
+
+Professor: Graziela Piccoli Richetti
+Email: graziela.richetti@ufsc.br
+Telefone: (48) 3721-3383, (47) 3232-5183
+Localização: SN - B115
+Cargo: 
+
+Professor: Ismael Casagrande Bellettini
+Email: ismael.bellettini@ufsc.br
+Telefone: (48) 3721-3379, (47) 3232-5179
+Localização: SN - B107
+Cargo: 
+
+Professor: Jorge Cássio Costa Nóbriga
+Email: j.cassio@ufsc.br
+Telefone: (48) 3721-3383, (47) 3232-5183
+Localização: SN - B115
+Cargo: Subchefe de Departamento
+
+Professor: José Wilmo da Cruz Junior
+Email: jose.w.cruz@ufsc.br
+Telefone: (48) 3721-3379, (47) 3232-5179
+Localização: SN - B107
+Cargo: Coordenação de Extensão do Curso de Graduação em Química
+
+Professor: Julio Faria Corrêa
+Email: correa.j@ufsc.br
+Telefone: (48) 3721-3385, (47) 3232-5185
+Localização: SN - B015
+Cargo: Chefe de Departamento
+
+Professor: Keysy Solange Costa Nogueira
+Email: keysy.nogueira@ufsc.br
+Telefone: (48) 3721-3392, (47) 3232-5192
+Localização: SN - B106
+Cargo: Subcoordenadora do Curso de Graduação em Química
+
+Professor: Lara Fernandes dos Santos Lavelli
+Email: lara.fernandes@ufsc.br
+Telefone: (48) 3721-3386, (47) 3232-5186
+Localização: SN - B105
+Cargo: 
+
+Professor: Lidiane Meier
+Email: lidiane.meier@ufsc.br
+Telefone: (48) 3721-3379, (47) 3232-5179
+Localização: SN - B107
+Cargo: 
+
+Professor: Professor
+Email: Email
+Telefone: Telefone
+Localização: Localização
+Cargo: Cargo
+
+Professor: Lucas Chavero
+Email: l.chavero@ufsc.br
+Telefone: (48) 3721-3386, (47) 3232-5186
+Localização: SN - B105
+Cargo: Coordenador do Mestrado Profissional em Ensino de Física
+
+Professor: Luciane Schulz (Substituta)
+Email: luciane.s@ufsc.br
+Telefone: (48) 3721-3392, (47) 3232-5192
+Localização: SN - B106
+Cargo: 
+
+Professor: Marcelo Dallagnol Alloy
+Email: marcelo.alloy@ufsc.br
+Telefone: (48) 3721-3386, (47) 3232-5186
+Localização: SN - B105
+Cargo: Coordenador de Pesquisa
+
+Professor: Nara Rubiano da Silva
+Email: nara.rubiano@ufsc.br
+Telefone: (48) 3721-3386, (47) 3232-5186
+Localização: SN - B105
+Cargo: 
+
+Professor: Patricia Bulegon Brondani
+Email: p.b.brondani@ufsc.br
+Telefone: (48) 3721-3379, (47) 3232-5179
+Localização: SN - B107
+Cargo: Coordenadora de Estágio da Graduação em Química
+
+Professor: Rafael Leonardo Novak
+Email: rafael.novak@ufsc.br
+Telefone: (48) 3721-3386, (47) 3232-5186
+Localização: SN - B105
+Cargo: 
+
+Professor: Renata Orlandi
+Email: renata.orlandi@ufsc.br
+Telefone: (48) 3721-3392, (47) 3232-5192
+Localização: SN - B106
+Cargo: 
+

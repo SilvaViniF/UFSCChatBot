@@ -1,0 +1,270 @@
+Professor: Claudia Merlini
+Email: claudia.merlini@ufsc.br
+Telefone: 
+Localização: 
+Cargo: Coordenadora do Programa de Pós-Graduação em Nanociência, Processos e Materiais Avançados (PPGNPMat)
+
+Professor: Claudio Michel Poffo
+Email: claudio.poffo@ufsc.br
+Telefone: 
+Localização: 
+Cargo: Coordenador do Curso de Engenharia de Materiais
+
+Professor: Cristiano da Silva Teixeira
+Email: c.teixeira@ufsc.br
+Telefone: 
+Localização: 
+Cargo: No Position
+
+Professor: Johnny de Nardi Martins
+Email: johnny.martins@ufsc.br
+Telefone: 
+Localização: 
+Cargo: Subchefe da Coordenadoria Especial/Coordenador de Ensino
+
+Professor: Laura Ximena Lovisa Oliveira
+Email: laura.lovisa@ufsc.br
+Telefone: 
+Localização: 
+Cargo: No Position
+
+Professor: Larissa Nardini Carli
+Email: larissa.carli@ufsc.br
+Telefone: 
+Localização: 
+Cargo: Coordenadora de Pesquisa/Coordenadora de TCC
+
+Professor: Kethlinn Ramos
+Email: kethlinn.ramos@ufsc.br
+Telefone: 
+Localização: 
+Cargo: Coordenadora de Extensão do Departamento
+
+Professor: Leonardo Ulian Lopes
+Email: leonardo.ulian@ufsc.br
+Telefone: 
+Localização: 
+Cargo: Subcoordenador Curso Engenharia de Materiais / Coordenador de Estágio
+
+Professor: Luciana Maccarini Schabbach
+Email: luciana.maccarini@ufsc.br
+Telefone: 
+Localização: 
+Cargo: Coordenadora de Extensão do Curso
+
+Professor: Marcio Roberto da Rocha
+Email: marcio.rocha@ufsc.br
+Telefone: 
+Localização: 
+Cargo: Subcoordenador do Programa de Pós-Graduação em Nanociência, Processos e Materiais Avançados (PPGNPMat)
+
+Professor: Wanderson Santana da Silva
+Email: w.santana@ufsc.br
+Telefone: 
+Localização: 
+Cargo: Chefe da Coordenadoria Especial
+
+Professor: Aldo Sena de Oliveira
+Email: aldo.sena@ufsc.br
+Telefone: 
+Localização: 
+Cargo: No Position
+
+Professor: Nome
+Email: Email
+Telefone: 
+Localização: 
+Cargo: Cargo
+
+Professor: Alfredo Alberto Muxel
+Email: alfredo.muxel@ufsc.br
+Telefone: 
+Localização: 
+Cargo: Coordenador do Curso de Graduação em Química
+
+Professor: Amarildo Otávio Martins
+Email: amarildo.martins@ufsc.br
+Telefone: 
+Localização: 
+Cargo: Coordenador de TCC
+
+Professor: Cíntia Rosa da Silva
+Email: cintia.r@ufsc.br
+Telefone: 
+Localização: 
+Cargo: Coordenadora de Ensino
+
+Professor: Daniel Almeida Fagundes
+Email: daniel.fagundes@ufsc.br
+Telefone: 
+Localização: 
+Cargo: No Position
+
+Professor: Daniel Girardi
+Email: d.girardi@ufsc.br
+Telefone: 
+Localização: 
+Cargo: No Position
+
+Professor: Daniela Brondani
+Email: daniela.brondani@ufsc.br
+Telefone: 
+Localização: 
+Cargo: No Position
+
+Professor: Daniela Pires Gouvêa (Substituta)
+Email: daniela.p.gouvea@ufsc.br
+Telefone: 
+Localização: 
+Cargo: No Position
+
+Professor: Edilaine Aparecida Vieira
+Email: edilaine.vieira@ufsc.br
+Telefone: 
+Localização: 
+Cargo: No Position
+
+Professor: Eduardo Zapp
+Email: eduardo.zapp@ufsc.br
+Telefone: 
+Localização: 
+Cargo: No Position
+
+Professor: Eslley Scatena Gonçales
+Email: e.scatena@ufsc.br
+Telefone: 
+Localização: 
+Cargo: Coordenador de Extensão do Departamento
+
+Professor: Fabiana Schmitt Corrêa
+Email: fabiana.s.c@ufsc.br
+Telefone: 
+Localização: 
+Cargo: No Position
+
+Professor: Nome
+Email: Email
+Telefone: 
+Localização: 
+Cargo: Cargo
+
+Professor: Fernando Fuzinatto Dall'Agnol
+Email: fernando.dallagnol@ufsc.br
+Telefone: 
+Localização: 
+Cargo: Subcoordenador do Mestrado Profissional em Ensino de Física
+
+Professor: Franciellen Rodrigues da Silva Costa
+Email: franciellen.costa@ufsc.br
+Telefone: 
+Localização: 
+Cargo: No Position
+
+Professor: Gláucio Régis Nagurniak
+Email: glaucio.nagurniak@ufsc.br
+Telefone: 
+Localização: 
+Cargo: No Position
+
+Professor: Guilherme Wagner
+Email: guilherme.w@ufsc.br
+Telefone: 
+Localização: 
+Cargo: Coordenador de Estágio Licenciatura em Matemática
+
+Professor: Graziela Piccoli Richetti
+Email: graziela.richetti@ufsc.br
+Telefone: 
+Localização: 
+Cargo: No Position
+
+Professor: Ismael Casagrande Bellettini
+Email: ismael.bellettini@ufsc.br
+Telefone: 
+Localização: 
+Cargo: No Position
+
+Professor: Jorge Cássio Costa Nóbriga
+Email: j.cassio@ufsc.br
+Telefone: 
+Localização: 
+Cargo: Subchefe de Departamento
+
+Professor: José Wilmo da Cruz Junior
+Email: jose.w.cruz@ufsc.br
+Telefone: 
+Localização: 
+Cargo: Coordenação de Extensão do Curso de Graduação em Química
+
+Professor: Julio Faria Corrêa
+Email: correa.j@ufsc.br
+Telefone: 
+Localização: 
+Cargo: Chefe de Departamento
+
+Professor: Keysy Solange Costa Nogueira
+Email: keysy.nogueira@ufsc.br
+Telefone: 
+Localização: 
+Cargo: Subcoordenadora do Curso de Graduação em Química
+
+Professor: Lara Fernandes dos Santos Lavelli
+Email: lara.fernandes@ufsc.br
+Telefone: 
+Localização: 
+Cargo: No Position
+
+Professor: Lidiane Meier
+Email: lidiane.meier@ufsc.br
+Telefone: 
+Localização: 
+Cargo: No Position
+
+Professor: Nome
+Email: Email
+Telefone: 
+Localização: 
+Cargo: Cargo
+
+Professor: Lucas Chavero
+Email: l.chavero@ufsc.br
+Telefone: 
+Localização: 
+Cargo: Coordenador do Mestrado Profissional em Ensino de Física
+
+Professor: Luciane Schulz (Substituta)
+Email: luciane.s@ufsc.br
+Telefone: 
+Localização: 
+Cargo: No Position
+
+Professor: Marcelo Dallagnol Alloy
+Email: marcelo.alloy@ufsc.br
+Telefone: 
+Localização: 
+Cargo: Coordenador de Pesquisa
+
+Professor: Nara Rubiano da Silva
+Email: nara.rubiano@ufsc.br
+Telefone: 
+Localização: 
+Cargo: No Position
+
+Professor: Patricia Bulegon Brondani
+Email: p.b.brondani@ufsc.br
+Telefone: 
+Localização: 
+Cargo: Coordenadora de Estágio da Graduação em Química
+
+Professor: Rafael Leonardo Novak
+Email: rafael.novak@ufsc.br
+Telefone: 
+Localização: 
+Cargo: No Position
+
+Professor: Renata Orlandi
+Email: renata.orlandi@ufsc.br
+Telefone: 
+Localização: 
+Cargo: No Position
+

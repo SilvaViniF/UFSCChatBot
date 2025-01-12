@@ -2,7 +2,7 @@ from pydantic import BaseModel
 
 class SearchQuery(BaseModel):
     text: str
-    top_k: int = 5
+    top_n: int = 5
 
 
 class SearchResult(BaseModel):

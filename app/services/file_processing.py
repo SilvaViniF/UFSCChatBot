@@ -1,15 +1,14 @@
-import pymupdf4llm
 import pymupdf
 import bs4 as BeautifulSoup
 import os
 import pandas as pd
-from chonkie import SemanticChunker, SemanticChunk
+from chonkie import TokenChunker
 
 def _process_pdf(file_path: str) -> list[str]:
     try:
         doc = pymupdf.open(file_path)
-        markdown = pymupdf4llm.to_markdown(doc)
-        return markdown
+        markdown = pymupdf.get_text(doc)
+        return markdown[0]
     except Exception as e:
         print(f"Error processing {file_path}: {e}")
         return []
@@ -29,9 +28,9 @@ def _process_csv(file_path: str) -> list[str]:
         print(f"Error processing {file_path}: {e}")
         return []
 
-def _process_file(file_path: str, max_length: int) -> list[str]:
+def _process_file(file_path: str, max_length: int=512) -> list[str]:
     
-    chunker = SemanticChunker(chunk_size=max_length)
+    chunker = TokenChunker(chunk_size=max_length)
     
     file_extension = os.path.splitext(file_path)[1].lower()
     try:
@@ -54,6 +53,7 @@ def _process_file(file_path: str, max_length: int) -> list[str]:
     semantic_chunks = chunker.chunk(text)
     chunks = []
     for chunk in semantic_chunks:
+        print(f"=========\nCHUNK: {chunk.text}\nCHUNK_SIZE: {chunk.token_count}\n")
         chunks.append(chunk.text)
     return chunks
     

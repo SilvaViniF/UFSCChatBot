@@ -10,9 +10,11 @@ def create_app() -> FastAPI:
 
     app.include_router(api.router, prefix="/search", tags=["Search"])
     
-    embeddings = Embeddings(content=True,path="thenlper/gte-base")
-    services.search.index_chunks(embeddings)
-    #TODO fix chunking
+    embeddings = Embeddings(content=True, path="sentence-transformers/nli-mpnet-base-v2",backend="hnsw",hybrid=True)
+    services.search.SearchService.set_embeddings(embeddings)
+
+    search_service = services.search.SearchService()
+    search_service.index_chunks()
 
     @app.get("/")
     async def root():

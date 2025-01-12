@@ -1,0 +1,180 @@
+Professor: Rafael Leonardo Novak
+Email: rafael.novak@ufsc.br
+Telefone: (48) 3721-3386, (47) 3232-5186
+Localização: SN - B105
+Cargo: 
+
+Professor: Renata Orlandi
+Email: renata.orlandi@ufsc.br
+Telefone: (48) 3721-3392, (47) 3232-5192
+Localização: SN - B106
+Cargo: 
+
+Professor: Silmar José Spinardi Franchi
+Email: silmar.franchi@ufsc.br
+Telefone: (48) 3721-3379, (47) 3232-5179
+Localização: SN - B107
+Cargo: 
+
+Professor: Adão Boava
+Email: adao.boava@ufsc.br
+Telefone: (48) 3721-3373, (47) 3232-5173
+Localização: SN - B103
+Cargo: 
+
+Professor: Adriano Peres
+Email: adriano.peres@ufsc.br
+Telefone: (48) 3721-3395, (47) 3232-5195
+Localização: SN - B004
+Cargo: Diretor do Centro/Campus
+
+Professor: Alex Fabiano Bueno
+Email: alex.bueno@ufsc.br
+Telefone: (48) 3721-3347, (47) 3232-5147
+Localização: B118
+Cargo: Subchefe do Departamento/Coordenador de Ensino
+
+Professor: Anelize Zomkowski Salvi
+Email: anelize.salvi@ufsc.br
+Telefone: (48) 3721-3374, (47) 3232-5174
+Localização: SN - B104
+Cargo: 
+
+Professor: Brenda Teresa Porto de Matos (Em afastamento)
+Email: brenda.matos@ufsc.br
+Telefone: (48) 3721-3383, (47) 3232-5183
+Localização: SN - B115
+Cargo: 
+
+Professor: Carlos Roberto Moratelli
+Email: carlos.moratelli@ufsc.br
+Telefone: (48) 3721-3373, (47) 3232-5173
+Localização: SN - B103
+Cargo: 
+
+Professor: Ciro André Pitz
+Email: ciro.pitz@ufsc.br
+Telefone: (48) 3721-3373, (47) 3232-5173
+Localização: SN - B103
+Cargo: 
+
+Professor: Cristina Luz Cardoso
+Email: cristina.cardoso@ufsc.br
+Telefone: (48) 3721-3383, (47) 3232-5183
+Localização: SN - B115
+Cargo: Coordenadora de Extensão do Curso e do Departamento
+
+Professor: Daniel Alejandro Ponce Saldías
+Email: daniel.alejandro@ufsc.br
+Telefone: (48) 3721-3374, (47) 3232-5174
+Localização: SN - B104
+Cargo: 
+
+Professor: Daniel Martins Lima
+Email: daniel.lima@ufsc.br
+Telefone: (48) 3721-3337, (47) 3232-5137
+Localização: B119
+Cargo: Coordenador do Curso de Engenharia de Controle e Automação
+
+Professor: Ebrahim Samer El Youssef
+Email: ebrahim.el.youssef@ufsc.br
+Telefone: (48) 3721-3373, (47) 3232-5173
+Localização: SN - B103
+Cargo: 
+
+Professor: Fábio Rafael Segundo
+Email: fabio.segundo@ufsc.br
+Telefone: (48) 3721-3374, (47) 3232-5174
+Localização: SN - B104
+Cargo: 
+
+Professor: Fernando Luis Peixoto
+Email: fernando.l.peixoto@ufsc.br
+Telefone: (48) 3721-3383, (47) 3232-5183
+Localização: B118
+Cargo: 
+
+Professor: Gledson Heidemann (Substituto)
+Email: gledson.heidemann@ufsc.br
+Telefone: (48) 3721-3383, (47) 3232-5183
+Localização: SN - B115
+Cargo: 
+
+Professor: Guilherme Brasil Pintarelli
+Email: guilherme.pintarelli@ufsc.br
+Telefone: (48) 3721-3373, (47) 3232-5173
+Localização: SN - B103
+Cargo: 
+
+Professor: Hugo José Lara Urdaneta
+Email: hugo.lara.urdaneta@ufsc.br
+Telefone: (48) 3721-3332, (47) 3232-5132
+Localização: SN - B119
+Cargo: Chefe de Departamento
+
+Professor: Janaina Gonçalves Guimarães
+Email: janaina.guimaraes@ufsc.br
+Telefone: 
+Localização: 
+Cargo: B023
+
+Professor: Leonardo Mejia Rincon
+Email: leonardo.mejia.rincon@ufsc.br
+Telefone: (48) 3721-3374, (47) 3232-5174
+Localização: SN - B104
+Cargo: 
+
+Professor: Luiz Antonio Maccari Junior
+Email: luiz.maccari@ufsc.br
+Telefone: (48) 3721-3374, (47) 3232-5174
+Localização: SN - B104
+Cargo: 
+
+Professor: Maiquel de Brito
+Email: maiquel.b@ufsc.br
+Telefone: (48) 3721-3374, (47) 3232-5174
+Localização: SN - B104
+Cargo: Coordenador de Pesquisa
+
+Professor: Marcos Vinicius Matsuo
+Email: marcos.matsuo@ufsc.br
+Telefone: (48) 3721-3374, (47) 3232-5174
+Localização: SN - B104
+Cargo: Coordenador de Estágio da Engenharia de Controle e Automação
+
+Professor: Marilise Luiza Martins dos Reis Sayão
+Email: marilise.reis@ufsc.br
+Telefone: (48) 3721-4268
+Localização: Reitoria I - Térreo
+Cargo: Diretora de Ações Afirmativas e Equidade / PROAFE
+
+Professor: Mauri Ferrandin
+Email: mauri.ferrandin@ufsc.br
+Telefone: (48) 3721-3373, (47) 3232-5173
+Localização: SN - B103
+Cargo: 
+
+Professor: Sérgio Luiz Ferreira
+Email: sergio.ferreira@ufsc.br
+Telefone: (48) 3721-6212, (48) 3721-6284
+Localização: Sala 401 - Reitoria II
+Cargo: Presidente da CPA
+
+Professor: Sheila Santisi Travessa (Substituto)
+Email: 
+Telefone: 
+Localização: 
+Cargo: (48) 3721-3383, (47) 3232-5183
+
+Professor: Steffan Macali Werner (Substituto)
+Email: steffan.werner@ufsc.br
+Telefone: (48) 3721-3383, (47) 3232-5183
+Localização: SN - B115
+Cargo: 
+
+Professor: Tiago Davi Curi Busarello
+Email: tiago.busarello@ufsc.br
+Telefone: 
+Localização: 
+Cargo: B114
+
