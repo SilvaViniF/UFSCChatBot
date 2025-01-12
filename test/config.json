@@ -1,7 +1,6 @@
 {
   "content": true,
   "path": "sentence-transformers/nli-mpnet-base-v2",
-  "backend": "hnsw",
   "hybrid": true,
   "scoring": {
     "method": "bm25",
@@ -10,19 +9,16 @@
   },
   "autoid": 40,
   "dimensions": 768,
-  "metric": "ip",
+  "backend": "faiss",
   "offset": 40,
-  "deletes": 0,
   "build": {
-    "create": "2025-01-12T14:19:12Z",
+    "create": "2025-01-12T21:40:56Z",
     "python": "3.10.12",
     "settings": {
-      "efconstruction": 200,
-      "m": 16,
-      "seed": 100
+      "components": "IDMap,Flat"
     },
     "system": "Linux (x86_64)",
     "txtai": "8.2.0"
   },
-  "update": "2025-01-12T14:19:12Z"
+  "update": "2025-01-12T21:40:56Z"
 }

@@ -7,7 +7,13 @@ import os
 from config.settings import SYS_PROMPT, terminators
 from sentence_transformers import SentenceTransformer
 from threading import Thread
-
+import numpy as np
+from rank_bm25 import BM25Okapi
+import nltk
+import pickle
+nltk.download('punkt_tab', quiet=True)
+nltk.download('stopwords', quiet=True)
+nltk.download('rslp',quiet=True)
 from transformers import AutoTokenizer, AutoModelForCausalLM, TextIteratorStreamer
 load_dotenv()
 
@@ -28,7 +34,8 @@ class SearchService:
         tokenizer.eos_token_id,
         tokenizer.convert_tokens_to_ids("<|eot_id|>")
     ]
-    
+    chunk_list = None  # Initialize chunk_list as None
+
     @classmethod
     def set_embeddings(cls, embeddings_param: Embeddings):
         cls.embeddings = embeddings_param
@@ -43,14 +50,43 @@ class SearchService:
             chunk_list = get_documents(os.getenv('FILES'))
             self.embeddings.index(chunk_list)
             self.embeddings.save("test")
+            # Save chunk_list to a pickle file
+            with open('chunk_list.pickle', 'wb') as f:
+                pickle.dump(chunk_list, f)
+
+    def preprocess_text(self, text: str) -> list[str]:
+        from nltk.tokenize import word_tokenize
+        from nltk.corpus import stopwords
+        tokens = word_tokenize(text.lower(), language='portuguese')
+        stop_words = set(stopwords.words('portuguese') + ['é', 'são', 'está', 'estão', 'professor'])
+    
+        filtered_tokens = [token for token in tokens if token.isalnum() and token not in stop_words]
+    
+        return filtered_tokens
+    
+    def initialize_bm25(self, documents: list[list[str]]) -> BM25Okapi:
+        squashed_documents = [" ".join(doc) for doc in documents]
+        tokenized_corpus = [self.preprocess_text(doc) for doc in squashed_documents]
+        bm25 = BM25Okapi(tokenized_corpus)
+        return bm25
 
     def search(self, prompt: str, topn: int):
-        results = self.embeddings.search(prompt,limit=topn)
+        retrieved = self.embeddings.search(prompt, limit=topn * 4)
+        results = []
+        for item in retrieved:
+            idx = item["id"]
+            score = item["score"]
+            doc = item["text"]
+            if any(term in doc.lower() for term in prompt.lower().split()):
+                results.append((int(idx), float(score), doc))
+            if len(results) == topn:
+                break
+
         return results
 
     def talk(self, prompt: str, topn: int):
         retrieved_chunks = self.search(prompt,topn)
-        top_context ="\n".join([doc["text"] for doc in retrieved_chunks])
+        top_context = "\n".join([doc[2] for doc in retrieved_chunks])
         
         history_text = "\n".join([f"Pergunta: {h['user']}\nResposta: {h['assistant']}" for h in self.chat_history])
         complete_prompt = f"{history_text}\nPergunta: {prompt}\n{top_context}"

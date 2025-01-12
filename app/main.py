@@ -10,7 +10,7 @@ def create_app() -> FastAPI:
 
     app.include_router(api.router, prefix="/search", tags=["Search"])
     
-    embeddings = Embeddings(content=True, path="sentence-transformers/nli-mpnet-base-v2",backend="hnsw",hybrid=True)
+    embeddings = Embeddings(content=True, path="sentence-transformers/nli-mpnet-base-v2", hybrid=True)
     services.search.SearchService.set_embeddings(embeddings)
 
     search_service = services.search.SearchService()
