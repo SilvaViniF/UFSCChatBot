@@ -3,14 +3,16 @@ from routes import api
 import uvicorn
 from txtai import Embeddings
 import services.search
+from dotenv import load_dotenv
+
+load_dotenv()
 
 def create_app() -> FastAPI:
 
     app = FastAPI(title="RAG API", version="1.0.0")
 
     app.include_router(api.router, prefix="/search", tags=["Search"])
-    
-    embeddings = Embeddings(content=True, path="sentence-transformers/nli-mpnet-base-v2", hybrid=True)
+    embeddings = Embeddings(content=True, path="nomic-ai/nomic-embed-text-v1")
     services.search.SearchService.set_embeddings(embeddings)
 
     search_service = services.search.SearchService()

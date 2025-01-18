@@ -3,6 +3,7 @@ import bs4 as BeautifulSoup
 import os
 import pandas as pd
 from chonkie import TokenChunker
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 def _process_pdf(file_path: str) -> list[str]:
     try:
@@ -28,10 +29,14 @@ def _process_csv(file_path: str) -> list[str]:
         print(f"Error processing {file_path}: {e}")
         return []
 
-def _process_file(file_path: str, max_length: int=512) -> list[str]:
+
+def _process_file(file_path: str, max_length: int=768) -> list[str]:
     
-    chunker = TokenChunker(chunk_size=max_length)
-    
+    text_splitter = RecursiveCharacterTextSplitter(
+    chunk_size=max_length,  # Maximum size of each chunk
+    chunk_overlap=100  # Number of overlapping characters between chunks
+)
+
     file_extension = os.path.splitext(file_path)[1].lower()
     try:
         if file_extension == '.html':
@@ -50,18 +55,17 @@ def _process_file(file_path: str, max_length: int=512) -> list[str]:
         print(f"Error processing {file_path}: {str(e)}")
         return []
     
-    semantic_chunks = chunker.chunk(text)
+    semantic_chunks = text_splitter.split_text(text)
     chunks = []
     for chunk in semantic_chunks:
-        print(f"=========\nCHUNK: {chunk.text}\nCHUNK_SIZE: {chunk.token_count}\n")
-        chunks.append(chunk.text)
+       # print(f"=========\nCHUNK: {chunk}\nCHUNK_SIZE: {chunk.token_count}\n")
+        chunks.append(chunk)
     return chunks
-    
-#TODO add cache
 
-def get_documents(folder_path: str, max_length: int = 512) -> list[str]:
+
+def get_documents(folder_path: str, max_length: int = 768) -> list[str]:
     documents = []
     for file_path in os.listdir(folder_path):
-        documents.append(_process_file(f"{folder_path}/{file_path}",max_length))
+        documents.extend(_process_file(f"{folder_path}/{file_path}",max_length))
     return documents
 #endregion

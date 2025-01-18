@@ -1,18 +1,12 @@
 {
   "content": true,
-  "path": "sentence-transformers/nli-mpnet-base-v2",
-  "hybrid": true,
-  "scoring": {
-    "method": "bm25",
-    "terms": true,
-    "normalize": true
-  },
-  "autoid": 40,
+  "path": "nomic-ai/nomic-embed-text-v1",
+  "autoid": 117,
   "dimensions": 768,
   "backend": "faiss",
-  "offset": 40,
+  "offset": 117,
   "build": {
-    "create": "2025-01-12T21:40:56Z",
+    "create": "2025-01-18T16:07:57Z",
     "python": "3.10.12",
     "settings": {
       "components": "IDMap,Flat"
@@ -20,5 +14,5 @@
     "system": "Linux (x86_64)",
     "txtai": "8.2.0"
   },
-  "update": "2025-01-12T21:40:56Z"
+  "update": "2025-01-18T16:07:57Z"
 }

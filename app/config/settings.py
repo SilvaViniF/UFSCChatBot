@@ -2,7 +2,9 @@ from transformers import BitsAndBytesConfig
 import torch
 from transformers import AutoTokenizer
 import os
-import config
+from dotenv import load_dotenv
+
+load_dotenv()
 
 bnb_config = BitsAndBytesConfig(
     load_in_4bit=True,
