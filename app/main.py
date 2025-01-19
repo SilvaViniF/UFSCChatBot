@@ -12,7 +12,7 @@ def create_app() -> FastAPI:
     app = FastAPI(title="RAG API", version="1.0.0")
 
     app.include_router(api.router, prefix="/search", tags=["Search"])
-    embeddings = Embeddings(content=True, path="nomic-ai/nomic-embed-text-v1")
+    embeddings = Embeddings(content=True, path="mixedbread-ai/mxbai-embed-large-v1")
     services.search.SearchService.set_embeddings(embeddings)
 
     search_service = services.search.SearchService()

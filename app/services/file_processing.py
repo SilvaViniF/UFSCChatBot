@@ -2,7 +2,6 @@ import pymupdf
 import bs4 as BeautifulSoup
 import os
 import pandas as pd
-from chonkie import TokenChunker
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 def _process_pdf(file_path: str) -> list[str]:
@@ -30,11 +29,11 @@ def _process_csv(file_path: str) -> list[str]:
         return []
 
 
-def _process_file(file_path: str, max_length: int=768) -> list[str]:
+def _process_file(file_path: str, max_length: int=512) -> list[str]:
     
     text_splitter = RecursiveCharacterTextSplitter(
-    chunk_size=max_length,  # Maximum size of each chunk
-    chunk_overlap=100  # Number of overlapping characters between chunks
+    chunk_size=max_length,
+    chunk_overlap=256
 )
 
     file_extension = os.path.splitext(file_path)[1].lower()
@@ -63,7 +62,7 @@ def _process_file(file_path: str, max_length: int=768) -> list[str]:
     return chunks
 
 
-def get_documents(folder_path: str, max_length: int = 768) -> list[str]:
+def get_documents(folder_path: str, max_length: int = 512) -> list[str]:
     documents = []
     for file_path in os.listdir(folder_path):
         documents.extend(_process_file(f"{folder_path}/{file_path}",max_length))

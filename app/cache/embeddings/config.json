@@ -1,0 +1,18 @@
+{
+  "content": true,
+  "path": "mixedbread-ai/mxbai-embed-large-v1",
+  "autoid": 51,
+  "dimensions": 1024,
+  "backend": "faiss",
+  "offset": 51,
+  "build": {
+    "create": "2025-01-18T22:14:09Z",
+    "python": "3.10.12",
+    "settings": {
+      "components": "IDMap,Flat"
+    },
+    "system": "Linux (x86_64)",
+    "txtai": "8.2.0"
+  },
+  "update": "2025-01-18T22:14:09Z"
+}
