@@ -222,5 +222,5 @@ if __name__ == "__main__":
 
 
 print("Finished, running visualize_judge...")
-import visualize_judge
+import analysis.hf_test.visualize_judge as visualize_judge
 visualize_judge.main()
