@@ -195,7 +195,6 @@ class SearchService:
         t.start()
 
         for text in streamer:
-            print(text)
             yield text
 
 

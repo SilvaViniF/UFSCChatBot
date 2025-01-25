@@ -13,3 +13,4 @@ venv
 .lesshst
 .python_history
 .npm
+docker/
