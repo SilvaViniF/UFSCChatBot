@@ -8,7 +8,6 @@ projeto
 .local
 .env
 venv
-frontend
 **/__pycache__/
 .bash_history
 .lesshst
