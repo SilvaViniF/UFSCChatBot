@@ -12,3 +12,4 @@ venv
 .bash_history
 .lesshst
 .python_history
+.npm

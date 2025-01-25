@@ -154,18 +154,16 @@ class SearchService:
 
         context_pieces = [doc.strip() for _, _, doc in reranked_results]
         top_context = "\n\n---\n\n".join(context_pieces)
-        #history_text = "\n".join([f"Pergunta: {h['user']}\nResposta: {h['assistant']}" for h in self.chat_history])
-        history_text=""
+        history_text = ""
         complete_prompt = f"{history_text}\nPergunta: {prompt}\n Contexto:{top_context}"
 
         messages = [{"role": "system", "content": sys_prompt}, {"role": "user", "content": complete_prompt}]
 
-        streamed_output = []
+  
         for chunk in self.generate(messages):
-            streamed_output.append(chunk)
-            yield "".join(streamed_output)
+            yield chunk
 
-        form_output = "".join(streamed_output)
+        form_output = "".join(chunk for chunk in self.generate(messages))
         self.chat_history.append({"user": prompt, "assistant": form_output})
         if len(self.chat_history) > 3:
             self.chat_history.pop(0)
@@ -189,13 +187,15 @@ class SearchService:
             do_sample=True,
             top_p=0.9,
             temperature=0.5,
-            eos_token_id=terminators,
+            eos_token_id=self.terminators,
+            pad_token_id=self.tokenizer.eos_token_id,
         )
 
         t = Thread(target=self.model.generate, kwargs=generate_kwargs)
         t.start()
 
         for text in streamer:
+            print(text)
             yield text
 
 

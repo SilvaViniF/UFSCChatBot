@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
-import axios from "axios";
 import pngImage from "../../assets/images/pageUfsc.png";
 import pngImage1 from "../../assets/images/botUfsc.png";
 
@@ -22,19 +21,47 @@ export function ChatUfscPage() {
       setChatMessages([...chatMessages, { text: message, isUser: true }]);
       setMessage("");
       setIsLoading(true);
-
+  
       try {
-        const response = await axios.post("http://localhost:8080/api/userinput", {
-          message: message.trim()
+        const response = await fetch("http://localhost:8000/search/query", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            text: message.trim(),
+            top_n: 5,
+          }),
         });
-
-        if (response.status !== 200) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
+  
+        // Handle the streamed response
+        const reader = response.body.getReader();
+        const decoder = new TextDecoder("utf-8");
+        let accumulatedResponse = "";
+  
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+  
+          // Decode the chunk and append it to the accumulated response
+          const chunk = decoder.decode(value, { stream: true });
+          accumulatedResponse += chunk;
+  
+          // Update the chat UI with the accumulated response
+          setChatMessages((prevMessages) => {
+            const lastMessage = prevMessages[prevMessages.length - 1];
+            if (lastMessage && !lastMessage.isUser) {
+              // Update the last assistant message
+              return [
+                ...prevMessages.slice(0, -1),
+                { text: accumulatedResponse, isUser: false },
+              ];
+            } else {
+              // Add a new assistant message
+              return [...prevMessages, { text: accumulatedResponse, isUser: false }];
+            }
+          });
         }
-
-        const data = response.data;
-        // Add AI response to chat
-        setChatMessages([...chatMessages, { text: message, isUser: true }, { text: data.response, isUser: false }]);
       } catch (error) {
         console.error('Error:', error);
         alert('Error fetching data. Please try again.');
@@ -69,11 +96,14 @@ export function ChatUfscPage() {
           <ChatBox onClick={(e) => e.stopPropagation()}>
             <ChatBoxHeader>
               <ChatBoxTitle>ChatUFSC</ChatBoxTitle>
-              <CloseButton onClick={toggleChat}>Fechar</CloseButton>
+              <div>
+                <ClearButton onClick={() => setChatMessages([])}>Clear Chat</ClearButton>
+                <CloseButton onClick={toggleChat}>Fechar</CloseButton>
+              </div>
             </ChatBoxHeader>
             <MessagesContainer ref={messagesContainerRef}>
               {chatMessages.map((msg, index) => (
-                <Message key={index} isUser={msg.isUser}>{msg.text}</Message>
+                <Message key={index} text={msg.text} isUser={msg.isUser} />
               ))}
               {isLoading && <LoadingText>Pensando...</LoadingText>}
             </MessagesContainer>
@@ -93,6 +123,21 @@ export function ChatUfscPage() {
     </Container>
   );
 }
+
+const Message = ({ text, isUser }) => {
+  const handleCopy = () => {
+    navigator.clipboard.writeText(text).then(() => {
+      alert("Message copied to clipboard!");
+    });
+  };
+
+  return (
+    <MessageContainer isUser={isUser}>
+      <MessageText>{text}</MessageText>
+      <CopyButton onClick={handleCopy}>Copy</CopyButton>
+    </MessageContainer>
+  );
+};
 
 const Container = styled.div`
   position: relative;
@@ -163,7 +208,7 @@ const MessagesContainer = styled.div`
   flex-direction: column;
 `;
 
-const Message = styled.div`
+const MessageContainer = styled.div`
   background-color: ${props => props.isUser ? '#007bff' : '#f1f0f0'};
   color: ${props => props.isUser ? 'white' : 'black'};
   padding: 10px 15px;
@@ -173,6 +218,25 @@ const Message = styled.div`
   align-self: ${props => props.isUser ? 'flex-end' : 'flex-start'};
   word-wrap: break-word;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+const MessageText = styled.div`
+  flex: 1;
+`;
+
+const CopyButton = styled.button`
+  background: none;
+  border: none;
+  color: ${props => props.isUser ? 'white' : '#007bff'};
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 12px;
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 
 const ChatInputContainer = styled.div`
@@ -197,6 +261,20 @@ const SendButton = styled.button`
   border: none;
   border-radius: 5px;
   cursor: pointer;
+`;
+
+const ClearButton = styled.button`
+  height: 40px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+  padding: 0 20px;
+  &:hover {
+    background-color: #ff1a1a;
+  }
 `;
 
 const CloseButton = styled.button`
