@@ -3,7 +3,7 @@ from .file_processing import get_documents
 from dotenv import load_dotenv
 import torch
 import os
-from config.settings import SYS_PROMPT, terminators, bnb_config
+from ..config.settings import SYS_PROMPT, bnb_config
 from threading import Thread
 from rank_bm25 import BM25Okapi
 import nltk
