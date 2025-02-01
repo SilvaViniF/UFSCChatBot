@@ -30,53 +30,59 @@ graph = embeddings.search("UFSC Blumenau", 50, graph=True)
 
 import matplotlib.pyplot as plt
 import networkx as nx
+import matplotlib.pyplot as plt
+import networkx as nx
+from matplotlib import cm
 
 def plot(graph):
-    labels = {x: f"{graph.attribute(x, 'text')[:10]} ({x})" for x in graph.scan()}
-    options = {
-        "node_size": 750,
-        "node_color": "#0277bd",
-        "edge_color": "#454545",
-        "font_color": "#fff",
-        "font_size": 6,
-        "alpha": 1.0
-    }
+    labels = {x: f"{graph.attribute(x, 'id')[:10]} ({x})" for x in graph.scan()}
+    
+    backend = graph.backend
+    degrees = dict(backend.degree())
+    max_degree = max(degrees.values()) if degrees else 1
+    node_colors = [cm.viridis(degrees[node] / max_degree) for node in backend.nodes()]
+    
+    pos = nx.spring_layout(backend, seed=42, k=0.9, iterations=100)
 
-    fig, ax = plt.subplots(figsize=(17, 8))
-    pos = nx.spring_layout(graph.backend, seed=0, k=0.9, iterations=50)
-    nx.draw_networkx(graph.backend, pos=pos, labels=labels, **options)
+    fig, ax = plt.subplots(figsize=(20, 10))
+    
+    nx.draw_networkx_nodes(
+        backend, pos,
+        node_size=800,
+        node_color=node_colors,
+        alpha=0.9
+    )
+    
+    nx.draw_networkx_edges(
+        backend, pos,
+        edge_color="#454545",
+        width=1.5,
+        alpha=0.8
+    )
+    
+    nx.draw_networkx_labels(
+        backend, pos,
+        labels=labels,
+        font_size=10,
+        font_color="white",
+        font_weight="bold",
+        bbox=dict(facecolor="#303030", edgecolor="none", boxstyle="round,pad=0.2")
+    )
+    
+    ax.set_axis_off()
+    
     ax.set_facecolor("#303030")
-    ax.axis("off")
-    fig.set_facecolor("#303030")
-
-    plt.savefig("graph.png")
+    fig.set_facecolor("#ffffff")
+    
+    plt.title("Base de conhecimento UFSC Blumenau", fontsize=16, color="white", pad=20)
+    
+    plt.tight_layout()
+    plt.savefig("graph.png", dpi=300)
+    plt.show()
 
 plot(graph)
 
 for x in graph.showpath(0, 38):
     print(graph.node(x))
     
-    
-    
-from txtai import LLM
-import os
-llm = LLM(os.getenv("MODEL_ID"))
-
-def topic(graph):
-  topic = list(graph.topics.keys())[0]
-
-  text = "\n".join(graph.node(x)["text"] for x in graph.topics[topic])
-
-  prompt = f"""<|im_start|>system
-  You are a friendly assistant. You answer questions from users.<|im_end|>
-  <|im_start|>user
-  Label the following text with a topic name in a couple words.
-
-  text: {text}
-  topic: <|im_end|>
-  <|im_start|>assistant
-  """
-
-  print(f"Topic: \"{topic}\", Generated Topic: \"{llm(prompt, maxlength=4096)}\"")
-
-topic(graph)
+  
