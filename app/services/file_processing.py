@@ -59,7 +59,7 @@ def _process_file(file_path: str, max_length: int=512) -> list[str]:
     for chunk in semantic_chunks:
        # print(f"=========\nCHUNK: {chunk}\nCHUNK_SIZE: {chunk.token_count}\n")
         chunks.append(chunk)
-    return chunks
+    return chunks   
 
 
 def get_documents(folder_path: str, max_length: int = 512) -> list[str]:
