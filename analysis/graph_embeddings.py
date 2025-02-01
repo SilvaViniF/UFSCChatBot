@@ -82,7 +82,4 @@ def plot(graph):
 
 plot(graph)
 
-for x in graph.showpath(0, 38):
-    print(graph.node(x))
-    
   
