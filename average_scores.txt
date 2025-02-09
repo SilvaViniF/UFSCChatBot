@@ -1,0 +1,40 @@
+analysis/human_test/v2/Llama-3-8B-Instruct/questoes_with_answers_scored.csv:
+  Mean   = 0.25
+  Median = 0.25
+  Std    = 0.21
+  Min    = 0.00
+  Max    = 0.75
+  Count  = 20
+
+analysis/human_test/v2/Llama-3.2-3B-Instruct/questoes_with_answers_scored.csv:
+  Mean   = 0.28
+  Median = 0.25
+  Std    = 0.27
+  Min    = 0.00
+  Max    = 0.75
+  Count  = 20
+
+analysis/human_test/v2/Llama-2-7b-chat-hf/questoes_with_answers_scored.csv:
+  Mean   = 0.29
+  Median = 0.25
+  Std    = 0.22
+  Min    = 0.00
+  Max    = 0.75
+  Count  = 20
+
+analysis/human_test/v2/Llama-3.1-8B-Instruct/questoes_with_answers_scored.csv:
+  Mean   = 0.31
+  Median = 0.25
+  Std    = 0.30
+  Min    = 0.00
+  Max    = 0.75
+  Count  = 20
+
+analysis/human_test/v2/Mistral-7B-Instruct-v0.3/questoes_with_answers_scored.csv:
+  Mean   = 0.30
+  Median = 0.25
+  Std    = 0.31
+  Min    = 0.00
+  Max    = 1.00
+  Count  = 20
+
