@@ -3,20 +3,18 @@ import sys
 import os
 from txtai import Embeddings
 
-parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.append(parent_dir)
-
-from app.services.search import SearchService
+root_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+sys.path.append(root_dir)
+from app import SearchService
 
 embeddings = Embeddings(content=True, path="mixedbread-ai/mxbai-embed-large-v1")
 SearchService.set_embeddings(embeddings)
 search_service = SearchService()
 search_service.index_chunks()
 
-os.chdir(parent_dir)
 
-input_file = os.path.join('human_test', 'questoes.csv')
-output_file = os.path.join('human_test', 'questoes_with_answers.csv')
+input_file = os.path.join('analysis/human_test', 'questoes.csv')
+output_file = os.path.join('analysis/human_test', 'v2/llama3.1/questoes_with_answers.csv')
 
 def get_database_answers(input_file: str, output_file: str):
     questions = []
@@ -27,10 +25,10 @@ def get_database_answers(input_file: str, output_file: str):
 
     for question in questions:
         print(f"Processing question {question['ID']}: {question['Pergunta']}")
-        answer_gen =  search_service.talk(question['Pergunta'],5)
+        answer_gen = search_service.talk(question['Pergunta'], 5)
         answer = ""
         for chunk in answer_gen:
-            answer = chunk 
+            answer += chunk
         question['Resposta'] = answer
         print(f"Answer: {answer}\n")
 
@@ -44,4 +42,7 @@ def get_database_answers(input_file: str, output_file: str):
     print(f"Results have been saved to {output_file}")
 
 if __name__ == "__main__":
+    from dotenv import load_dotenv
+    load_dotenv("/home/grupoh/.env")
+    print(f"TESTING MODEL = {os.getenv('MODEL_ID')}")
     get_database_answers(input_file,output_file)

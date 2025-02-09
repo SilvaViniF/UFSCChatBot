@@ -26,7 +26,7 @@ chunk_cache = os.path.join(cache_dir, "chunk_cache")
 class SearchService:
     embeddings = None
     chat_history = []
-    token = ""
+    token = os.getenv("HF_TOKEN")
     tokenizer = AutoTokenizer.from_pretrained(os.getenv("MODEL_ID"), token=token)
     model = AutoModelForCausalLM.from_pretrained(
         os.getenv("MODEL_ID"),

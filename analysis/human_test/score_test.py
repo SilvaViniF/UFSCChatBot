@@ -2,10 +2,9 @@ import os,sys
 import csv
 import pandas as pd
 
-parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.append(parent_dir)
-
-from app.services.search import SearchService
+root_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+sys.path.append(root_dir)
+from app import SearchService
 
 search_service = SearchService()
 
@@ -32,13 +31,14 @@ Avalie a qualidade da resposta gerada em uma escala de 0 a 1 com base nos seguin
 
 **Instrução final:**  
 Responda apenas com o número decimal representando a pontuação final (exemplo: 0.75). Não escreva nada além do número decimal.  
+Lembre que a resposta que você está avaliando deve estar na mesma língua de pergunta realizada.
 """
     
     messages = [{"role": "system", "content": prompt}]
     score_gen = search_service.generate(messages)   
     score = ""
     for chunk in score_gen:
-        score = chunk
+        score += chunk
     return score
 
 def process_csv_files(folder_path):
@@ -72,6 +72,6 @@ def process_single_csv(file_path):
     df.to_csv(output_path, index=False)
     print(f"Processed and saved: {output_path}")
 
-folder_path = "analysis/human_test/v1/mistral"
+folder_path = "analysis/human_test/v2/llama3.1"
 
 process_csv_files(folder_path)
