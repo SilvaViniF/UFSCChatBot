@@ -79,7 +79,7 @@ def print_json_info(json_files, file_avg_scores):
         print(f"- {file_path}: Average Score = {avg_score}")
 
 def main():
-    base_path = '.'  # Current directory
+    base_path = '.' 
     output_folder = 'judge_results'
 
     data, json_files = read_json_files(base_path)
